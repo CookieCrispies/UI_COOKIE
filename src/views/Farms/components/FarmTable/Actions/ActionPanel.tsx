@@ -156,7 +156,7 @@ const ActionPanel: React.FunctionComponent<ActionPanelProps> = ({
   return (
     <Container expanded={expanded}>
       <InfoContainer>
-        {isActive && (
+        {/* {isActive && (
           <StakeContainer>
             <StyledLinkExternal href={addLiquidityUrl}>
               {TranslateString(999, `Get ${lpLabel}`, { name: lpLabel })}
@@ -164,7 +164,7 @@ const ActionPanel: React.FunctionComponent<ActionPanelProps> = ({
           </StakeContainer>
         )}
         <StyledLinkExternal href={bsc}>{TranslateString(999, 'View Contract')}</StyledLinkExternal>
-        <StyledLinkExternal href={info}>{TranslateString(999, 'See Pair Info')}</StyledLinkExternal>
+        <StyledLinkExternal href={info}>{TranslateString(999, 'See Pair Info')}</StyledLinkExternal> */}
         <TagsContainer>
           {/* farm.isCommunity ? <CommunityTag /> : <CoreTag /> */}
           {farm.depositFeeBP === 0 ? <NoFeeTag /> : null}

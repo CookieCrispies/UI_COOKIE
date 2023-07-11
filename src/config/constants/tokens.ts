@@ -136,7 +136,7 @@ const tokens = {
     projectLink: 'https://bitcoin.org/',
   },
   cola: {
-    symbol: 'cola',
+    symbol: 'COLA',
     address: {
       56: '0x50d809c74e0b8e49e7b4c65bb3109abe3ff4c1c1',
       97: '',

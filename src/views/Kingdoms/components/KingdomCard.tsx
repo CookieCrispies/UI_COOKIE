@@ -143,7 +143,7 @@ const KingdomCard: React.FC<KingdomCardProps> = ({
   const bnbRewardsUSD = bnbRewards ? new BigNumber(bnbRewards).multipliedBy(bnbPrice).toNumber() : 0
 
   let harvestSection = null
-  if (farm.lpSymbol === 'cola') {
+  if (farm.lpSymbol === 'COLA') {
     harvestSection = (
       <>
         <Text>BNB Dividends</Text>

@@ -118,13 +118,13 @@ const ExpandedFooter: React.FC<ExpandedFooterProps> = ({
       </Flex>
       {poolContractAddress && (
         <Flex mb="2px" justifyContent="flex-end">
-          <LinkExternal
+          {/* <LinkExternal
             bold={false}
             small
             href={`${BASE_BSC_SCAN_URL}/address/${isAutoVault ? cakeVaultContractAddress : poolContractAddress}`}
           >
             {TranslateString(412, 'View Contract')}
-          </LinkExternal>
+          </LinkExternal> */}
         </Flex>
       )}
       {account && isMetaMaskInScope && tokenAddress && (
