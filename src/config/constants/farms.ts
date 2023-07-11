@@ -43,7 +43,7 @@ const farms: FarmConfig[] = [
   //   token: tokens.bleo,
   //   quoteToken: tokens.wbnb,
   // },
-  {
+  /* {
     pid: 6,
     lpSymbol: 'USDT-BUSD LP',
     lpAddresses: {
@@ -104,7 +104,7 @@ const farms: FarmConfig[] = [
     },
     token: tokens.dai,
     quoteToken: tokens.busd,
-  },
+  }, */
   // {
   //   pid: 23,
   //   lpSymbol: 'DEC-BUSD LP (v1)',
@@ -210,15 +210,17 @@ const farms: FarmConfig[] = [
   {
     pid: 12,
     isTokenOnly: true,
-    lpSymbol: 'CUB',
+    lpSymbol: 'COLA',
     lpAddresses: {
       97: '',
       56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // CUB-BUSD LP
+      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // CUB-BUSD LP
+      943: '',
     },
-    token: tokens.cub,
+    token: tokens.cola,
     quoteToken: tokens.busd,
   },
-  {
+  /* {
     pid: 17,
     isTokenOnly: true,
     lpSymbol: 'BTCB',
@@ -250,7 +252,7 @@ const farms: FarmConfig[] = [
     },
     token: tokens.dot,
     quoteToken: tokens.busd,
-  },
+  }, */
   // {
   //   pid: 19,
   //   isTokenOnly: true,
@@ -287,7 +289,7 @@ const farms: FarmConfig[] = [
   // },
 
   // V2 Farms
-  {
+  /* {
     pid: 33,
     pcsVersion: 2,
     lpSymbol: 'bHBD-bHIVE',
@@ -297,7 +299,7 @@ const farms: FarmConfig[] = [
     },
     token: tokens.bhive,
     quoteToken: tokens.bhbd,
-  },
+  },  */
   {
     pid: 30,
     pcsVersion: 2,
@@ -305,11 +307,14 @@ const farms: FarmConfig[] = [
     lpAddresses: {
       97: '',
       56: '0x8b97f5b65532d2f89ff0e60e308540bb20e47933',
+      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // CUB-BUSD LP
+      943: '',
+
     },
     token: tokens.bhbd,
     quoteToken: tokens.busd,
   },
-  {
+  /* {
     pid: 32,
     pcsVersion: 2,
     lpSymbol: 'bHBD-CUB',
@@ -330,30 +335,34 @@ const farms: FarmConfig[] = [
     },
     token: tokens.bhive,
     quoteToken: tokens.cub,
-  },
+  }, */
   {
     pid: 29,
     pcsVersion: 2,
-    lpSymbol: 'BUSD-CUB LP (v2)',
+    lpSymbol: 'COLA-USDC LP',
     lpAddresses: {
       97: '',
       56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
+      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // CUB-BUSD LP
+      943: '',
     },
-    token: tokens.cub,
+    token: tokens.cola,
     quoteToken: tokens.busd,
   },
   {
     pid: 27,
     pcsVersion: 2,
-    lpSymbol: 'BNB-CUB LP (v2)',
+    lpSymbol: 'COLA-WPLS LP',
     lpAddresses: {
       97: '',
       56: '0x7BaE0d7D2760E681559fbb502b43fFA26561bA24',
+      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // CUB-BUSD LP
+      943: '',
     },
-    token: tokens.cub,
+    token: tokens.cola,
     quoteToken: tokens.wbnb,
   },
-  {
+  /* {
     pid: 28,
     pcsVersion: 2,
     lpSymbol: 'BLEO-BNB LP (v2)',
@@ -385,10 +394,10 @@ const farms: FarmConfig[] = [
     },
     token: tokens.cakepop,
     quoteToken: tokens.busd,
-  },
+  }, */
 
   // KINGDOMS
-  {
+ /* {
     pid: 34,
     altPid: 13,
     compounding: 0,
@@ -559,10 +568,10 @@ const farms: FarmConfig[] = [
     token: tokens.sps,
     quoteToken: tokens.wbnb,
     kingdomContract: '0xc18cd88a97f39b1db91990c79227223ae6f5efb2',
-  },
+  }, */
 
   // INACTIVE KINGDOMS, alloc = 0
-  {
+  /* {
     pid: 5,
     compounding: 365,
     isKingdom: true,
@@ -575,7 +584,7 @@ const farms: FarmConfig[] = [
     token: tokens.btcb,
     quoteToken: tokens.wbnb,
     kingdomContract: '0xbdc40a031f6908a8203fb1c75bb2b9c4abf59e2e',
-  },
+  }, */
 ];
 
 export default farms

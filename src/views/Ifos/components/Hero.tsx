@@ -29,11 +29,11 @@ const Hero = () => {
     <StyledHero>
       <Container>
         <Title>{TranslateString(500, 'IDO: Initial DEX Offerings')}</Title>
-        <Heading as="h2" color="secondary">{TranslateString(502, 'Participate in new platform tokens via decentralized IDOs! 50% of the raise burns CUB and 50% goes to the project team who initiated the IDO.')}</Heading>
+        <Heading as="h2" color="secondary">{TranslateString(502, 'Participate in new platform tokens via decentralized IDOs! 50% of the raise burns COLA and 50% goes to the project team who initiated the IDO.')}</Heading>
         <br />
         <Wrapper>
           <Button size="sm">
-            <a href="https://docs.cubdefi.com/major-feature-releases/initial-dex-offering-ido">Learn More</a>
+            <a href="https://docs.colafactory.com/">Learn More</a>
           </Button>
         </Wrapper>
       </Container>

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Heading, Card, CardBody, Flex, ArrowForwardIcon, Link } from '@pancakeswap-libs/uikit'
 
 const StyledFarmStakingCard = styled(Card)`
-  background: linear-gradient(#53dee9, #4576d9);
+  background: linear-gradient(#ff2d49, #4576d9);
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -20,14 +20,14 @@ const BridgeCard = () => {
     <StyledFarmStakingCard>
       <CardBody>
         <Heading color="contrast" size="lg">
-          Instantly Swap
+          VIP & Public presale
         </Heading>
-        <CardMidContent color="invertedContrast">ERC20 for BEP20</CardMidContent>
+        <CardMidContent color="invertedContrast">2 000 000 COLA token</CardMidContent>
         <Flex justifyContent="space-between">
           <Heading color="contrast" size="lg">
-            on LeoBridge
+            Coming soon !
           </Heading>
-          <Link href="https://bridge.cubdefi.com/">
+          <Link href="https://colafactory.com/">
             <ArrowForwardIcon mt={30} color="contrast" />
           </Link>
         </Flex>

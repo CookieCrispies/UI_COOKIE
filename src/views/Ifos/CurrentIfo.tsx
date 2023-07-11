@@ -45,53 +45,53 @@ const Ifo = () => {
       </IfoCards>
       <LaunchIfoCallout>
         <div>
-          <Title as="h2">{TranslateString(592, 'How to Participate in Decentralized IDOs on CubFinance')}</Title>
+          <Title as="h2">{TranslateString(592, 'How to Participate in Decentralized IDOs on ColaFactory')}</Title>
           <Heading mb="16px">{TranslateString(594, 'Before IDO')}:</Heading>
           <List>
-            <li>{TranslateString(596, 'Buy CUB and BUSD Tokens')}</li>
-            <li>{TranslateString(598, 'Get CUB-BUSD LP tokens (PCSv2 Only) on PancakeSwap')}</li>
+            <li>{TranslateString(596, 'Buy COLA Tokens')}</li>
+            <li>{TranslateString(598, 'Get COLA-USDC LP tokens')}</li>
           </List>
           <Flex mb="16px">
-            <LinkExternal href="https://exchange.cubdefi.com/" mr="16px">
-              {TranslateString(999, 'Buy CUB')}
+            <LinkExternal href="https://colafactory.com/" mr="16px">
+              {TranslateString(999, 'Buy COLA')}
             </LinkExternal>
-            <LinkExternal href="https://pancakeswap.finance/add/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56/0x50D809c74e0B8e49e7B4c65BB3109AbE3Ff4C1C1">
+            <LinkExternal href="">
               {TranslateString(999, 'Get LP tokens')}
             </LinkExternal>
           </Flex>
           <Heading mb="16px">{TranslateString(600, 'During IDO')}:</Heading>
           <List>
-            <li>{TranslateString(602, 'While the IDO is live, commit your CUB-BUSD LP tokens to participate in the decentralized raise at the predetermined token price')}</li>
+            <li>{TranslateString(602, 'While the IDO is live, commit your tokens to participate in the decentralized raise at the predetermined token price')}</li>
           </List>
           <Heading mb="16px">{TranslateString(604, 'After IDO')}:</Heading>
           <List>
-            <li>{TranslateString(606, 'Click "Claim" to claim the IDO tokens you purchased along with any unspent CUB-BUSD LP.')}</li>
+            <li>{TranslateString(606, 'Click "Claim" to claim the IDO tokens you purchased.')}</li>
             <li>{TranslateString(608, 'Done!')}</li>
           </List>
-          <img src="images/cub/header_logo_wide.svg" alt="cub" />
+          <img src="images/Cola/LogoTextNewDark.png" alt="cola" />
           <Text as="div" pt="16px">
             <Button
               as="a"
               variant="secondary"
-              href="https://docs.cubdefi.com/major-feature-releases/initial-dex-offering-ido"
+              href="https://docs.colafactory.com/"
             >
               {TranslateString(610, 'Read more')}
             </Button>
           </Text>
         </div>
         <div>
-          <Image src="/images/cub/wide.svg" alt="ifo bunny" width={436} height={406} responsive />
+          <Image src="/images/Cola/logoCola2.png" alt="ifo" width={500} height={406} responsive />
           <div>
             <Title as="h2">{TranslateString(512, 'Want to launch your own IDO?')}</Title>
             <Text mb={3}>
               {TranslateString(
                 514,
-                'Launch your project with CubDefi to bring your token directly to the most active and rapidly growing community on BSC.',
+                'Launch your project with ColaFactory to bring your token directly to the most active and rapidly growing community on PulseChain.',
               )}
             </Text>
             <Button
               as="a"
-              href="https://forms.gle/qRRKAefPsh6D83Ys9"
+              href=""
               external
             >
               {TranslateString(516, 'Apply to launch')}

@@ -7,7 +7,7 @@ BigNumber.config({
   DECIMAL_PLACES: 80,
 })
 
-export const BSC_BLOCK_TIME = 3
+export const BSC_BLOCK_TIME = 10
 
 // CAKE_PER_BLOCK details
 // 40 CAKE is minted per block
@@ -29,11 +29,11 @@ export const BELT_PER_BLOCK = new BigNumber(1.178)
 export const BELT_PER_YEAR = BELT_PER_BLOCK.times(BLOCKS_PER_YEAR)
 
 // export const PCS_BLOCKS_PER_YEAR = new BigNumber((60 / BSC_BLOCK_TIME) * 60 * 24 * 365) // 10512000
-export const BASE_URL = 'https://cubdefi.com'
-export const BASE_EXCHANGE_URL = 'https://exchange.cubdefi.com'
+export const BASE_URL = 'https://colafactory.com/'
+export const BASE_EXCHANGE_URL = 'https://app.pulsex.com/'
 export const BASE_ADD_LIQUIDITY_URL = `${BASE_EXCHANGE_URL}/#/add`
 export const BASE_LIQUIDITY_POOL_URL = `${BASE_EXCHANGE_URL}/#/pool`
-export const PCS_EXCHANGE_URL = 'https://pancakeswap.finance'
+export const PCS_EXCHANGE_URL = 'https://app.pulsex.com/'
 export const PCS_ADD_LIQUIDITY_URL = `${PCS_EXCHANGE_URL}/add`
 export const PCS_LIQUIDITY_POOL_URL = `${PCS_EXCHANGE_URL}/pool`
 export const BAKERY_EXCHANGE_URL = 'https://www.bakeryswap.org'

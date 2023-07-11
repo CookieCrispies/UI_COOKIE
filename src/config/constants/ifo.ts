@@ -96,7 +96,7 @@ const ifos: Ifo[] = [
     tokenDecimals: 18,
     releaseBlockNumber: 14394954,
   }, */
-  {
+ /* {
     id: 'cakepop',
     address: '0x345c045f3573368b82da5d1b3a21250dafa889dd',
     isActive: false,
@@ -114,7 +114,7 @@ const ifos: Ifo[] = [
     currencyAddress: '0xfdf68922460d7508f84bd55acb9d276d3f9a2c31',
     tokenDecimals: 18,
     releaseBlockNumber: 10512405,
-  },
+  }, */
 ]
 
 export default ifos

@@ -309,7 +309,7 @@ const Kingdoms: React.FC = () => {
       <PageHeader>
         <div className='k-header'>
           <Heading as="h1" size="xxl" color="secondary" mb="10px">
-            Kingdoms
+            Vaults
           </Heading>
           <Flex>
             <Text bold fontSize="24px">
@@ -322,34 +322,34 @@ const Kingdoms: React.FC = () => {
           Composable Auto-Compounding
         </Heading>
         <Heading as="h2" color="secondary" mb="10px" style={{ textAlign: 'left' }}>
-          Stake tokens for cross-platform farming plus CUB rewards
+          Stake tokens for cross-platform farming plus COLA rewards
         </Heading>
-        <Heading as="h2" color="warning" mb="10px" style={{ textAlign: 'left' }}>
+        {/* <Heading as="h2" color="warning" mb="10px" style={{ textAlign: 'left' }}>
           IMPORTANT: Must use the host farm exchange (eg. PCS, Bakery) for Kingdom LP tokens
         </Heading>
         <Heading as="h2" color="warning" mb="10px" style={{ textAlign: 'left' }}>
           CertiK Audit is Pending: Our other contracts have been audited by CertiK and Kingdoms are currently under review. Please use at your own discretion until the audit has been published
-        </Heading>
+        </Heading> */}
         <FeeWrapper>
-          <Heading as="h2" color="secondary" mb="5px" style={{ textAlign: 'left' }}>
+          {/* <Heading as="h2" color="secondary" mb="5px" style={{ textAlign: 'left' }}>
             Fees
-          </Heading>
-          <Flex justifyContent="space-between">
-            <Text>Fee for CUB Staking Kingdom BNB Dividends:</Text>
+          </Heading> */}
+          {/* <Flex justifyContent="space-between">
+            <Text>Fee for COLA Staking Kingdom BNB Dividends:</Text>
             <Text>3%</Text>
-          </Flex>
-          <Flex justifyContent="space-between">
+          </Flex> */}
+         {/*  <Flex justifyContent="space-between">
             <Text>Management Fee:</Text>
-            <Text>7%</Text>
-          </Flex>
-          <Flex justifyContent="space-between">
+            <Text>5%</Text>
+          </Flex> */}
+          {/* <Flex justifyContent="space-between">
             <Text>CUB Burn Rate:</Text>
             <Text>100% of Fees Buyback and Burn CUB</Text>
-          </Flex>
-          <Flex justifyContent="space-between">
+          </Flex> */}
+          {/* <Flex justifyContent="space-between">
             <Text>Withdrawal Fee:</Text>
             <Text>None</Text>
-          </Flex>
+          </Flex> */}
         </FeeWrapper>
       </PageHeader>
       <Page className="k-container">

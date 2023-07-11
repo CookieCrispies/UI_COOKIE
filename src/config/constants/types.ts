@@ -3,7 +3,9 @@ import BigNumber from 'bignumber.js'
 
 export interface Address {
   97?: string
-  56: string
+  943: string
+  56?: string
+  369: string
 }
 
 export interface Token {

@@ -406,15 +406,15 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
   }
 
   let header = TranslateString(674, 'Farms')
-  let heading = TranslateString(320, 'Stake LP tokens to earn CUB')
-  const subHeading = TranslateString(10000, 'Deposit Fee will be used to buyback CUB and bLEO')
+  let heading = TranslateString(320, 'Stake LP tokens to earn COLA')
+  const subHeading = TranslateString(10000, 'Deposit Fee will be used to buyback COLA')
   // let extra = null
   // const data = useGetStats()
   // const tvl = data ? data.total_value_locked_all.toLocaleString('en-US', { maximumFractionDigits: 0 }) : null
 
   if (tokenMode) {
-    header = TranslateString(674, 'Dens')
-    heading = TranslateString(10002, 'Stake tokens to earn CUB')
+    header = TranslateString(674, 'Pools')
+    heading = TranslateString(10002, 'Stake tokens to earn COLA')
   }
 
   const tlvSpacing = '20px'
@@ -434,7 +434,7 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
             {/* extra */}
           </div>
 
-          <div className="column-cad" style={{height: "100%", display: "flex", flexDirection: "row", flexGrow: 1}}>
+          {/* <div className="column-cad" style={{height: "100%", display: "flex", flexDirection: "row", flexGrow: 1}}>
             <AdditionalHeader />
             <Card style={{height: "100%", flexGrow: 1, maxWidth: "400px", marginLeft: "auto", padding: "10px 20px"}}>
                 <Heading><HiveLogo /> Multi-Token Bridge</Heading>
@@ -447,7 +447,7 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
                   <a href="https://docs.cubdefi.com/mechanics/multi-token-bridge">How it Works</a>
                 </Button>
             </Card>
-          </div>
+          </div> */}
         </div>
       </PageHeader>
       {/* <MigrationV2 /> */}
@@ -501,7 +501,7 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
         </ControlContainer>
         {renderContent()}
         <div ref={loadMoreRef} />
-        <Image src="/images/cub/wide.svg" alt="illustration" width={1352} height={587} responsive />
+        {/* <Image src="/images/Cola/LogoCola2.png" alt="illustration" width={700} height={350} responsive /> */}
       </Page>
     </>
   )

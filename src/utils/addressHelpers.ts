@@ -33,7 +33,7 @@ export const getBelt = () => {
   return getAddress(addresses.belt)
 }
 export const getMulticallAddress = () => {
-  return getAddress(addresses.multiCall)
+  return getAddress(addresses.mulltiCall)
 }
 export const getWbnbAddress = () => {
   return getAddress(tokens.wbnb.address)

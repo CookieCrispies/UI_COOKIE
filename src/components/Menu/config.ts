@@ -26,12 +26,12 @@ const config: MenuEntry[] = [
     href: '/farms',
   },
   {
-    label: 'Dens',
+    label: 'Pools',
     icon: 'PoolIcon',
     href: '/dens',
   },
   {
-    label: 'Kingdoms',
+    label: 'Vaults',
     icon: 'PawIcon',
     href: '/kingdoms',
     status: {
@@ -39,7 +39,12 @@ const config: MenuEntry[] = [
       color: 'warning',
     },
   },
-  {
+  /* {
+    label: 'Lottery',
+    icon: 'TicketIcon',
+    href: '/lottery',
+  }, */
+  /* {
     label: 'Wrap HBD',
     icon: 'DollarIcon',
     href: "https://wleo.io/hbd-bsc/",
@@ -57,44 +62,53 @@ const config: MenuEntry[] = [
       text: 'Polygon',
       color: 'warning',
     },
-  },
+  }, */
   {
     label: 'IDO',
     icon: 'IfoIcon',
     href: '/ido',
   },
   {
-    label: 'Info',
+    label: 'Charts',
     icon: 'InfoIcon',
     items: [
       {
-        label: 'GitHub',
-        href: 'https://github.com/CubFinance',
+        label: 'PulseX',
+        href: 'https://app.pulsex.com/swap',
       },
       {
-        label: 'PancakeSwap',
-        href: 'https://pancakeswap.info/token/0x50d809c74e0b8e49e7b4c65bb3109abe3ff4c1c1',
+        label: 'DexScreener',
+        href: 'https://dexscreener.com/pulsechain',
       },
       {
-        label: 'CoinMarketCap',
-        href: 'https://coinmarketcap.com/currencies/cub-finance/',
+        label: 'Coingecko',
+        href: 'https://www.coingecko.com/',
       },
       {
-        label: 'CoinGecko',
-        href: 'https://www.coingecko.com/en/coins/cub-finance',
-      },
-      {
-        label: 'AstroTools',
-        href: 'https://app.astrotools.io/pancake-pair-explorer/0x50d809c74e0b8e49e7b4c65bb3109abe3ff4c1c1',
+        label: 'Coinmarketcap',
+        href: 'https://coinmarketcap.com/',
       },
     ],
   },
   {
-    label: 'Docs',
-    icon: 'TicketIcon',
-    href: 'https://docs.cubdefi.com/',
+    label: 'More',
+    icon: 'MoreIcon',
+    items: [
+      {
+        label: 'Github',
+        href: 'https://github.com/Cola-Factory',
+      },
+      {
+        label: 'Docs',
+        href: 'https://docs.colafactory.com/',
+      },
+      {
+        label: 'Blog',
+        href: 'https://medium.com/@ColaFactoryEN',
+      },
+    ],
   },
-  {
+  /* {
     label: 'Roadmap',
     icon: 'MoreIcon',
     href: 'https://docs.cubdefi.com/roadmap',
@@ -103,8 +117,8 @@ const config: MenuEntry[] = [
     label: "Tokenized Blogging",
     icon: "TokenizeIcon",
     href: "https://leofinance.io/",
-  },
-  {
+  }, */
+  /* {
     label: "Blog",
     icon: "BlogIcon",
     href: "https://leofinance.io/@leofinance",
@@ -113,7 +127,7 @@ const config: MenuEntry[] = [
     label: 'CertiK Audit',
     icon: 'AuditIcon',
     href: 'https://www.certik.org/projects/cubfinance',
-  },
+  }, */
 ]
 
 export default config

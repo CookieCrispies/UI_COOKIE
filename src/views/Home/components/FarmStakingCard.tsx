@@ -13,7 +13,6 @@ import CakeWalletBalance from './CakeWalletBalance'
 import BNBHarvestBalance from './BNBHarvestBalance'
 
 const StyledFarmStakingCard = styled(Card)`
-  background-image: url('/images/cub/cub-bg.png');
   background-repeat: no-repeat;
   background-position: top right;
   min-height: 376px;
@@ -70,15 +69,15 @@ const FarmedStakingCard = () => {
         <Heading size="xl" mb="24px">
           {TranslateString(542, 'Farms & Staking')}
         </Heading>
-        <CardImage src="/images/cub/token.svg" alt="cub logo" width={64} height={64} />
+        <CardImage src="/images/Cola/cola-card-image.png" alt="cub logo" width={64} height={64} />
         <Flex justifyContent='space-between'>
           <div>
             <Block>
-              <Label>{TranslateString(544, 'CUB to Harvest')}:</Label>
+              <Label>{TranslateString(544, 'COLA to Harvest')}:</Label>
               <CakeHarvestBalance />
             </Block>
             <Block>
-              <Label>{TranslateString(546, 'CUB in Wallet')}:</Label>
+              <Label>{TranslateString(546, 'COLA in Wallet')}:</Label>
               <CakeWalletBalance />
             </Block>
             <Actions>
@@ -90,7 +89,7 @@ const FarmedStakingCard = () => {
                   width="100%"
                 >
                   {pendingTx
-                    ? TranslateString(548, 'Collecting CUB')
+                    ? TranslateString(548, 'Collecting COLA')
                     : TranslateString(532, `Harvest all (${balancesWithValue.length})`, {
                         count: balancesWithValue.length,
                       })}
@@ -100,28 +99,7 @@ const FarmedStakingCard = () => {
               )}
             </Actions>
           </div>
-          <div>
-            <Block>
-              <Label>BNB Dividends <br />for Staking CUB:</Label>
-              <BNBHarvestBalance bnbDividends={bnbDividends} />
-            </Block>
-            <Actions>
-              {account ? (
-                <Button
-                  disabled={bnbRewards === 0 || pendingTxDivs}
-                  onClick={async () => {
-                    setPendingTxDivs(true)
-                    await onClaim()
-                    setPendingTxDivs(false)
-                  }}
-                >
-                  Claim BNB
-                </Button>
-              ) : (
-                <UnlockButton width="100%" />
-              )}
-            </Actions>
-          </div>
+
         </Flex>
       </CardBody>
     </StyledFarmStakingCard>

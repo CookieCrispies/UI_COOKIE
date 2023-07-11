@@ -14,7 +14,6 @@ import KingdomCard from 'views/Home/components/KingdomCard'
 
 const Hero = styled.div`
   align-items: center;
-  background-image: url('/images/cub/wide.svg');
   background-repeat: no-repeat;
   background-position: top center;
   display: flex;
@@ -22,14 +21,21 @@ const Hero = styled.div`
   flex-direction: column;
   margin: auto;
   margin-bottom: 32px;
-  padding-top: 116px;
+  padding-top: 0px;
   text-align: center;
+  img {
+    max-width: 150px;
+  }
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('/images/cub/2logos.png') ,url('/images/cub/wide.svg');
-    background-position: left center, right center;
-    height: 165px;
+    // background-image: url('/images/egg/3.png'), url('/images/egg/3b.png');
+    // background-position: left center, right center;
+    // height: 165px;
+    height: auto;
     padding-top: 0;
+    img {
+      max-width: 300px;
+    }
   }
 `
 
@@ -83,25 +89,23 @@ const Home: React.FC = () => {
   return (
     <Page>
       <Hero>
-        <Heading as="h1" size="xl" mb="24px" color="secondary">
-          {TranslateString(576, 'Cub Finance')}
+        <Heading as="h1" size="xl" mb="24px" color="white">
+          {/* {TranslateString(576, 'Cola Defi')} */}
+          <img src="/images/Cola/ColaLogoM.png" alt="Cola Defi" />
         </Heading>
-        <Text>{TranslateString(578, 'Cub Finance on Binance Smart Chain.')}</Text>
       </Hero>
       <div>
         <Cards>
           <FarmStakingCard />
-          <TwitterCard/>
+          <CakeStats />
           {/* <LotteryCard /> */}
         </Cards>
         <CTACards>
-          <EarnAPRCard />
-          <BridgeCard />
-          <KingdomCard />
+
           {/* <WinCard /> */}
         </CTACards>
         <Cards>
-          <CakeStats />
+          <BridgeCard />
           <TotalValueLockedCard />
         </Cards>
       </div>
