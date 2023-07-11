@@ -10,7 +10,7 @@ const Title = styled(Heading).attrs({ as: 'h1', size: 'xl' })`
 `
 
 const StyledHero = styled.div`
-  background-image: linear-gradient(139.73deg, #E6FDFF 0%, #eff8ff 100%);
+  background: ${({ theme}) => theme.colors.gradients.bubblegum};
   padding-bottom: 40px;
   padding-top: 40px;
   margin-bottom: 32px;
