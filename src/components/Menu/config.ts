@@ -73,6 +73,11 @@ const config: MenuEntry[] = [
     },
   },
   {
+    label: 'Vote',
+    icon: 'VoteIcon',
+    href: 'https://snapshot.org/#/colafactory.eth',
+  },
+  {
     label: 'Charts',
     icon: 'InfoIcon',
     items: [
