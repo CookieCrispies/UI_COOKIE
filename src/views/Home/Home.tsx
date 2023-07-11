@@ -91,7 +91,7 @@ const Home: React.FC = () => {
       <Hero>
         <Heading as="h1" size="xl" mb="24px" color="white">
           {/* {TranslateString(576, 'Cola Defi')} */}
-          <img src="/images/Cola/ColaLogoM.png" alt="Cola Defi" />
+          <img src="/images/Cola/ColaLogoM2.png" alt="Cola Defi" />
         </Heading>
       </Hero>
       <div>

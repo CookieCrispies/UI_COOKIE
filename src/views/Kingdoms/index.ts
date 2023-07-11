@@ -1,1 +1,1 @@
-export { default } from './Kingdoms'
+export { default } from './Vaults'

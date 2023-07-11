@@ -1,7 +1,7 @@
 {
-  "short_name": "CubFinance",
-  "name": "CubFinance",
-  "description": "Farm CUB with Pancake LP Tokens",
+  "short_name": "colaFinance",
+  "name": "colaFinance",
+  "description": "Farm cola with Pancake LP Tokens",
   "icons": [
     {
       "src": "favicon.ico",

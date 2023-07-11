@@ -235,7 +235,7 @@ export const useGetApiPrice = (address: string) => {
 // }
 
 export const usePriceCakeBusd = (): BigNumber => {
-  const cakeBnbFarm = useFarmFromPid(29)
+  const cakeBnbFarm = useFarmFromPid(0)
   // const bnbBusdPrice = usePriceBnbBusd()
   //
   // const cakeBusdPrice = cakeBnbFarm.tokenPriceVsQuote ? bnbBusdPrice.times(cakeBnbFarm.tokenPriceVsQuote) : BIG_ZERO
@@ -402,13 +402,13 @@ export const useTotalValueKingdoms = (): BigNumber => {
 }
 
 
-export const useTotalCubStaked = (): any => {
+export const useTotalcolaStaked = (): any => {
   const farms = useFarms()
-  let total = { cub: new BigNumber(0), value: new BigNumber(0) }
+  let total = { cola: new BigNumber(0), value: new BigNumber(0) }
 
-  const cubFarms = farms.data.filter(farm => farm.token.symbol === 'CUB' && new BigNumber(farm.userData.stakedBalance).gt(0))
+  const colaFarms = farms.data.filter(farm => farm.token.symbol === 'COLA' && new BigNumber(farm.userData.stakedBalance).gt(0))
 
-  total = cubFarms.reduce((accu, farm) => {
+  total = colaFarms.reduce((accu, farm) => {
     let newAccu = accu
 
     const { userData, lpTotalInQuoteToken, lpTokenBalance, quoteToken: { busdPrice: quoteTokenPriceUsd }, token: { busdPrice: tokenPriceString } } = farm
@@ -423,15 +423,15 @@ export const useTotalCubStaked = (): any => {
     else oneTokenQuoteValue = tokenPrice.times(DEFAULT_TOKEN_DECIMAL)
 
     const totalValueStaked = stakedAmount.times(oneTokenQuoteValue).div(DEFAULT_TOKEN_DECIMAL)
-    const totalCubValue = !farm.isTokenOnly && !farm.isKingdomToken ? totalValueStaked.div(2) : totalValueStaked
-    const amountCubTokens = !farm.isTokenOnly && !farm.isKingdomToken ? totalCubValue.div(tokenPrice) : totalCubValue.div(oneTokenQuoteValue).times(DEFAULT_TOKEN_DECIMAL)
+    const totalcolaValue = !farm.isTokenOnly && !farm.isKingdomToken ? totalValueStaked.div(2) : totalValueStaked
+    const amountcolaTokens = !farm.isTokenOnly && !farm.isKingdomToken ? totalcolaValue.div(tokenPrice) : totalcolaValue.div(oneTokenQuoteValue).times(DEFAULT_TOKEN_DECIMAL)
 
     // console.log('oneTokenQuoteValue',oneTokenQuoteValue.div(DEFAULT_TOKEN_DECIMAL).toNumber())
     // console.log('totalValueStaked',totalValueStaked.div(DEFAULT_TOKEN_DECIMAL).toNumber())
-    // console.log('totalCubValue',totalCubValue.div(DEFAULT_TOKEN_DECIMAL).toNumber())
-    // console.log('amountCubTokens',amountCubTokens.div(DEFAULT_TOKEN_DECIMAL).toNumber())
+    // console.log('totalcolaValue',totalcolaValue.div(DEFAULT_TOKEN_DECIMAL).toNumber())
+    // console.log('amountcolaTokens',amountcolaTokens.div(DEFAULT_TOKEN_DECIMAL).toNumber())
 
-    newAccu = { cub: newAccu.cub.plus(amountCubTokens.div(DEFAULT_TOKEN_DECIMAL)), value: newAccu.value.plus(totalCubValue.div(DEFAULT_TOKEN_DECIMAL)) }
+    newAccu = { cola: newAccu.cola.plus(amountcolaTokens.div(DEFAULT_TOKEN_DECIMAL)), value: newAccu.value.plus(totalcolaValue.div(DEFAULT_TOKEN_DECIMAL)) }
     // console.log('newAccu', newAccu)
     return newAccu
   }, total)

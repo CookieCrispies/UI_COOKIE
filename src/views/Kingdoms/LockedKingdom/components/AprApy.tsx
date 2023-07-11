@@ -44,7 +44,7 @@ const AprApy: React.FC<AprApyProps> = ({ aprApy,  lpLabel, addLiquidityUrl }) =>
         />
       </Flex>
       <Flex justifyContent="space-between" alignItems="center">
-        <Text>CUB APR:</Text>
+        <Text>cola APR:</Text>
         <Text bold style={{ display: 'flex', alignItems: 'center' }}>
           {apr ? (
             <>

@@ -441,10 +441,10 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
 
                 <hr />
 
-                <p style={{marginBottom: "10px"}}>MTB Assets (HIVE and HBD) Can Be Wrapped and Utilized to Provide Liquidity and Earn High Yields. MTB Assets Generate Revenue Which Buys and Burns CUB Each Day</p>
+                <p style={{marginBottom: "10px"}}>MTB Assets (HIVE and HBD) Can Be Wrapped and Utilized to Provide Liquidity and Earn High Yields. MTB Assets Generate Revenue Which Buys and Burns cola Each Day</p>
 
                 <Button className="button-cad">
-                  <a href="https://docs.cubdefi.com/mechanics/multi-token-bridge">How it Works</a>
+                  <a href="https://docs.coladefi.com/mechanics/multi-token-bridge">How it Works</a>
                 </Button>
             </Card>
           </div> */}

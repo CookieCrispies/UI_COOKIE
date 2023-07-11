@@ -15,22 +15,22 @@ const farms: FarmConfig[] = [
   // },
   // {
   //   pid: 10,
-  //   lpSymbol: 'CUB-BUSD LP (v1)',
+  //   lpSymbol: 'cola-BUSD LP (v1)',
   //   lpAddresses: {
   //     97: '',
   //     56: '0x0EF564D4F8D6C0ffE13348A32e21EFd55e508e84',
   //   },
-  //   token: tokens.cub,
+  //   token: tokens.cola,
   //   quoteToken: tokens.busd,
   // },
   // {
   //   pid: 11,
-  //   lpSymbol: 'CUB-BNB LP (v1)',
+  //   lpSymbol: 'cola-BNB LP (v1)',
   //   lpAddresses: {
   //     97: '',
   //     56: '0xc08C74dC9EF46C6dB122b30c48a659831017DD2E',
   //   },
-  //   token: tokens.cub,
+  //   token: tokens.cola,
   //   quoteToken: tokens.wbnb,
   // },
   // {
@@ -207,19 +207,7 @@ const farms: FarmConfig[] = [
   //   token: tokens.usdt,
   //   quoteToken: tokens.busd,
   // },
-  {
-    pid: 12,
-    isTokenOnly: true,
-    lpSymbol: 'COLA',
-    lpAddresses: {
-      97: '',
-      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // CUB-BUSD LP
-      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // CUB-BUSD LP
-      943: '',
-    },
-    token: tokens.cola,
-    quoteToken: tokens.busd,
-  },
+
   /* {
     pid: 17,
     isTokenOnly: true,
@@ -300,67 +288,158 @@ const farms: FarmConfig[] = [
     token: tokens.bhive,
     quoteToken: tokens.bhbd,
   },  */
-  {
+  /* {
     pid: 30,
     pcsVersion: 2,
     lpSymbol: 'bHBD-BUSD',
     lpAddresses: {
       97: '',
       56: '0x8b97f5b65532d2f89ff0e60e308540bb20e47933',
-      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // CUB-BUSD LP
+      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // cola-BUSD LP
       943: '',
 
     },
     token: tokens.bhbd,
     quoteToken: tokens.busd,
-  },
+  }, */
   /* {
     pid: 32,
     pcsVersion: 2,
-    lpSymbol: 'bHBD-CUB',
+    lpSymbol: 'bHBD-cola',
     lpAddresses: {
       97: '',
       56: '0x93c52e0213376a78c8b1c0b7d1f9fcba057c9a0d',
     },
     token: tokens.bhbd,
-    quoteToken: tokens.cub,
+    quoteToken: tokens.cola,
   },
   {
     pid: 31,
     pcsVersion: 2,
-    lpSymbol: 'bHIVE-CUB',
+    lpSymbol: 'bHIVE-cola',
     lpAddresses: {
       97: '',
       56: '0xbb98f40a60bfcc5a12b529c860fcdcd03830c8be',
     },
     token: tokens.bhive,
-    quoteToken: tokens.cub,
+    quoteToken: tokens.cola,
   }, */
   {
-    pid: 29,
+    pid: 0,
     pcsVersion: 2,
     lpSymbol: 'COLA-USDC LP',
     lpAddresses: {
       97: '',
       56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
-      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // CUB-BUSD LP
+      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // cola-BUSD LP
       943: '',
     },
     token: tokens.cola,
     quoteToken: tokens.busd,
   },
   {
-    pid: 27,
+    pid: 1,
     pcsVersion: 2,
     lpSymbol: 'COLA-WPLS LP',
     lpAddresses: {
       97: '',
       56: '0x7BaE0d7D2760E681559fbb502b43fFA26561bA24',
-      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // CUB-BUSD LP
+      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // cola-BUSD LP
       943: '',
     },
     token: tokens.cola,
     quoteToken: tokens.wbnb,
+  },
+  {
+    pid: 2,
+    pcsVersion: 2,
+    lpSymbol: 'WPLS-USDC LP',
+    lpAddresses: {
+      97: '',
+      56: '0x7BaE0d7D2760E681559fbb502b43fFA26561bA24',
+      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // cola-BUSD LP
+      943: '',
+    },
+    token: tokens.wbnb,
+    quoteToken: tokens.busd,
+  },
+  {
+    pid: 3,
+    isTokenOnly: true,
+    lpSymbol: 'COLA',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // cola-BUSD LP
+      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // cola-BUSD LP
+      943: '',
+    },
+    token: tokens.cola,
+    quoteToken: tokens.busd,
+  },
+  {
+    pid: 4,
+    isTokenOnly: true,
+    lpSymbol: 'WPLS',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // cola-BUSD LP
+      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // cola-BUSD LP
+      943: '',
+    },
+    token: tokens.wpls,
+    quoteToken: tokens.busd,
+  },
+  {
+    pid: 5,
+    isTokenOnly: true,
+    lpSymbol: 'USDC',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // cola-BUSD LP
+      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // cola-BUSD LP
+      943: '',
+    },
+    token: tokens.usdc,
+    quoteToken: tokens.busd,
+  },
+  {
+    pid: 6,
+    isTokenOnly: true,
+    lpSymbol: 'PLSX',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // cola-BUSD LP
+      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // cola-BUSD LP
+      943: '',
+    },
+    token: tokens.plsx,
+    quoteToken: tokens.busd,
+  },
+  {
+    pid: 7,
+    isTokenOnly: true,
+    lpSymbol: 'HEX',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // cola-BUSD LP
+      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // cola-BUSD LP
+      943: '',
+    },
+    token: tokens.hex,
+    quoteToken: tokens.busd,
+  },
+  {
+    pid: 8,
+    isTokenOnly: true,
+    lpSymbol: 'ETH',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // cola-BUSD LP
+      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // cola-BUSD LP
+      943: '',
+    },
+    token: tokens.eth,
+    quoteToken: tokens.busd,
   },
   /* {
     pid: 28,
@@ -404,13 +483,13 @@ const farms: FarmConfig[] = [
     isKingdom: true,
     isKingdomToken: true,
     isKingdomLocked: true,
-    farmType: "Cub DeFi",
-    lpSymbol: "CUB",
+    farmType: "cola DeFi",
+    lpSymbol: "cola",
     lpAddresses: {
       97: '',
       56: '0x0EF564D4F8D6C0ffE13348A32e21EFd55e508e84',
     },
-    token: tokens.cub,
+    token: tokens.cola,
     quoteToken: tokens.busd,
     kingdomContract: '0x08bea2702d89abb8059853d654d0838c5e06fe0b'
   },
@@ -420,13 +499,13 @@ const farms: FarmConfig[] = [
     compounding: 720,
     isKingdom: true,
     isKingdomToken: true,
-    farmType: 'Cub DeFi',
-    lpSymbol: 'CUB',
+    farmType: 'cola DeFi',
+    lpSymbol: 'cola',
     lpAddresses: {
       97: '',
-      56: '0x0EF564D4F8D6C0ffE13348A32e21EFd55e508e84', // CUB-BUSD LP
+      56: '0x0EF564D4F8D6C0ffE13348A32e21EFd55e508e84', // cola-BUSD LP
     },
-    token: tokens.cub,
+    token: tokens.cola,
     quoteToken: tokens.busd,
     kingdomContract: '0xc2adf5fc4d4e6c2cc97f8190acbdf808c689117c',
   },

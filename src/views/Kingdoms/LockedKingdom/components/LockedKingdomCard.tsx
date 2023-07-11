@@ -176,15 +176,15 @@ const LockedKingdomCard: React.FC<KingdomCardProps> = ({
   const existingStakeSecondsRemain = Math.max(userDataAsBigNumbers?.lockEndTime?.minus(new Date().getTime() / 1000).toNumber() || 0, 0);
 
   const [onPresentConvertToLocked] = useModal(
-      <ExtendModal amount={stakedBalance.toString()} onConfirm={onStakeLocked} tokenName="CUB" addLiquidityUrl={addLiquidityUrl} title="Convert to Lock" />
+      <ExtendModal amount={stakedBalance.toString()} onConfirm={onStakeLocked} tokenName="cola" addLiquidityUrl={addLiquidityUrl} title="Convert to Lock" />
   );
 
   const [onPresentExtend] = useModal(
-      <ExtendModal amount={stakedBalance.toString()} existingStakeDuration={existingStakeDuration} existingStakeSecondsRemain={existingStakeSecondsRemain} onConfirm={onStakeLocked} tokenName="CUB" addLiquidityUrl={addLiquidityUrl} title="Extend" />
+      <ExtendModal amount={stakedBalance.toString()} existingStakeDuration={existingStakeDuration} existingStakeSecondsRemain={existingStakeSecondsRemain} onConfirm={onStakeLocked} tokenName="cola" addLiquidityUrl={addLiquidityUrl} title="Extend" />
   );
 
   const [onPresentRenew] = useModal(
-      <ExtendModal amount={autoCakeToDisplay.toString()} existingStakeDuration={existingStakeDuration} onConfirm={onStakeLocked} tokenName="CUB" addLiquidityUrl={addLiquidityUrl} title="Renew" />
+      <ExtendModal amount={autoCakeToDisplay.toString()} existingStakeDuration={existingStakeDuration} onConfirm={onStakeLocked} tokenName="cola" addLiquidityUrl={addLiquidityUrl} title="Renew" />
   );
 
   const [onPresentFlexAdd] = useModal(
@@ -267,7 +267,7 @@ const LockedKingdomCard: React.FC<KingdomCardProps> = ({
             <ActionContent style={{flexWrap: "wrap"}}>
                 <ActionContent style={{flexDirection: "column", alignItems: "flex-start"}}>
                     <ActionTitles>
-                        <Title>CUB </Title>
+                        <Title>cola </Title>
                         <Subtle>LOCKED</Subtle>
                     </ActionTitles>
                     <ActionContent style={{display: "block"}}>
@@ -280,7 +280,7 @@ const LockedKingdomCard: React.FC<KingdomCardProps> = ({
                           style={{width: "100%"}}
                           disabled={location.pathname.includes('archived')}
                           onClick={onPresentMoreDepositLocked}
-                      >Add CUB</Button>
+                      >Add cola</Button>
                     </ActionContent>
                 </ActionContent>
               <ActionContent style={{flexDirection: "column", alignItems: "flex-end"}}>
@@ -312,7 +312,7 @@ const LockedKingdomCard: React.FC<KingdomCardProps> = ({
             <ActionContent style={{flexWrap: "wrap"}}>
               <ActionContent style={{flexDirection: "column", alignItems: "flex-start"}}>
                 <ActionTitles>
-                  <Title>CUB </Title>
+                  <Title>cola </Title>
                   <Subtle>LOCKED</Subtle>
                 </ActionTitles>
                 <ActionContent style={{display: "block"}}>
@@ -336,7 +336,7 @@ const LockedKingdomCard: React.FC<KingdomCardProps> = ({
                       <Subtle style={{color: "lightgray"}}>AFTER BURNING</Subtle>
                     </ActionTitles>
                     <Text color="failure" bold>
-                      {userDataAsBigNumbers?.overdueFee?.toNumber() > 0 && cakeVaultEarnings?.autoCakeToDisplay > 0 ? `${userDataAsBigNumbers?.overdueFee?.div(DEFAULT_TOKEN_DECIMAL)?.toNumber().toFixed(3)} CUB Burned` : '-'}
+                      {userDataAsBigNumbers?.overdueFee?.toNumber() > 0 && cakeVaultEarnings?.autoCakeToDisplay > 0 ? `${userDataAsBigNumbers?.overdueFee?.div(DEFAULT_TOKEN_DECIMAL)?.toNumber().toFixed(3)} cola Burned` : '-'}
                     </Text>
                   </ActionContent> :
                   <ActionContent style={{flexDirection: "column", alignItems: "flex-end"}}>
@@ -354,9 +354,9 @@ const LockedKingdomCard: React.FC<KingdomCardProps> = ({
         // stake is flexible and active
 
         // left side:
-        // CUB STAKED heading
-        // CUB staked amount
-        // CUB staked amount in USD
+        // cola STAKED heading
+        // cola staked amount
+        // cola staked amount in USD
 
         // right side:
         // + button to flex stake more
@@ -366,7 +366,7 @@ const LockedKingdomCard: React.FC<KingdomCardProps> = ({
             <ActionContent style={{flexWrap: "wrap"}}>
                 <ActionContent style={{flexDirection: "row", flexWrap: "wrap", alignItems: "flex-start"}}>
                     <ActionTitles style={{flex: "100%"}}>
-                        <Title>CUB </Title>
+                        <Title>cola </Title>
                         <Subtle>STAKED</Subtle>
                     </ActionTitles>
                     <ActionContent style={{display: "flex"}}>
@@ -398,7 +398,7 @@ const LockedKingdomCard: React.FC<KingdomCardProps> = ({
       return <>
         <ActionTitles>
           <Title>STAKE </Title>
-          <Subtle>CUB</Subtle>
+          <Subtle>cola</Subtle>
         </ActionTitles>
         <ActionContent style={{flexWrap: "wrap"}}>
           <Button mt="8px" fullWidth onClick={onPresentDeposit}>Flexible</Button>
@@ -436,9 +436,9 @@ const LockedKingdomCard: React.FC<KingdomCardProps> = ({
           <ActionContent style={{flex: "50%"}}>
             <div>
           <ActionTitles>
-            <Title>RECENT CUB PROFIT</Title>
+            <Title>RECENT cola PROFIT</Title>
           </ActionTitles>
-             <Earned>{countUp}CUB</Earned>
+             <Earned>{countUp}cola</Earned>
             <Staked>~{countUp2}USD</Staked>
             </div>
           </ActionContent>
@@ -461,11 +461,11 @@ const LockedKingdomCard: React.FC<KingdomCardProps> = ({
 
     return <>
       <ActionTitles>
-        <Title>RECENT CUB PROFIT</Title>
+        <Title>RECENT cola PROFIT</Title>
       </ActionTitles>
       <ActionContent style={{flexWrap: "wrap"}}>
         <div style={{width: "50%", flex: "50% 0 0"}}>
-          <Earned>{countUp}CUB</Earned>
+          <Earned>{countUp}cola</Earned>
           <Staked>~{countUp2}USD</Staked>
         </div>
         <div style={{width: "50%", flex: "50% 0 0"}}>
@@ -504,7 +504,7 @@ const LockedKingdomCard: React.FC<KingdomCardProps> = ({
           }
       >
         <Text>
-          Renew your staking position to continue earning CUB rewards.
+          Renew your staking position to continue earning cola rewards.
         </Text>
       </Message>;
     }

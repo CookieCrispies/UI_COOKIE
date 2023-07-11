@@ -18,7 +18,7 @@ import history from './routerHistory'
 // Only pool is included in the main bundle because of it's the most visited page
 const Home = lazy(() => import('./views/Home'))
 const Farms = lazy(() => import('./views/Farms'))
-const Kingdoms = lazy(() => import('./views/Kingdoms'))
+const Vaults = lazy(() => import('./views/Kingdoms'))
 const NotFound = lazy(() => import('./views/NotFound'))
 /* const Lottery = lazy(() => import('./views/lottery')) */
 const Ifos = lazy(() => import('./views/Ifos'))
@@ -63,11 +63,11 @@ const App: React.FC = () => {
             <Route path="/farms">
               <Farms />
             </Route>
-            <Route path="/dens">
+            <Route path="/pools">
               <Farms tokenMode />
             </Route>
-            <Route path="/kingdoms">
-              <Kingdoms />
+            <Route path="/vaults">
+              <Vaults />
             </Route>
             <Route path="/ido">
               <Ifos />
@@ -114,6 +114,7 @@ const App: React.FC = () => {
             <Route component={NotFound} />
           </Switch>
         </SuspenseWithChunkError>
+
       </Menu>
       {/* <EasterEgg iterations={2} />
       <ToastListener /> */}

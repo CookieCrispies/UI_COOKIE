@@ -28,7 +28,7 @@ const Menu = (props) => {
       setLang={setSelectedLanguage}
       cakePriceUsd={cakePriceUsd.toNumber()}
       links={config}
-      priceLink="https://coinmarketcap.com/currencies/cub-finance/"
+      priceLink="https://coinmarketcap.com/currencies/cola-finance/"
       profile={{
         username: profile?.username,
         image: profile?.nft ? `/images/nfts/${profile.nft?.images.sm}` : undefined,
@@ -37,7 +37,9 @@ const Menu = (props) => {
         showPip: !profile?.username,
       }}
       {...props}
+
     />
+
   )
 }
 

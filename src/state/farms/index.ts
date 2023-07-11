@@ -45,7 +45,7 @@ export const farmsSlice = createSlice({
       arrayOfUserDataObjects.forEach((userDataEl) => {
         const { pid, isKingdom, lpSymbol } = userDataEl
         const index = state.data.findIndex((farm) => farm.pid === pid && isKingdom === farm.isKingdom)
-        if (isKingdom && lpSymbol === 'CUB') state.data[index] = { ...state.data[index], userData: { ...userDataEl }}
+        if (isKingdom && lpSymbol === 'cola') state.data[index] = { ...state.data[index], userData: { ...userDataEl }}
         else state.data[index] = { ...state.data[index], userData: userDataEl }
       })
       state.userDataLoaded = true

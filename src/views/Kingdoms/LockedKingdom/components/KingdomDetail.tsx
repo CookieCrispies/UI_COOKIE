@@ -45,7 +45,7 @@ const StyledLinkExternal = styled(Link)`
   font-weight: 400;
 `
 
-const CubKingdom = styled.div`
+const colaKingdom = styled.div`
   color: ${(props) => props.theme.colors.text};
   margin-top: 0.2rem;
 `
@@ -98,9 +98,9 @@ const KingdomDetail: React.FC<KingdomDetailProps> = ({
 
   const isToken = isTokenOnly || isKingdomToken
   const farmContract= isToken ?
-    `https://bscscan.com/token/${tokenAddress}`
-    : `https://bscscan.com/token/${lpAddress}`
-  const vaultContract = `https://bscscan.com/address/${kingdomContract}`
+    `https://scan.pulsechain.com/token/${tokenAddress}`
+    : `https://scan.pulsechain.com/token/${lpAddress}`
+  const vaultContract = `https://scan.pulsechain.com/address/${kingdomContract}`
   let infoAddress = `https://pancakeswap.info/pair/${isTokenOnly ? tokenAddress : lpAddress}`
 
   const avgLockDuration = useAvgLockDuration(new BigNumber(farm?.lockedKingdomData?.totalLockedAmount || 0), new BigNumber(farm?.lockedKingdomData?.totalShares || 0), new BigNumber(farm?.lockedKingdomData?.totalBalance || 0), new BigNumber(farm?.lockedKingdomData?.pricePerFullShare || 0));
@@ -131,7 +131,7 @@ const KingdomDetail: React.FC<KingdomDetailProps> = ({
         <Detail style={{width: "20%"}}>
           <Flex justifyContent="space-between">
             <Text>Total locked:</Text>
-            <Text><Balance value={Number(totalLocked)} fontSize="md" decimals={0} unit=" CUB" /></Text>
+            <Text><Balance value={Number(totalLocked)} fontSize="md" decimals={0} unit=" cola" /></Text>
           </Flex>
           <Flex justifyContent="space-between">
             <Text><abbr title="The average lock duration of all the locked staking positions of other users">Avg. Lock Duration:</abbr></Text>

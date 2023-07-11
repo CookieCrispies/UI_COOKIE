@@ -35,6 +35,19 @@ const Actions = styled.div`
   margin-top: 24px;
 `
 
+const TokenImageWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+`
+
+const Row = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+`
+
 const FarmedStakingCard = () => {
   const [pendingTx, setPendingTx] = useState(false)
   const [pendingTxDivs, setPendingTxDivs] = useState(false)
@@ -63,15 +76,56 @@ const FarmedStakingCard = () => {
     }
   }, [onReward])
 
+  const addWatchColaToken = useCallback(async () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    const provider = window.ethereum
+    if (provider) {
+      try {
+        // wasAdded is a boolean. Like any RPC method, an error may be thrown.
+        const wasAdded = await provider.request({
+          method: 'wallet_watchAsset',
+          params: {
+            type: 'ERC20',
+            options: {
+              address: '0x02Dff78fDeDaF86D9dfbe9B3132aA3Ea72Ed1680',
+              symbol: 'COLA',
+              decimals: '18',
+              image:
+                  'https://raw.githubusercontent.com/Cola-Factory/images/master/logo.png',
+            },
+          },
+        })
+
+        if (wasAdded) {
+          console.log('Token was added')
+        }
+      } catch (error) {
+        // TODO: find a way to handle when the user rejects transaction or it fails
+      }
+    }
+  }, [])
+
   return (
     <StyledFarmStakingCard>
       <CardBody>
         <Heading size="xl" mb="24px">
-          {TranslateString(542, 'Farms & Staking')}
+          <Row> {TranslateString(542, 'Farms & Staking')}
+            <Button onClick={addWatchColaToken} scale="sm">
+              +{' '}
+              <img
+                  style={{ marginLeft: 8 }}
+                  width={16}
+                  src="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/wallet/metamask.png"
+                  alt="metamask logo"
+              /></Button> </Row>
+
+
         </Heading>
-        <CardImage src="/images/Cola/cola-card-image.png" alt="cub logo" width={64} height={64} />
-        <Flex justifyContent='space-between'>
-          <div>
+        <TokenImageWrapper>
+        <CardImage src="/images/Cola/cola-card-image.png" alt="cola logo" width={64} height={64} />
+
+        </TokenImageWrapper>
             <Block>
               <Label>{TranslateString(544, 'COLA to Harvest')}:</Label>
               <CakeHarvestBalance />
@@ -98,9 +152,6 @@ const FarmedStakingCard = () => {
                 <UnlockButton width="100%" />
               )}
             </Actions>
-          </div>
-
-        </Flex>
       </CardBody>
     </StyledFarmStakingCard>
   )

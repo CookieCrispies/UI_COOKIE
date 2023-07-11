@@ -21,7 +21,7 @@ const useAllEarnings = () => {
 
       const calls = nonKingdomFarms.map((farm) => ({
         address: getMasterChefAddress(),
-        name: 'pendingCub',
+        name: 'pendingCola',
         params: [farm.pid, account],
       }))
 
@@ -29,7 +29,7 @@ const useAllEarnings = () => {
 
       const callsK = kingdomFarms.filter(farm => farm.pid === 100).map((farm) => ({
         address: getKingdomsAddress(),
-        name: 'pendingCUB',
+        name: 'pendingCola',
         params: [farm.pid, account],
       }))
 

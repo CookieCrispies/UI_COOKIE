@@ -1,44 +1,44 @@
 import { PageMeta } from './types'
 
 export const DEFAULT_META: PageMeta = {
-  title: 'Cub Finance',
+  title: 'ColaFactory',
   description:
-    'The most popular AMM on BSC by user count! Earn CAKE through yield farming or win it in the Lottery, then stake it in Syrup Pools to earn more tokens! Initial Farm Offerings (new token launch model pioneered by Cub Finance), NFTs, and more, on a platform you can trust.',
-  image: 'https://cubdefi.com/images/2logos',
+    'Turn Cola into cold, hard cash on PulseChain',
+  image: 'https://coladefi.com/images/2logos',
 }
 
 export const customMeta: { [key: string]: PageMeta } = {
   '/': {
-    title: 'Home | Cub Finance',
+    title: 'Home | ColaFactory',
   },
   '/competition': {
-    title: 'Trading Battle | Cub Finance',
+    title: 'Trading Battle | ColaFactory',
   },
   '/prediction': {
-    title: 'Prediction | Cub Finance',
+    title: 'Prediction | ColaFactory',
   },
   '/farms': {
-    title: 'Farms | Cub Finance',
+    title: 'Farms | ColaFactory',
   },
   '/pools': {
-    title: 'Pools | Cub Finance',
+    title: 'Pools | ColaFactory',
   },
   '/lottery': {
-    title: 'Lottery | Cub Finance',
+    title: 'Lottery | ColaFactory',
   },
   '/collectibles': {
-    title: 'Collectibles | Cub Finance',
+    title: 'Collectibles | ColaFactory',
   },
   '/ido': {
-    title: 'Initial DEX Offering | Cub Finance',
+    title: 'Initial DEX Offering | ColaFactory',
   },
   '/teams': {
-    title: 'Leaderboard | Cub Finance',
+    title: 'Leaderboard | ColaFactory',
   },
   '/profile/tasks': {
-    title: 'Task Center | Cub Finance',
+    title: 'Task Center | ColaFactory',
   },
   '/profile': {
-    title: 'Your Profile | Cub Finance',
+    title: 'Your Profile | ColaFactory',
   },
 }

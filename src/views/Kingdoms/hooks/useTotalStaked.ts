@@ -6,8 +6,8 @@ import { getBalanceNumber } from 'utils/formatBalance'
 import BigNumber from 'bignumber.js'
 import getKingdomAPRAPY from 'utils/getKingdomAPRAPY'
 
-const useTotalStaked = (farms: any, cakePrice: BigNumber, bakePrice: BigNumber, beltPrice: BigNumber, cubDen: any) => {
-  let rawTotalCUB = BIG_ZERO
+const useTotalStaked = (farms: any, cakePrice: BigNumber, bakePrice: BigNumber, beltPrice: BigNumber, colaDen: any) => {
+  let rawTotalcola = BIG_ZERO
   let rawTotalStakedUSD = BIG_ZERO
   let rawTotalAPY = 0
   let rawTotalDailyAPR = 0
@@ -18,7 +18,7 @@ const useTotalStaked = (farms: any, cakePrice: BigNumber, bakePrice: BigNumber, 
       const { stakedBalance, earnings } = userData
 
       // eslint-disable-next-line react-hooks/rules-of-hooks
-      const aprApy = getKingdomAPRAPY(farm, cakePrice, bakePrice, beltPrice, cubDen)
+      const aprApy = getKingdomAPRAPY(farm, cakePrice, bakePrice, beltPrice, colaDen)
 
       if (stakedBalance > '1') {
         let oneTokenQuoteValue = BIG_ZERO
@@ -37,17 +37,17 @@ const useTotalStaked = (farms: any, cakePrice: BigNumber, bakePrice: BigNumber, 
         count += 1
       }
 
-      if (earnings !== '0') rawTotalCUB = rawTotalCUB.plus(new BigNumber(earnings))
+      if (earnings !== '0') rawTotalcola = rawTotalcola.plus(new BigNumber(earnings))
     }
   })
 
   const stakedUSD = rawTotalStakedUSD !== BIG_ZERO ? getBalanceNumber(rawTotalStakedUSD) : 0
 
-  const cubEarned = rawTotalCUB !== BIG_ZERO ? getBalanceNumber(rawTotalCUB) : 0
+  const colaEarned = rawTotalcola !== BIG_ZERO ? getBalanceNumber(rawTotalcola) : 0
 
-  const cubBusd = cubEarned ? new BigNumber(cubEarned).multipliedBy(cakePrice).toNumber() : 0
+  const colaBusd = colaEarned ? new BigNumber(colaEarned).multipliedBy(cakePrice).toNumber() : 0
 
-  return [stakedUSD, cubEarned, cubBusd, rawTotalAPY, rawTotalDailyAPR, count]
+  return [stakedUSD, colaEarned, colaBusd, rawTotalAPY, rawTotalDailyAPR, count]
 }
 
 export default useTotalStaked

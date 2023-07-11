@@ -1,18 +1,18 @@
 const tokens = {
   bnb: {
-    symbol: 'BNB',
-    projectLink: 'https://www.binance.com/',
+    symbol: 'PLS',
+    projectLink: 'https://gopulse.com/',
   },
   cake: {
     symbol: 'CAKE',
     address: {
       56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
       97: '0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe',
-      369: '',
+      369: '0x02Dff78fDeDaF86D9dfbe9B3132aA3Ea72Ed1680',
       943: '',
     },
     decimals: 18,
-    projectLink: 'https://pancakeswap.finance/',
+    projectLink: 'https://app.pulsex.com/',
   },
   wbnb: {
     symbol: 'BNB',
@@ -23,7 +23,7 @@ const tokens = {
       943: '',
     },
     decimals: 18,
-    projectLink: 'https://pancakeswap.finance/',
+    projectLink: 'https://app.pulsex.com/',
   },
   busd: {
     symbol: 'BUSD',
@@ -135,8 +135,8 @@ const tokens = {
     decimals: 18,
     projectLink: 'https://bitcoin.org/',
   },
-  cub: {
-    symbol: 'CUB',
+  cola: {
+    symbol: 'cola',
     address: {
       56: '0x50d809c74e0b8e49e7b4c65bb3109abe3ff4c1c1',
       97: '',
@@ -144,18 +144,7 @@ const tokens = {
       943: '',
     },
     decimals: 18,
-    projectLink: 'https://cubdefi.com/',
-  },
-  cola: {
-    symbol: 'COLA',
-    address: {
-      56: '0x50d809c74e0b8e49e7b4c65bb3109abe3ff4c1c1',
-      97: '',
-      369: '0x02Dff78fDeDaF86D9dfbe9B3132aA3Ea72Ed1680',
-      943:'0xa0F242fBD6bA8769dE3E2421fC83B0e658902627',
-    },
-    decimals: 18,
-    projectLink: 'https://colafactory.com/',
+    projectLink: 'https://coladefi.com/',
   },
   bleo: {
     symbol: 'bLEO',
@@ -166,7 +155,7 @@ const tokens = {
       943: '',
     },
     decimals: 18,
-    projectLink: 'https://cubdefi.com/',
+    projectLink: 'https://coladefi.com/',
   },
   dec: {
     symbol: 'DEC',
@@ -177,7 +166,7 @@ const tokens = {
       943: '',
     },
     decimals: 18,
-    projectLink: 'https://cubdefi.com/',
+    projectLink: 'https://coladefi.com/',
   },
   bake: {
     symbol: 'BAKE',
@@ -354,7 +343,7 @@ const tokens = {
       943: '',
     },
     decimals: 3,
-    projectLink: 'https://cubdefi.com/',
+    projectLink: 'https://coladefi.com/',
   },
   bhive: {
     symbol: 'bHIVE',
@@ -365,7 +354,7 @@ const tokens = {
       943: '',
     },
     decimals: 3,
-    projectLink: 'https://cubdefi.com/',
+    projectLink: 'https://coladefi.com/',
   },
 }
 

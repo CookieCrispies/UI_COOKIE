@@ -1,5 +1,5 @@
 {
-  "extends": ["@commitlint/config-conventional"],
+  "extends": ["@commitment/config-conventional"],
   "rules": {
     "subject-case": [2, "always", "sentence-case"],
     "type-enum": [

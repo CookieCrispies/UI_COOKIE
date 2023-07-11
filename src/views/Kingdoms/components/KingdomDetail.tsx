@@ -43,7 +43,7 @@ const StyledLinkExternal = styled(Link)`
   font-weight: 400;
 `
 
-const CubKingdom = styled.div`
+const ColaKingdom = styled.div`
   color: ${(props) => props.theme.colors.text};
   margin-top: 0.2rem;
 `
@@ -94,9 +94,9 @@ const KingdomDetail: React.FC<KingdomDetailProps> = ({
 
   const isToken = isTokenOnly || isKingdomToken
   const farmContract= isToken ?
-    `https://bscscan.com/token/${tokenAddress}`
-    : `https://bscscan.com/token/${lpAddress}`
-  const vaultContract = `https://bscscan.com/address/${kingdomContract}`
+    `https://scan.pulsechain.com/token/${tokenAddress}`
+    : `https://scan.pulsechain.com/token/${lpAddress}`
+  const vaultContract = `https://scan.pulsechain.com/address/${kingdomContract}`
   let infoAddress = `https://pancakeswap.info/pair/${isTokenOnly ? tokenAddress : lpAddress}`
 
   let exchangeUrl = PCS_ADD_LIQUIDITY_URL
@@ -147,7 +147,7 @@ const KingdomDetail: React.FC<KingdomDetailProps> = ({
             <Text>Auto-compound</Text>
           </Flex>
           {altPid === 12 ? (
-            <CubKingdom>*CUB Kingdom multiplier coexists with CUB Den multiplier</CubKingdom>
+            <ColaKingdom>*cola Kingdom multiplier coexists with cola Den multiplier</ColaKingdom>
           ) : (
             <Flex justifyContent="space-between">
               <Text>Farm:</Text>

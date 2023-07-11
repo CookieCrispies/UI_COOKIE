@@ -55,31 +55,31 @@ const ComingSoon = () => {
       <Content>
         <div>
           <Block>
-            <Title as="h2">{TranslateString(999, 'Coming Soon to CubDefi.')}</Title>
+            <Title as="h2">{TranslateString(999, 'Coming Soon to colaDefi.')}</Title>
             <Text mb={3}>
               {TranslateString(
                 504,
-                'You’ll pay for the new tokens using CUB-BNB LP tokens, which means you need to stake equal amounts of CUB and BNB in a liquidity pool to take part.',
+                'You’ll pay for the new tokens using cola-BNB LP tokens, which means you need to stake equal amounts of cola and BNB in a liquidity pool to take part.',
               )}
             </Text>
             <Text mb={3}>
-              <LiquidityLink href="https://pancakeswap.finance/liquidity">
-                {TranslateString(506, 'Get CUB-BNB LP >')}
+              <LiquidityLink href="https://app.pulsex.com/liquidity">
+                {TranslateString(506, 'Get cola-BNB LP >')}
               </LiquidityLink>
             </Text>
             <Text mb={3}>
-              {TranslateString(508, 'The project gets the BNB, CubDefi burns the CUB.')}
+              {TranslateString(508, 'The project gets the BNB, colaDefi burns the cola.')}
               <br />
               <strong>{TranslateString(510, 'You get the tokens.')}</strong>
             </Text>
           </Block>
-          <MobileImage src="/images/cub/wide.svg" alt="ifo bunny" />
+          <MobileImage src="/images/cola/wide.svg" alt="ifo bunny" />
           <Block>
             <Title as="h2">{TranslateString(512, 'Want to launch your own IDO?')}</Title>
             <Text mb={3}>
               {TranslateString(
                 514,
-                'Launch your project with CubDefi to bring your token directly to the most active and rapidly growing community on BSC.',
+                'Launch your project with colaDefi to bring your token directly to the most active and rapidly growing community on BSC.',
               )}
             </Text>
             <Button
@@ -93,7 +93,7 @@ const ComingSoon = () => {
           </Block>
         </div>
         <div>
-          <MainImage src="/images/cub/wide.svg" alt="ifo bunny" />
+          <MainImage src="/images/cola/wide.svg" alt="ifo bunny" />
         </div>
       </Content>
     </Page>

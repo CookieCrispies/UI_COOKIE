@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://pancakeswap.finance/swap?outputCurrency=0x50d809c74e0b8e49e7b4c65bb3109abe3ff4c1c1',
+        href: 'https://app.pulsex.com',
       },
       {
         label: 'Liquidity',
-        href: 'https://pancakeswap.finance/add/0xe9e7cea3dedca5984780bafc599bd69add087d56/0x50d809c74e0b8e49e7b4c65bb3109abe3ff4c1c1',
+        href: 'https://app.pulsex.com',
       },
     ],
   },
@@ -28,14 +28,14 @@ const config: MenuEntry[] = [
   {
     label: 'Pools',
     icon: 'PoolIcon',
-    href: '/dens',
+    href: '/pools',
   },
   {
     label: 'Vaults',
     icon: 'PawIcon',
-    href: '/kingdoms',
+    href: '/vaults',
     status: {
-      text: 'AUTO',
+      text: 'SOON',
       color: 'warning',
     },
   },
@@ -55,9 +55,9 @@ const config: MenuEntry[] = [
     href: "https://wleo.io/hive-bsc/",
   },
   {
-    label: 'PolyCUB',
+    label: 'Polycola',
     icon: 'PawIcon',
-    href: 'https://polycub.com',
+    href: 'https://polycola.com',
     status: {
       text: 'Polygon',
       color: 'warning',
@@ -67,6 +67,10 @@ const config: MenuEntry[] = [
     label: 'IDO',
     icon: 'IfoIcon',
     href: '/ido',
+    status: {
+      text: 'SOON',
+      color: 'warning',
+    },
   },
   {
     label: 'Charts',
@@ -82,7 +86,7 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Coingecko',
-        href: 'https://www.coingecko.com/',
+        href: 'https://www.coingecko.com/en/coins/cola-token-2',
       },
       {
         label: 'Coinmarketcap',
@@ -111,7 +115,7 @@ const config: MenuEntry[] = [
   /* {
     label: 'Roadmap',
     icon: 'MoreIcon',
-    href: 'https://docs.cubdefi.com/roadmap',
+    href: 'https://docs.coladefi.com/roadmap',
   },
   {
     label: "Tokenized Blogging",
@@ -126,7 +130,7 @@ const config: MenuEntry[] = [
   {
     label: 'CertiK Audit',
     icon: 'AuditIcon',
-    href: 'https://www.certik.org/projects/cubfinance',
+    href: 'https://www.certik.org/projects/colafinance',
   }, */
 ]
 

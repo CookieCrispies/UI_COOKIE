@@ -20,7 +20,7 @@ export interface InitialPoolVaultState {
 // call LockedKingdoms ABI and convert into the above format
 export const fetchPoolVaultData = async (): Promise<InitialPoolVaultState> => {
     const contract = getLockedKingdomsContract()
-    const cubContract = getCakeContract();
+    const colaContract = getCakeContract();
     const lockedKingdomsAddress = getLockedKingdomsAddress();
 
     const [
@@ -38,7 +38,7 @@ export const fetchPoolVaultData = async (): Promise<InitialPoolVaultState> => {
         contract.methods.withdrawFee().call(),
         contract.methods.withdrawFeePeriod().call(),
         contract.methods.performanceFee().call(),
-        cubContract.methods.balanceOf(lockedKingdomsAddress).call(),
+        colaContract.methods.balanceOf(lockedKingdomsAddress).call(),
     ])
 
     return {

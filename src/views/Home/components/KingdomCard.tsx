@@ -22,11 +22,11 @@ const KingdomCard = () => {
       <CardBody>
         <CardMidContent color="primary">Kingdoms</CardMidContent>
         <Heading color="contrast" size="lg">
-          CUB&apos;s First Composable Yield Farming Contract
+          cola&apos;s First Composable Yield Farming Contract
         </Heading>
         <Flex justifyContent="space-between">
           <CardMidContent color="primary">LIVE</CardMidContent>
-          <NavLink exact activeClassName="active" to="/kingdoms">
+          <NavLink exact activeClassName="active" to="/vaults">
             <ArrowForwardIcon mt={30} color="primary" />
           </NavLink>
         </Flex>
