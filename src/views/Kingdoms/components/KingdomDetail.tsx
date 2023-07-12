@@ -21,7 +21,7 @@ const Detail = styled.div`
   /*display: inline;
   margin-right: 1rem;*/
   /*& div {
-    font-family: Arial;
+    font-family: Bantayog Regular;
     font-size: 0.8rem;
     padding: 2px;
   }*/
