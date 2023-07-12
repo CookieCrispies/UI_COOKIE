@@ -95,7 +95,7 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Coinmarketcap',
-        href: 'https://coinmarketcap.com/',
+        href: 'https://coinmarketcap.com/currencies/colafactory/',
       },
     ],
   },

@@ -1,4 +1,4 @@
-import BigNumber from 'bignumber.js/bignumber'
+import BigNumber from 'bignumber.js'
 import { BigNumber as EthersBigNumber } from '@ethersproject/bignumber'
 import { BIG_TEN } from 'utils/bigNumber'
 

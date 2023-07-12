@@ -22,7 +22,7 @@ const BridgeCard = () => {
         <Heading color="contrast" size="lg">
           VIP & Public presale
         </Heading>
-        <CardMidContent color="invertedContrast">1 500 000 COLA token</CardMidContent>
+        <CardMidContent color="invertedContrast">Get COLA token</CardMidContent>
         <Flex justifyContent="space-between">
           <Heading color="contrast" size="lg">
             Coming soon !

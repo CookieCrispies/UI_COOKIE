@@ -5,7 +5,7 @@ import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'
 import useI18n from 'hooks/useI18n'
 import { getCakeAddress } from 'utils/addressHelpers'
-import BigNumber from 'bignumber.js/bignumber'
+import BigNumber from 'bignumber.js'
 import CardValue from './CardValue'
 import { usePriceCakeBusd } from '../../../state/hooks'
 import farms from "../../Farms";
@@ -71,7 +71,7 @@ const CakeStats = () => {
           <a href="https://www.coingecko.com/en/coins/cola-token-2">
             <img src="/images/Cola/CG.png" width="80px" alt="Cola Defi" />
           </a>
-          <a href="https://coinmarketcap.com/">
+          <a href="https://coinmarketcap.com/currencies/colafactory/">
             <img src="/images/Cola/CMC.png" width="80px" alt="Cola Defi" />
           </a>
           <a href="https://www.geckoterminal.com">
