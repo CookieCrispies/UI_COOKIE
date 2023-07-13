@@ -27,7 +27,7 @@ const BridgeCard = () => {
           <Heading color="contrast" size="lg">
             Coming soon !
           </Heading>
-          <Link href="https://docs.google.com/spreadsheets/d/1xi3MQhUousgQuDAsnt59GMOYp2mi8m3NHkD0kUItbNo/edit?usp=sharing">
+          <Link href="https://forms.gle/Ms6z83Ci4a6wBmTe8">
             <ArrowForwardIcon mt={30} color="contrast" />
           </Link>
         </Flex>
