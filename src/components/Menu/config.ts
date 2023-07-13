@@ -78,6 +78,15 @@ const config: MenuEntry[] = [
     href: 'https://snapshot.org/#/colafactory.eth',
   },
   {
+    label: 'Audit',
+    icon: 'AuditIcon',
+    href: 'https://snapshot.org/#/colafactory.eth',
+    status: {
+      text: 'SOON',
+      color: 'warning',
+    },
+  },
+  {
     label: 'Charts',
     icon: 'InfoIcon',
     items: [
