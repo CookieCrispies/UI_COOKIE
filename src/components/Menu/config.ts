@@ -80,7 +80,7 @@ const config: MenuEntry[] = [
   {
     label: 'Audit',
     icon: 'AuditIcon',
-    href: 'https://snapshot.org/#/colafactory.eth',
+    href: 'https://colafactory.com/',
     status: {
       text: 'SOON',
       color: 'warning',
