@@ -72,7 +72,7 @@ const Ifo = () => {
             <Button
               as="a"
               variant="secondary"
-              href="https://docs.colafactory.com/"
+              href="https://docs.colafactory.com/cola-products/ido"
             >
               {TranslateString(610, 'Read more')}
             </Button>
