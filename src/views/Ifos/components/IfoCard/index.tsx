@@ -75,7 +75,6 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
     launchTime,
     saleAmount,
     raiseAmount,
-    cakeToBurn,
     projectSiteUrl,
     currency,
     currencyAddress,
@@ -146,7 +145,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
 
   return (
     <StyledIfoCard ifoId={id} ribbon={Ribbon} isActive={isActive}>
-      <BackgroundImg ifoId={id} src={`/images/ifos/${id}-bg.svg`} />
+      <BackgroundImg ifoId={id} src={`/images/ifos/${id}.jpg`} />
       <CardBody>
         <IfoCardHeader ifoId={id} name={name} subTitle={subTitle} />
         <IfoCardProgress progress={state.progress} />
@@ -175,7 +174,6 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
           launchTime={launchTime}
           saleAmount={saleAmount}
           raiseAmount={raiseAmount}
-          cakeToBurn={cakeToBurn}
           projectSiteUrl={projectSiteUrl}
           raisingAmount={state.raisingAmount}
           totalAmount={state.totalAmount}

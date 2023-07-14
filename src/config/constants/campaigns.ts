@@ -41,6 +41,12 @@ const campaigns: Campaign[] = [
     badge: 'ifo-wsote.svg',
   },
   {
+    id: '511050000',
+    type: 'ifo',
+    title: 'Cola',
+    badge: 'cola.jpg',
+  },
+  {
     id: '511040000',
     type: 'ifo',
     title: 'Helmet',

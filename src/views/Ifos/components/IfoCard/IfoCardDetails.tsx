@@ -9,7 +9,6 @@ export interface IfoCardDetailsProps {
   launchTime: string
   saleAmount: string
   raiseAmount: string
-  cakeToBurn: string
   projectSiteUrl: string
   raisingAmount: BigNumber
   totalAmount: BigNumber
@@ -34,7 +33,6 @@ const IfoCardDetails: React.FC<IfoCardDetailsProps> = ({
   launchTime,
   saleAmount,
   raiseAmount,
-  cakeToBurn,
   projectSiteUrl,
   raisingAmount,
   totalAmount,
@@ -49,7 +47,7 @@ const IfoCardDetails: React.FC<IfoCardDetailsProps> = ({
           <Text>
             {launchDate},
             <Link
-              href="https://www.timeanddate.com/worldclock/singapore/singapore"
+              href="https://www.timeanddate.com/worldclock/uk/london"
               target="blank"
               rel="noopener noreferrer"
               ml="4px"
@@ -67,17 +65,20 @@ const IfoCardDetails: React.FC<IfoCardDetailsProps> = ({
           <Display>{TranslateString(999, 'To raise (USD)')}</Display>
           <Text>{raiseAmount}</Text>
         </Item>
-        <Item>
+        {/* <Item>
           <Display>{TranslateString(586, 'cola to burn (USD)')}</Display>
           <Text>{cakeToBurn}</Text>
-        </Item>
+        </Item> */}
         <Item>
           <Display>{TranslateString(999, 'Total raised (% of target)')}</Display>
           <Text>{`${totalAmount.div(raisingAmount).times(100).toFixed(2)}%`}</Text>
         </Item>
       </StyledIfoCardDetails>
-      <LinkExternal href={projectSiteUrl} style={{ margin: 'auto' }}>
+      {/* <LinkExternal href={projectSiteUrl} style={{ margin: 'auto' }}>
         {TranslateString(412, 'View project site')}
+      </LinkExternal> */}
+      <LinkExternal href="https://scan.pulsechain.com/address/0x06B6f6A5b49fce0B95D3516780756b541D45F20E" style={{ margin: 'auto' }}>
+        {TranslateString(412, 'View contract address')}
       </LinkExternal>
     </>
   )

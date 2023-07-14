@@ -44,7 +44,7 @@ const Ifo = () => {
         {activeIfo? <IfoCard ifo={activeIfo} /> : <Text>No Active IDOs</Text>}
       </IfoCards>
       <LaunchIfoCallout>
-        <div>
+        {/* <div>
           <Title as="h2">{TranslateString(592, 'How to Participate in Decentralized IDOs on ColaFactory')}</Title>
           <Heading mb="16px">{TranslateString(594, 'Before IDO')}:</Heading>
           <List>
@@ -78,7 +78,7 @@ const Ifo = () => {
               {TranslateString(610, 'Read more')}
             </Button>
           </Text>
-        </div>
+        </div> */}
         <div>
           <Image src="/images/Cola/logoCola2.png" alt="ifo" width={500} height={406} responsive />
           <div>
