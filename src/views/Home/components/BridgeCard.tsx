@@ -20,14 +20,14 @@ const BridgeCard = () => {
     <StyledFarmStakingCard>
       <CardBody>
         <Heading color="contrast" size="lg">
-          VIP presale
+          Public presale open soon !
         </Heading>
-        <CardMidContent color="invertedContrast">Get COLA token !</CardMidContent>
+        <CardMidContent color="invertedContrast">GET COLA TOKEN !</CardMidContent>
         <Flex justifyContent="space-between">
           <Heading color="contrast" size="lg">
-            LIVE !
+            SOON !
           </Heading>
-          <Link href="https://forms.gle/Ms6z83Ci4a6wBmTe8">
+          <Link href="/ido">
             <ArrowForwardIcon mt={30} color="contrast" />
           </Link>
         </Flex>

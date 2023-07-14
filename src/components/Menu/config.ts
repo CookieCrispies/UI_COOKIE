@@ -80,10 +80,10 @@ const config: MenuEntry[] = [
   {
     label: 'Audit',
     icon: 'AuditIcon',
-    href: 'https://colafactory.com/',
+    href: 'https://github.com/TechRate/Smart-Contract-Audits/blob/main/July_2023/ColaToken.pdf',
     status: {
-      text: 'SOON',
-      color: 'warning',
+      text: 'LIVE',
+      color: 'failure',
     },
   },
   {
