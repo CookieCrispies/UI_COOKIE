@@ -12,7 +12,7 @@ const ifos: Ifo[] = [
             'Our primary aim is to utilize the scalability, security, decentralization, and lower transaction fees offered by the PULSECHAIN Blockchain to deliver the finest product to the PULSECHAIN Ecosystem.',
         launchDate: 'Jui. 15',
         launchTime: '2PM LON',
-        saleAmount: '500,000 COLA',
+        saleAmount: '250,000 COLA',
         raiseAmount: '$50,000',
         projectSiteUrl: 'https://colafactory.com/',
         currency: 'WPLS',
