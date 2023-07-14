@@ -77,7 +77,7 @@ const IfoCardDetails: React.FC<IfoCardDetailsProps> = ({
       {/* <LinkExternal href={projectSiteUrl} style={{ margin: 'auto' }}>
         {TranslateString(412, 'View project site')}
       </LinkExternal> */}
-      <LinkExternal href="https://scan.pulsechain.com/address/0x06B6f6A5b49fce0B95D3516780756b541D45F20E" style={{ margin: 'auto' }}>
+      <LinkExternal href="https://scan.pulsechain.com/address/0x89B35f7Af474D7f8259A8086670c7506B6F2e452" style={{ margin: 'auto' }}>
         {TranslateString(412, 'View contract address')}
       </LinkExternal>
     </>

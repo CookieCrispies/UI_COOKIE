@@ -3,7 +3,7 @@ import { Ifo } from './types'
 const ifos: Ifo[] = [
     {
         id: 'cola',
-        address: '0x06B6f6A5b49fce0B95D3516780756b541D45F20E',
+        address: '0x89B35f7Af474D7f8259A8086670c7506B6F2e452',
         isActive: true,
         name: 'ColaFactory',
         subTitle: 'Turn Cola into cold, hard cash on PulseChain',
