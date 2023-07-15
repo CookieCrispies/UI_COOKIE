@@ -68,8 +68,8 @@ const config: MenuEntry[] = [
     icon: 'IfoIcon',
     href: '/ido',
     status: {
-      text: 'SOON',
-      color: 'warning',
+      text: 'LIVE',
+      color: 'failure',
     },
   },
   {

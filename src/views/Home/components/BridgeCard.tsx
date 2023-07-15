@@ -25,7 +25,7 @@ const BridgeCard = () => {
         <CardMidContent color="invertedContrast">GET COLA TOKEN !</CardMidContent>
         <Flex justifyContent="space-between">
           <Heading color="contrast" size="lg">
-            SOON !
+            LIVE !
           </Heading>
           <Link href="/ido">
             <ArrowForwardIcon mt={30} color="contrast" />
