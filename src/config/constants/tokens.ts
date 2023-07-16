@@ -140,7 +140,7 @@ const tokens = {
     address: {
       56: '0x50d809c74e0b8e49e7b4c65bb3109abe3ff4c1c1',
       97: '',
-      369: '',
+      369: '0x02Dff78fDeDaF86D9dfbe9B3132aA3Ea72Ed1680',
       943: '',
     },
     decimals: 18,
