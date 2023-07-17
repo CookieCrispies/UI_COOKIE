@@ -170,7 +170,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, account }
             {farm.apr ? (
               <>
                 <ApyButton lpLabel={lpLabel} addLiquidityUrl={addLiquidityUrl} cakePrice={cakePrice} apr={farm.apr} />
-                {APR}%
+                {farmAPR}%
               </>
             ) : (
               <Skeleton height={24} width={80} />
