@@ -439,7 +439,7 @@ const farms: FarmConfig[] = [
       943: '',
     },
     token: tokens.dai,
-    quoteToken: tokens.usdc,
+    quoteToken: tokens.wpls,
   },
   {
     pid: 6,

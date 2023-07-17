@@ -88,7 +88,7 @@ const tokens = {
       369: '0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39',
       943: '',
     },
-    decimals: 6,
+    decimals: 8,
     projectLink: 'https://www.centre.io/usdc',
   },
   ehex: {
@@ -99,7 +99,7 @@ const tokens = {
       369: '0x57fde0a71132198BBeC939B98976993d8D89D225',
       943: '',
     },
-    decimals: 6,
+    decimals: 8,
     projectLink: 'https://www.centre.io/usdc',
   },
   dai: {
@@ -110,7 +110,7 @@ const tokens = {
       369: '0xefD766cCb38EaF1dfd701853BFCe31359239F305',
       943: '',
     },
-    decimals: 6,
+    decimals: 18,
     projectLink: 'http://www.makerdao.com/',
   },
   dot: {
