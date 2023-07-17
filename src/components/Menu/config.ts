@@ -92,11 +92,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'PulseX',
-        href: 'https://app.pulsex.com/swap',
+        href: 'https://app.pulsex.com/info/pool/0x7978de6276f5f7397e730c143f194bcb66c03cc7',
       },
       {
         label: 'DexScreener',
-        href: 'https://dexscreener.com/pulsechain',
+        href: 'https://dexscreener.com/pulsechain/0x7978de6276f5f7397e730c143f194bcb66c03cc7',
       },
       {
         label: 'Coingecko',

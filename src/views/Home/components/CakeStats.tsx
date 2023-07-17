@@ -73,13 +73,13 @@ const CakeStats = () => {
           <a href="https://coinmarketcap.com/currencies/colafactory/">
             <img src="/images/Cola/CMC.png" width="80px" alt="Cola Defi" />
           </a>
-          <a href="https://www.geckoterminal.com">
+          <a href="https://www.geckoterminal.com/fr/pulsechain/pools/0x7978de6276f5f7397e730c143f194bcb66c03cc7">
             <img src="/images/Cola/gecko.png" width="80px" alt="Cola Defi" />
           </a>
           <a href="https://scan.pulsechain.com/address/0x02Dff78fDeDaF86D9dfbe9B3132aA3Ea72Ed1680/contracts#address-tabs">
             <img src="/images/Cola/scan.png" width="80px" alt="Cola Defi" />
           </a>
-          <a href="https://www.dextools.io/app/en/pulse">
+          <a href="https://www.dextools.io/app/en/pulse/pair-explorer/0x7978de6276f5f7397e730c143f194bcb66c03cc7">
             <img src="/images/Cola/dextools.png" width="80px" alt="Cola Defi" />
           </a>
         </Row>
