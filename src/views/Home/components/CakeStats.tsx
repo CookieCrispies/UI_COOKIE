@@ -33,7 +33,7 @@ const CakeStats = () => {
   const {data:farms} = useFarms();
   let ColaPerBlock = 0
   if (farms && farms[0] && farms[0]?.colaPerBlock) {
-    ColaPerBlock = new BigNumber(farms[0]?.colaPerBlock).div(new BigNumber(10).pow(18)).toNumber()
+    ColaPerBlock = new BigNumber(farms[0]?.colaPerBlock).toNumber()
   }
 
   return (
