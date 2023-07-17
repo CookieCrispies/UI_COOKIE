@@ -206,9 +206,10 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
 
         const quoteTokenPriceUsd = farm.quoteToken.busdPrice
         const totalLiquidity = new BigNumber(farm.lpTotalInQuoteToken).times(quoteTokenPriceUsd)
-        const apr = isActive ? getFarmApr(farm.poolWeight, cakePrice, totalLiquidity) : 0
-
-        return { ...farm, apr, liquidity: totalLiquidity }
+        
+        const apr = isActive ? getFarmApr(farm.colaPerBlock, farm.poolWeight, cakePrice, totalLiquidity) : 0
+        
+        return { ...farm, apr: apr ?? 0, liquidity: totalLiquidity }
       })
 
       if (query) {
@@ -312,6 +313,9 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
       compoundFrequency: 1,
     })
 
+    if (farm.pid === 10)
+      console.log('apr', farm.apr)
+
     const APR = getRoi({
       amountEarned: tokenEarnedPerThousand365D,
       amountInvested: 1000 / parseFloat(token.busdPrice),
@@ -319,7 +323,7 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
 
     const row: RowProps = {
       apr: {
-        value: APR,
+        value: farm?.apr?.toFixed(2),
         multiplier: farm.multiplier,
         lpLabel,
         tokenAddress,

@@ -8,7 +8,7 @@ export default {
   masterChef: {
     56: '0x227e79c83065edb8b954848c46ca50b96cb33e16',
     97: '',
-    369: '0xa966764447731D037E1deCA24ef44284fA0734D5',
+    369: '0x5Fe423A22d4bFD1caFd6044042f4269Fc930F8dC',
     943:'0x789fb076e08cE07A39aA81b4c5Cdf85E07EAf551',
   },
   kingdoms: {
@@ -72,6 +72,12 @@ export default {
     943:'0xb50F69cA8071c0FCD0273D6C2b87336c9e84fadF',
   },
   busd: {
+    56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+    97: '',
+    369: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07', // USDC from ETH
+    943:'0x846ccAD8AD1BaDFC0b2FFa515f66ae8E4AaF8f1d', // USDCola
+  },
+  usdc: {
     56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
     97: '',
     369: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07', // USDC from ETH

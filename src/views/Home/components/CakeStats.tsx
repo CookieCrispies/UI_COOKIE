@@ -7,8 +7,7 @@ import useI18n from 'hooks/useI18n'
 import { getCakeAddress } from 'utils/addressHelpers'
 import BigNumber from 'bignumber.js'
 import CardValue from './CardValue'
-import { usePriceCakeBusd } from '../../../state/hooks'
-import farms from "../../Farms";
+import { useFarms, usePriceCakeBusd } from '../../../state/hooks'
 
 const StyledCakeStats = styled(Card)`
   margin-left: auto;
@@ -31,10 +30,10 @@ const CakeStats = () => {
   const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0);
   const cakeSupply = getBalanceNumber(circSupply);
   const marketCap = colaPrice.times(circSupply);
-
+  const {data:farms} = useFarms();
   let ColaPerBlock = 0
-  if (farms && farms[0] && farms[0].colaPerBlock) {
-    ColaPerBlock = new BigNumber(farms[0].colaPerBlock).div(new BigNumber(10).pow(18)).toNumber()
+  if (farms && farms[0] && farms[0]?.colaPerBlock) {
+    ColaPerBlock = new BigNumber(farms[0]?.colaPerBlock).div(new BigNumber(10).pow(18)).toNumber()
   }
 
   return (

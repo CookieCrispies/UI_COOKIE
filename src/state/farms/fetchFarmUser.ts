@@ -133,13 +133,13 @@ export const fetchFarmUserEarnings = async (account: string, farmsToFetch: FarmC
     params: [farm.pid, account],
   }))
 
-  const callsLK = getLockedKingdomsUserEarnings(account);
+  // const callsLK = getLockedKingdomsUserEarnings(account);
 
   const rawEarningsMasterChef = await multicall(masterchefABI, callsMC)
-  const rawEarningsKingdoms = await multicall(kingdomsABI, callsK)
-  const rawEarningsLockedKingdoms = await callsLK;
+  // const rawEarningsKingdoms = await multicall(kingdomsABI, callsK)
+  // const rawEarningsLockedKingdoms = await callsLK;
 
-  const rawEarnings = [...rawEarningsMasterChef, rawEarningsLockedKingdoms, ...rawEarningsKingdoms]
+  const rawEarnings = [...rawEarningsMasterChef, ]
   const parsedEarnings = rawEarnings.map((earnings) => {
     if (earnings === "NaN") {
       return new BigNumber(0).toJSON()

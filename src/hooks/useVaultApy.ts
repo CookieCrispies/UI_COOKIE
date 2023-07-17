@@ -82,7 +82,7 @@ export default function useVaultApy({ duration = MAX_LOCK_DURATION, tvl = "" }: 
         const calls = [
             {
                 address: masterChefAddress,
-                name: 'colaPerBlock'
+                name: 'ColaPerBlock'
             },
             {
                 address: masterChefAddress,

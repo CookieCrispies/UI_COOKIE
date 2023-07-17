@@ -29,6 +29,7 @@ export const getPoolApr = (
  * @returns
  */
 export const getFarmApr = (
+  cakePerBlock: BigNumber,
   poolWeight: BigNumber,
   cakePriceUsd: BigNumber,
   poolLiquidityUsd: BigNumber,
@@ -43,7 +44,7 @@ export const getFarmApr = (
     const apr = yearlyCakeRewardAllocation.times(cakePriceUsd).div(poolLiquidityUsd).times(100)
     return apr.isNaN() || !apr.isFinite() ? null : apr.toNumber()
   }
-  const yearlyCakeRewardAllocation = CAKE_PER_BLOCK.times(BLOCKS_PER_YEAR).times(poolWeight)
+  const yearlyCakeRewardAllocation = new BigNumber(cakePerBlock).times(BLOCKS_PER_YEAR).times(poolWeight)
   const liquidity = poolLiquidityUsd.toNumber() ? poolLiquidityUsd : new BigNumber(0)
   const apr = yearlyCakeRewardAllocation.times(cakePriceUsd).div(liquidity).times(100)
 

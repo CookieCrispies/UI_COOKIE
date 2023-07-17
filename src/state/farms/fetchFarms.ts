@@ -207,10 +207,10 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
 
           if (farmConfig.farmType === 'Belt') tokenAmount = new BigNumber(kingdomSupply)
 
-          if (farmConfig.token.symbol === 'BUSD' && farmConfig.quoteToken.symbol === 'BUSD') {
+          if (farmConfig.token.symbol === 'USDC' && farmConfig.quoteToken.symbol === 'USDC') {
             tokenPriceVsQuote = new BigNumber(1)
           } else {
-            tokenPriceVsQuote = new BigNumber(quoteTokenBalanceLP).div(new BigNumber(tokenBalanceLP))
+            tokenPriceVsQuote = new BigNumber(quoteTokenBalanceLP).div(new BigNumber(tokenBalanceLP)).div(BIG_TEN.pow(farmConfig.quoteToken.decimals)).times(BIG_TEN.pow(farmConfig.token.decimals))
           }
 
           lpTotalInQuoteToken = tokenAmount.times(tokenPriceVsQuote)
@@ -221,12 +221,12 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
 
           // Total value in staking in quote token value
           lpTotalInQuoteToken = new BigNumber(quoteTokenBalanceLP)
-              .div(DEFAULT_TOKEN_DECIMAL)
+              .div(BIG_TEN.pow(farmConfig.quoteToken.decimals))
               .times(new BigNumber(2))
               .times(lpTokenRatio)
 
-          tokenPriceVsQuote = new BigNumber(quoteTokenBalanceLP).div(new BigNumber(tokenBalanceLP))
-
+          tokenPriceVsQuote = new BigNumber(quoteTokenBalanceLP).div(new BigNumber(tokenBalanceLP)).div(BIG_TEN.pow(farmConfig.quoteToken.decimals)).times((BIG_TEN.pow(farmConfig.token.decimals)));
+          
           if (farmConfig.isKingdom) {
 
             const lpTokenRatioPCS = new BigNumber(lpTokenBalanceMC).div(new BigNumber(lpTotalSupply))
@@ -249,19 +249,20 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
                 .times(new BigNumber(2))
           }
           // Amount of token in the LP that are considered staking (i.e amount of token * lp ratio)
-          tokenAmount = new BigNumber(tokenBalanceLP).div(BIG_TEN.pow(tokenDecimals)).times(lpTokenRatio)
+          tokenAmount = new BigNumber(tokenBalanceLP).div(BIG_TEN.pow(farmConfig.token.decimals)).times(lpTokenRatio)
+          
           quoteTokenAmount = new BigNumber(quoteTokenBalanceLP)
-              .div(BIG_TEN.pow(quoteTokenDecimals))
+              .div(BIG_TEN.pow(farmConfig.quoteToken.decimals))
               .times(lpTokenRatio)
 
           if (tokenAmount.comparedTo(0) > 0) {
             tokenPriceVsQuote = quoteTokenAmount.div(tokenAmount)
           } else {
-            tokenPriceVsQuote = new BigNumber(quoteTokenBalanceLP).div(new BigNumber(tokenBalanceLP))
+            tokenPriceVsQuote = new BigNumber(quoteTokenBalanceLP).div(BIG_TEN.pow(farmConfig.quoteToken.decimals)).div(new BigNumber(tokenBalanceLP)).times(BIG_TEN.pow(farmConfig.token.decimals));
           }
         }
 
-        const tokenAmountTotal = new BigNumber(tokenBalanceLP).div(BIG_TEN.pow(tokenDecimals))
+        const tokenAmountTotal = new BigNumber(tokenBalanceLP).div(BIG_TEN.pow(farmConfig.token.decimals))
 
         const mCalls = [
           {
@@ -275,11 +276,12 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
           },
           {
             address: getMasterChefAddress(),
-            name: 'colaPerBlock',
+            name: 'ColaPerBlock',
           }
         ]
 
-        const [info, totalAllocPoint, colaPerBlock] = await multicall(masterchefABI, mCalls).catch(error => {
+        const [info, totalAllocPoint, ColaPerBlock] = await multicall(masterchefABI, mCalls).catch(error => {
+          console.log("multicall error")
           throw new Error(`multicall nontoken: ${error}`)
         })
 
@@ -392,7 +394,7 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
             // multiplier: farmConfig.pid === 4 ? '30X' : `2X`,
             // multiplier: '1.5X',
             depositFeeBP: kInfo.depositFeeBP,
-            colaPerBlock: new BigNumber(colaPerBlock).toNumber(),
+            colaPerBlock: new BigNumber(ColaPerBlock).div(BIG_TEN.pow(DEFAULT_TOKEN_DECIMAL)).toNumber(),
             lpTokenBalancePCS: new BigNumber(lpTokenBalanceMC).div(DEFAULT_TOKEN_DECIMAL).toNumber(),
             lpTotalInQuoteTokenPCS: lpTotalInQuoteTokenPCS.toNumber(),
             poolWeightPCS: poolWeightPCS.toJSON(),
@@ -420,7 +422,7 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
           lockedKingdomData: await asyncLockedKingdomData,
           multiplier: `${allocPoint.div(100).toString()}X`,
           depositFeeBP: info.depositFeeBP,
-          colaPerBlock: new BigNumber(colaPerBlock).toNumber(),
+          colaPerBlock: new BigNumber(ColaPerBlock).div(DEFAULT_TOKEN_DECIMAL).toNumber(),
           tokenAmountTotal: tokenAmountTotal.toJSON(),
           lpTokenBalance: new BigNumber(lpTokenBalanceMC).div(DEFAULT_TOKEN_DECIMAL).toNumber(),
         }

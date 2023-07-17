@@ -11,7 +11,7 @@ const tokens = {
       369: '0x02Dff78fDeDaF86D9dfbe9B3132aA3Ea72Ed1680',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://app.pulsex.com/',
   },
   wbnb: {
@@ -22,7 +22,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://app.pulsex.com/',
   },
   busd: {
@@ -33,7 +33,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://www.paxos.com/busd/',
   },
   eth: {
@@ -44,7 +44,7 @@ const tokens = {
       369: '0x02DcdD04e3F455D838cd1249292C58f3B79e3C3C',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://ethereum.org/en/',
   },
   usdc: {
@@ -55,7 +55,7 @@ const tokens = {
       369: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://www.centre.io/usdc',
   },
   wpls: {
@@ -77,7 +77,7 @@ const tokens = {
       369: '0x95B303987A60C71504D99Aa1b13B4DA07b0790ab',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://www.centre.io/usdc',
   },
   hex: {
@@ -88,7 +88,18 @@ const tokens = {
       369: '0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
+    projectLink: 'https://www.centre.io/usdc',
+  },
+  ehex: {
+    symbol: 'ehex',
+    address: {
+      56: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d',
+      97: '',
+      369: '0x57fde0a71132198BBeC939B98976993d8D89D225',
+      943: '',
+    },
+    decimals: 6,
     projectLink: 'https://www.centre.io/usdc',
   },
   dai: {
@@ -96,10 +107,10 @@ const tokens = {
     address: {
       56: '0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3',
       97: '',
-      369: '',
+      369: '0xefD766cCb38EaF1dfd701853BFCe31359239F305',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'http://www.makerdao.com/',
   },
   dot: {
@@ -110,7 +121,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://polkadot.network/',
   },
   usdt: {
@@ -121,7 +132,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://tether.to/',
   },
   btcb: {
@@ -132,7 +143,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://bitcoin.org/',
   },
   cola: {
@@ -154,7 +165,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://coladefi.com/',
   },
   dec: {
@@ -165,7 +176,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://coladefi.com/',
   },
   bake: {
@@ -176,7 +187,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://www.bakeryswap.org/',
   },
   belt: {
@@ -187,7 +198,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://beta.belt.fi/',
   },
   beltbtc: {
@@ -198,7 +209,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://belt.fi/bsc',
   },
   belteth: {
@@ -209,7 +220,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://belt.fi/bsc',
   },
   beltusd: {
@@ -220,7 +231,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://belt.fi/bsc',
   },
   /* For IDOs */
@@ -232,7 +243,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://horizonprotocol.com/',
   },
   watch: {
@@ -243,7 +254,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://yieldwatch.net/',
   },
   bry: {
@@ -254,7 +265,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://berrydata.co/',
   },
   wsote: {
@@ -265,7 +276,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://soteria.finance/#/',
   },
   helmet: {
@@ -276,7 +287,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://www.helmet.insure/',
   },
   ten: {
@@ -287,7 +298,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://www.tenet.farm/',
   },
   ditto: {
@@ -320,7 +331,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://cakepop.app',
   },
   sps: {
@@ -331,7 +342,7 @@ const tokens = {
       369: '',
       943: '',
     },
-    decimals: 18,
+    decimals: 6,
     projectLink: 'https://splinterlands.com/',
   },
   bhbd: {

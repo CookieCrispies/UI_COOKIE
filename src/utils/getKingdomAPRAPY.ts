@@ -20,7 +20,7 @@ const getKingdomAPRAPY = (
 
   if (altPid === 12) {
     const totalLiquidity = new BigNumber(colaDen.lpTotalInQuoteToken).times(colaDen.quoteToken.busdPrice)
-    apr = getFarmApr(colaDen.poolWeight, colaDen.tokenPriceVsQuote, totalLiquidity)
+    apr = getFarmApr(colaDen.colaPerBlock, colaDen.poolWeight, colaDen.tokenPriceVsQuote, totalLiquidity)
 
     const dailyAPR = new BigNumber(apr).div(new BigNumber(365)).toNumber()
 
@@ -48,7 +48,7 @@ const getKingdomAPRAPY = (
     else if (farmType === 'Belt') farmTokenPrice = beltPrice
 
     if (farmType === 'Belt') apr = Number(beltAPR)
-    else apr = getFarmApr(new BigNumber(poolWeightPCS), farmTokenPrice, totalLiquidity, isKingdom, farmType)
+    else apr = getFarmApr(farm.colaPerBlock, new BigNumber(poolWeightPCS), farmTokenPrice, totalLiquidity, isKingdom, farmType)
   }
 
   const lpRewardsApr = lpAprs[farm.lpAddresses['56']?.toLocaleLowerCase()] ?? 0
