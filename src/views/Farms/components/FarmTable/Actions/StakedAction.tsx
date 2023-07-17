@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import styled from 'styled-components'
+import BigNumber from 'bignumber.js'
 import { Button, useModal, IconButton, AddIcon, MinusIcon, Skeleton } from '@pancakeswap-libs/uikit'
 import { useLocation } from 'react-router-dom'
 import UnlockButton from 'components/UnlockButton'
@@ -65,8 +66,12 @@ const Staked: React.FunctionComponent<StackedActionProps> = ({
     return stakedBalanceNumber.toLocaleString()
   }, [stakedBalance])
 
+  const decimals = isTokenOnly ? token.decimals : 18
+
+  const tokenBalanceString = new BigNumber(tokenBalance).div(new BigNumber(10).pow(decimals));
+
   const [onPresentDeposit] = useModal(
-    <DepositModal max={tokenBalance} onConfirm={onStake} tokenName={lpSymbol} addLiquidityUrl={addLiquidityUrl} />,
+    <DepositModal max={tokenBalanceString} onConfirm={(amount) => onStake(new BigNumber(amount).times(new BigNumber(10).pow(new BigNumber(decimals))).toString())} tokenName={lpSymbol} addLiquidityUrl={addLiquidityUrl} />,
   )
   const [onPresentWithdraw] = useModal(<WithdrawModal max={stakedBalance} onConfirm={onUnstake} tokenName={lpSymbol} />)
 

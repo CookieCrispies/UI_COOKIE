@@ -77,7 +77,7 @@ const tokens = {
       369: '0x95B303987A60C71504D99Aa1b13B4DA07b0790ab',
       943: '',
     },
-    decimals: 6,
+    decimals: 18,
     projectLink: 'https://www.centre.io/usdc',
   },
   hex: {

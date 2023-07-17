@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom'
 import useI18n from 'hooks/useI18n'
 import useStake from 'hooks/useStake'
 import useUnstake from 'hooks/useUnstake'
+import { useFarmFromPid } from 'state/hooks'
 import { getBalanceNumber, getFullDisplayBalance } from 'utils/formatBalance'
 import DepositModal from '../DepositModal'
 import WithdrawModal from '../WithdrawModal'
@@ -44,7 +45,7 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
   const location = useLocation()
 
   const displayBalance = useCallback(() => {
-    const stakedBalanceNumber = getBalanceNumber(stakedBalance)
+    const stakedBalanceNumber = getBalanceNumber(stakedBalance )
     if (stakedBalanceNumber > 0 && stakedBalanceNumber < 0.0001) {
       return getFullDisplayBalance(stakedBalance).toLocaleString()
     }

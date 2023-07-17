@@ -208,7 +208,6 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
         const totalLiquidity = new BigNumber(farm.lpTotalInQuoteToken).times(quoteTokenPriceUsd)
         
         const apr = isActive ? getFarmApr(farm.colaPerBlock, farm.poolWeight, cakePrice, totalLiquidity) : 0
-
         return { ...farm, apr: apr ?? 0, liquidity: totalLiquidity }
       })
 

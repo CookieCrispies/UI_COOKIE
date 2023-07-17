@@ -213,6 +213,10 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
             tokenPriceVsQuote = new BigNumber(quoteTokenBalanceLP).div(new BigNumber(tokenBalanceLP)).div(BIG_TEN.pow(farmConfig.quoteToken.decimals)).times(BIG_TEN.pow(farmConfig.token.decimals))
           }
 
+          if (farmConfig.pid === 4) {
+            console.log("quoteTokenBalanceLP", new BigNumber(quoteTokenBalanceLP).toNumber())
+          }
+
           lpTotalInQuoteToken = tokenAmount.times(tokenPriceVsQuote)
           // lpTotalInQuoteTokenPCS = tokenAmountPCS.times(tokenPriceVsQuote)
         } else {
