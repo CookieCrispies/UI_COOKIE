@@ -58,17 +58,17 @@ const Staked: React.FunctionComponent<StackedActionProps> = ({
   })
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
 
+  const decimals = isTokenOnly ? token.decimals : 18
+
+  const tokenBalanceString = new BigNumber(tokenBalance).div(new BigNumber(10).pow(decimals));
+
   const displayBalance = useCallback(() => {
-    const stakedBalanceNumber = getBalanceNumber(stakedBalance)
+    const stakedBalanceNumber = getBalanceNumber(stakedBalance, decimals)
     if (stakedBalanceNumber > 0 && stakedBalanceNumber < 0.0001) {
       return getFullDisplayBalance(stakedBalance).toLocaleString()
     }
     return stakedBalanceNumber.toLocaleString()
-  }, [stakedBalance])
-
-  const decimals = isTokenOnly ? token.decimals : 18
-
-  const tokenBalanceString = new BigNumber(tokenBalance).div(new BigNumber(10).pow(decimals));
+  }, [stakedBalance, decimals])
 
   const [onPresentDeposit] = useModal(
     <DepositModal max={tokenBalanceString} onConfirm={(amount) => onStake(new BigNumber(amount).times(new BigNumber(10).pow(new BigNumber(decimals))).toString())} tokenName={lpSymbol} addLiquidityUrl={addLiquidityUrl} />,

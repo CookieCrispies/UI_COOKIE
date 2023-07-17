@@ -51,12 +51,12 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
   const tokenBalanceString = new BigNumber(tokenBalance).div(new BigNumber(10).pow(decimals));
 
   const displayBalance = useCallback(() => {
-    const stakedBalanceNumber = getBalanceNumber(stakedBalance )
+    const stakedBalanceNumber = getBalanceNumber(stakedBalance, decimals)
     if (stakedBalanceNumber > 0 && stakedBalanceNumber < 0.0001) {
       return getFullDisplayBalance(stakedBalance).toLocaleString()
     }
     return stakedBalanceNumber.toLocaleString()
-  }, [stakedBalance])
+  }, [stakedBalance, decimals])
 
   const [onPresentDeposit] = useModal(
     <DepositModal max={tokenBalanceString} onConfirm={onStake} tokenName={tokenName} addLiquidityUrl={addLiquidityUrl} isTokenOnly={isTokenOnly} isKingdomToken={isKingdomToken} />,
