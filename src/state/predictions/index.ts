@@ -95,9 +95,10 @@ export const predictionsSlice = createSlice({
       const newRoundData = makeRoundData(rounds)
       const incomingCurrentRound = maxBy(rounds, 'epoch')
 
+      // @ts-ignore
       if (state.currentEpoch !== incomingCurrentRound.epoch) {
         // Add new round
-        const newestRound = maxBy(rounds, 'epoch') as Round
+        const newestRound = maxBy(rounds, 'epoch') as unknown as Round
         const futureRound = transformRoundResponse(
           makeFutureRoundResponse(newestRound.epoch + 2, newestRound.startBlock + state.intervalBlocks),
         )
@@ -105,7 +106,9 @@ export const predictionsSlice = createSlice({
         newRoundData[futureRound.id] = futureRound
       }
 
+      // @ts-ignore
       state.currentEpoch = incomingCurrentRound.epoch
+      // @ts-ignore
       state.currentRoundStartBlockNumber = incomingCurrentRound.startBlock
       state.status = market.paused ? PredictionStatus.PAUSED : PredictionStatus.LIVE
       state.rounds = { ...state.rounds, ...newRoundData }

@@ -22,7 +22,7 @@ const BridgeCard = () => {
         <Heading color="contrast" size="lg">
           Public presale open soon !
         </Heading>
-        <CardMidContent color="invertedContrast">GET COLA TOKEN !</CardMidContent>
+        <CardMidContent color="invertedContrast">GET Yogurt TOKEN !</CardMidContent>
         <Flex justifyContent="space-between">
           <Heading color="contrast" size="lg">
             LIVE !

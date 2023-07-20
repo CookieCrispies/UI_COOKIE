@@ -45,14 +45,14 @@ const Ifo = () => {
       </IfoCards>
       <LaunchIfoCallout>
         <div>
-          <Title as="h2">{TranslateString(592, 'How to Participate in Decentralized IDOs on ColaFactory')}</Title>
+          <Title as="h2">{TranslateString(592, 'How to Participate in Decentralized IDOs on YogurtFactory')}</Title>
           <Heading mb="16px">{TranslateString(594, 'Before IDO')}:</Heading>
           <List>
             <li>{TranslateString(598, 'Get WPLS tokens')}</li>
           </List>
           <Flex mb="16px">
-            {/* <LinkExternal href="https://colafactory.com/" mr="16px">
-              {TranslateString(999, 'Buy COLA')}
+            {/* <LinkExternal href="https://Yogurtfactory.com/" mr="16px">
+              {TranslateString(999, 'Buy Yogurt')}
             </LinkExternal> */}
             <LinkExternal href="https://app.pulsex.com/swap?outputCurrency=0xa1077a294dde1b09bb078844df40758a5d0f9a27">
               {TranslateString(999, 'Get WPLS tokens')}
@@ -67,30 +67,30 @@ const Ifo = () => {
             <li>{TranslateString(606, 'Click "Claim" to claim the IDO tokens you purchased.')}</li>
             <li>{TranslateString(608, 'Done!')}</li>
           </List>
-          <img src="images/Cola/LogoTextNewDark.png" width={300} alt="cola" />
+          <img src="images/Yogurt/LogoTextNewDark.png" width={300} alt="Yogurt" />
           <Text as="div" pt="16px">
             <Button
               as="a"
               variant="secondary"
-              href="https://docs.colafactory.com/cola-products/ido"
+              href="https://docs.Yogurtfactory.com/Yogurt-products/ido"
             >
               {TranslateString(610, 'Read more')}
             </Button>
           </Text>
         </div>
         <div>
-          <Image src="/images/Cola/logoCola2.png" alt="ifo" width={500} height={406} responsive />
+          <Image src="/images/Yogurt/logoYogurt2.png" alt="ifo" width={500} height={406} responsive />
           <div>
             <Title as="h2">{TranslateString(512, 'Want to launch your own IDO?')}</Title>
             <Text mb={3}>
               {TranslateString(
                 514,
-                'Launch your project with ColaFactory to bring your token directly to the most active and rapidly growing community on PulseChain.',
+                'Launch your project with YogurtFactory to bring your token directly to the most active and rapidly growing community on PulseChain.',
               )}
             </Text>
             <Button
               as="a"
-              href="https://t.me/colasterol"
+              href="https://t.me/Yogurtsterol"
               external
             >
               {TranslateString(516, 'Apply to launch')}

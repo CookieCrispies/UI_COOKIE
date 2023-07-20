@@ -90,22 +90,21 @@ const Home: React.FC = () => {
     <Page>
       <Hero>
         <Heading as="h1" size="xl" mb="24px" color="white">
-          {/* {TranslateString(576, 'Cola Defi')} */}
-          <img src="/images/Cola/ColaLogoM2.png" alt="Cola Defi" />
+          {/* {TranslateString(576, 'Yogurt Defi')} */}
+          <img src="/images/Yogurt/logohome.png" alt="Yogurt Defi" />
         </Heading>
       </Hero>
       <div>
         <Cards>
           <FarmStakingCard />
-          <CakeStats />
-          {/* <LotteryCard /> */}
+
         </Cards>
         <CTACards>
 
           {/* <WinCard /> */}
         </CTACards>
         <Cards>
-          <BridgeCard />
+          <CakeStats />
           <TotalValueLockedCard />
         </Cards>
       </div>

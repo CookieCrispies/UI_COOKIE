@@ -10,7 +10,7 @@ const Block = styled.div`
   margin-bottom: 24px;
 `
 
-const StakedBalance = ({ cola, value }) => {
+const StakedBalance = ({ Yogurt, value }) => {
   const TranslateString = useI18n()
   const { account } = useWeb3React()
 
@@ -24,7 +24,7 @@ const StakedBalance = ({ cola, value }) => {
 
   return (
     <Block>
-      <CardValue value={cola.toNumber()} lineHeight="1.5" />
+      <CardValue value={Yogurt.toNumber()} lineHeight="1.5" />
       {value.gt(0) && <CardBusdValue value={value.toNumber()} />}
     </Block>
   )

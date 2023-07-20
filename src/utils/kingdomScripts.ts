@@ -35,7 +35,7 @@ export const getWBNBDOTAmount = async () => {
   return call.amount
 }
 
-export const getcolaAmount = async () => {
+export const getYogurtAmount = async () => {
   const contract = new web3.eth.Contract(PCS_ABI, '0x227e79c83065edb8b954848c46ca50b96cb33e16');
   const call = await contract.methods.userInfo(12, '0xc2adf5fc4d4e6c2cc97f8190acbdf808c689117c').call();
   return call.amount

@@ -84,16 +84,16 @@ interface KingdomProps {
   account?: string
   bakePrice?: BigNumber
   beltPrice?: BigNumber
-  colaDen?: any
+  YogurtDen?: any
   realCakePrice?: BigNumber
   bnbDividends?: any
 }
 
-const LockedKingdom: React.FC<KingdomProps> = ({ farm, removed, cakePrice, account, bakePrice, beltPrice, colaDen, realCakePrice, bnbDividends }) => {
+const LockedKingdom: React.FC<KingdomProps> = ({ farm, removed, cakePrice, account, bakePrice, beltPrice, YogurtDen, realCakePrice, bnbDividends }) => {
   const [showExpandableSection, setShowExpandableSection] = useState(false)
     const [cakeVaultEarnings, setCakeVaultEarnings] = useState(null)
 
-    // useswrimmutable to getCakeVaultEarnings from chain data called "chain-balance-locked-cola"
+    // useswrimmutable to getCakeVaultEarnings from chain data called "chain-balance-locked-Yogurt"
     useEffect(() => {
         if (farm?.userData?.lockedKingdomUserData) {
             setCakeVaultEarnings(getCakeVaultEarnings(account, new BigNumber(farm?.userData?.lockedKingdomUserData?.tokenAtLastUserAction).times(DEFAULT_TOKEN_DECIMAL), new BigNumber(farm?.userData?.lockedKingdomUserData?.shares), new BigNumber(farm?.lockedKingdomData.pricePerFullShare), cakePrice.toNumber(), new BigNumber(farm?.userData?.lockedKingdomUserData?.performanceFee).plus(new BigNumber(farm?.userData?.lockedKingdomUserData?.overdueFee)).plus(new BigNumber(farm?.userData?.lockedKingdomUserData?.userBoostedShare))))
@@ -133,7 +133,7 @@ const LockedKingdom: React.FC<KingdomProps> = ({ farm, removed, cakePrice, accou
     <>
       <Spacer />
       <K>
-        {farm.token.symbol === 'COLA' && <StyledCardAccent />}
+        {farm.token.symbol === 'Yogurt' && <StyledCardAccent />}
         <KMain role="presentation" className="flex-grid k-grid" onClick={() => setShowExpandableSection(!showExpandableSection)}
       >
           <div className="col"><KImage src={`/images/farms/${farmImage}.png`} alt={lpSymbol} width={64} height={64} /></div>

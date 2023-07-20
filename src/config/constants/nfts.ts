@@ -116,7 +116,7 @@ const Nfts: Nft[] = [
   },
   {
     name: "Stormy Easter '21",
-    description: 'Do you like chocolate with your syrup? Go long!',
+    description: 'Do you like choYogurtte with your syrup? Go long!',
     images: {
       lg: 'stormy-easter-21-lg.png',
       md: 'stormy-easter-21-md.png',

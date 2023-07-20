@@ -45,7 +45,7 @@ const StyledLinkExternal = styled(Link)`
   font-weight: 400;
 `
 
-const colaKingdom = styled.div`
+const YogurtKingdom = styled.div`
   color: ${(props) => props.theme.colors.text};
   margin-top: 0.2rem;
 `
@@ -131,7 +131,7 @@ const KingdomDetail: React.FC<KingdomDetailProps> = ({
         <Detail style={{width: "20%"}}>
           <Flex justifyContent="space-between">
             <Text>Total locked:</Text>
-            <Text><Balance value={Number(totalLocked)} fontSize="md" decimals={0} unit=" cola" /></Text>
+            <Text><Balance value={Number(totalLocked)} fontSize="md" decimals={0} unit=" Yogurt" /></Text>
           </Flex>
           <Flex justifyContent="space-between">
             <Text><abbr title="The average lock duration of all the locked staking positions of other users">Avg. Lock Duration:</abbr></Text>

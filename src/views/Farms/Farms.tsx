@@ -207,7 +207,7 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
         const quoteTokenPriceUsd = farm.quoteToken.busdPrice
         const totalLiquidity = new BigNumber(farm.lpTotalInQuoteToken).times(quoteTokenPriceUsd)
         
-        const apr = isActive ? getFarmApr(farm.colaPerBlock, farm.poolWeight, cakePrice, totalLiquidity) : 0
+        const apr = isActive ? getFarmApr(farm.YogurtPerBlock, farm.poolWeight, cakePrice, totalLiquidity) : 0
         return { ...farm, apr: apr ?? 0, liquidity: totalLiquidity }
       })
 
@@ -409,15 +409,15 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
   }
 
   let header = TranslateString(674, 'Farms')
-  let heading = TranslateString(320, 'Stake LP tokens to earn COLA')
-  const subHeading = TranslateString(10000, 'Deposit Fee will be used to buyback COLA')
+  let heading = TranslateString(320, 'Stake LP tokens to earn Yogurt')
+  const subHeading = TranslateString(10000, 'Deposit Fee will be used to buyback Yogurt')
   // let extra = null
   // const data = useGetStats()
   // const tvl = data ? data.total_value_locked_all.toLocaleString('en-US', { maximumFractionDigits: 0 }) : null
 
   if (tokenMode) {
     header = TranslateString(674, 'Pools')
-    heading = TranslateString(10002, 'Stake tokens to earn COLA')
+    heading = TranslateString(10002, 'Stake tokens to earn Yogurt')
   }
 
   const tlvSpacing = '20px'
@@ -444,10 +444,10 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
 
                 <hr />
 
-                <p style={{marginBottom: "10px"}}>MTB Assets (HIVE and HBD) Can Be Wrapped and Utilized to Provide Liquidity and Earn High Yields. MTB Assets Generate Revenue Which Buys and Burns cola Each Day</p>
+                <p style={{marginBottom: "10px"}}>MTB Assets (HIVE and HBD) Can Be Wrapped and Utilized to Provide Liquidity and Earn High Yields. MTB Assets Generate Revenue Which Buys and Burns Yogurt Each Day</p>
 
                 <Button className="button-cad">
-                  <a href="https://docs.coladefi.com/mechanics/multi-token-bridge">How it Works</a>
+                  <a href="https://docs.Yogurtdefi.com/mechanics/multi-token-bridge">How it Works</a>
                 </Button>
             </Card>
           </div> */}
@@ -458,10 +458,10 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
         <ControlContainer>
           <ViewControls>
             <ToggleView viewMode={viewMode} onToggle={(mode: ViewMode) => setViewMode(mode)} />
-            <ToggleWrapper>
+            {/* <ToggleWrapper>
               <Toggle checked={stakedOnly} onChange={() => setStakedOnly(!stakedOnly)} scale="sm" />
               <Text> {TranslateString(1116, 'Staked only')}</Text>
-            </ToggleWrapper>
+            </ToggleWrapper> */}
             <FarmTabButtons
               hasStakeInFinishedFarms={stakedInactiveFarms.length > 0}
               hasStakeInArchivedFarms={stakedArchivedFarms.length > 0}
@@ -504,7 +504,7 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
         </ControlContainer>
         {renderContent()}
         <div ref={loadMoreRef} />
-        {/* <Image src="/images/Cola/LogoCola2.png" alt="illustration" width={700} height={350} responsive /> */}
+        {/* <Image src="/images/Yogurt/LogoYogurt2.png" alt="illustration" width={700} height={350} responsive /> */}
       </Page>
     </>
   )

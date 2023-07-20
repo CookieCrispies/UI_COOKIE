@@ -30,7 +30,7 @@ const ExtendModal: React.FC<DepositModalProps> = ({ amount, onConfirm, onDismiss
     let warningMessage = '';
 
     if (title === 'Convert to Lock' || title === 'Renew') {
-        warningMessage = 'You will be able to withdraw the staked cola and profit only when the staking position is unlocked.';
+        warningMessage = 'You will be able to withdraw the staked Yogurt and profit only when the staking position is unlocked.';
     }
 
     // takes a number of weeks and gets the date at that time in the format MMM DD, YYYY HH:mm (i.e. Jan 01, 2021 00:00)
@@ -61,7 +61,7 @@ const ExtendModal: React.FC<DepositModalProps> = ({ amount, onConfirm, onDismiss
 
     return (
         <Modal title={title} onDismiss={onDismiss}>
-            <Text>Amount: {Number(amount).toFixed(3)} cola</Text>
+            <Text>Amount: {Number(amount).toFixed(3)} Yogurt</Text>
             <div style={{marginBottom: "20px"}} />
             <ModalInput max={maxAddWeeks} symbol="Weeks" onChange={(e) => e.currentTarget.validity.valid && setDuration(Number(e.currentTarget.value))} onSelectMax={() => setDuration(Number(maxAddWeeks))} value={duration.toString()} inputTitle={modalInputText} showMaxInstead />
             {/* extend checkbox */}
@@ -79,7 +79,7 @@ const ExtendModal: React.FC<DepositModalProps> = ({ amount, onConfirm, onDismiss
             {/* Show APY information for currently selected weeks value */}
             <div style={{marginBottom: "20px"}} />
             <Text><strong>APY:</strong> {lockedApy ? new BigNumber(getLockedApy(secondsDuration)).toFixed(2) : "0.00"}%</Text>
-            <Text><strong>You will earn:</strong> {youWillEarn && !Number.isNaN(Number(youWillEarn)) ? youWillEarn : "0.000"} cola</Text>
+            <Text><strong>You will earn:</strong> {youWillEarn && !Number.isNaN(Number(youWillEarn)) ? youWillEarn : "0.000"} Yogurt</Text>
             <Text><strong>Duration:</strong> {duration} Week{duration === 1 ? "" : "s"}</Text>
             <Text><strong>Unlocks at:</strong> {futureDate}</Text>
 

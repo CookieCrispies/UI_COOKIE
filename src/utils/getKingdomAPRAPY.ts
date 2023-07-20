@@ -11,16 +11,16 @@ const getKingdomAPRAPY = (
   realCakePrice: BigNumber,
   bakePrice: BigNumber,
   beltPrice: BigNumber,
-  colaDen: any,
+  YogurtDen: any,
 ) => {
-  const { apr: colaAPR, isKingdom, poolWeightPCS, compounding, lpTokenBalancePCS: lpTokenBalanceMC = 0, lpTotalInQuoteTokenPCS = 0, quoteToken: { busdPrice: quoteTokenPriceUsd }, altPid, farmType, beltAPR } = farm
+  const { apr: YogurtAPR, isKingdom, poolWeightPCS, compounding, lpTokenBalancePCS: lpTokenBalanceMC = 0, lpTotalInQuoteTokenPCS = 0, quoteToken: { busdPrice: quoteTokenPriceUsd }, altPid, farmType, beltAPR } = farm
 
   let apr:number
   let data = null
 
   if (altPid === 12) {
-    const totalLiquidity = new BigNumber(colaDen.lpTotalInQuoteToken).times(colaDen.quoteToken.busdPrice)
-    apr = getFarmApr(colaDen.colaPerBlock, colaDen.poolWeight, colaDen.tokenPriceVsQuote, totalLiquidity)
+    const totalLiquidity = new BigNumber(YogurtDen.lpTotalInQuoteToken).times(YogurtDen.quoteToken.busdPrice)
+    apr = getFarmApr(YogurtDen.YogurtPerBlock, YogurtDen.poolWeight, YogurtDen.tokenPriceVsQuote, totalLiquidity)
 
     const dailyAPR = new BigNumber(apr).div(new BigNumber(365)).toNumber()
 
@@ -28,7 +28,7 @@ const getKingdomAPRAPY = (
     const totalAPY = farmAPY
     const totalAPYString = totalAPY && totalAPY.toLocaleString('en-US', { maximumFractionDigits: 2 })
 
-    data = { hostApr: apr, dailyAPR, farmAPY, totalAPY, totalAPYString, newMultiplier: colaDen.multiplier }
+    data = { hostApr: apr, dailyAPR, farmAPY, totalAPY, totalAPYString, newMultiplier: YogurtDen.multiplier }
 
     return data
   }
@@ -48,7 +48,7 @@ const getKingdomAPRAPY = (
     else if (farmType === 'Belt') farmTokenPrice = beltPrice
 
     if (farmType === 'Belt') apr = Number(beltAPR)
-    else apr = getFarmApr(farm.colaPerBlock, new BigNumber(poolWeightPCS), farmTokenPrice, totalLiquidity, isKingdom, farmType)
+    else apr = getFarmApr(farm.YogurtPerBlock, new BigNumber(poolWeightPCS), farmTokenPrice, totalLiquidity, isKingdom, farmType)
   }
 
   const lpRewardsApr = lpAprs[farm.lpAddresses['56']?.toLocaleLowerCase()] ?? 0
@@ -60,7 +60,7 @@ const getKingdomAPRAPY = (
 
   let farmAPY = ((((apr / 100 / compounding) + 1) ** compounding) - 1) * 100
   if (farmType === 'Pancake v2') farmAPY = ((((Number(aprWithLpRewards) / 100 / compounding) + 1) ** compounding) - 1) * 100
-  const totalAPY = colaAPR ? colaAPR + farmAPY : farmAPY
+  const totalAPY = YogurtAPR ? YogurtAPR + farmAPY : farmAPY
   const totalAPYString = totalAPY && totalAPY.toLocaleString('en-US', { maximumFractionDigits: 2 })
 
   data = { hostApr: apr, dailyAPR, farmAPY, totalAPY, totalAPYString, lpRewardsApr, aprWithLpRewards }

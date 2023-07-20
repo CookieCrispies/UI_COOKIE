@@ -1,1 +1,1 @@
-(self.webpackChunkcoladefi_frontend=self.webpackChunkcoladefi_frontend||[]).push([[563],{36563:function(){}}]);
+(self.webpackChunkYogurtdefi_frontend=self.webpackChunkYogurtdefi_frontend||[]).push([[563],{36563:function(){}}]);

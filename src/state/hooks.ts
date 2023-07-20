@@ -401,13 +401,13 @@ export const useTotalValueKingdoms = (): BigNumber => {
 }
 
 
-export const useTotalcolaStaked = (): any => {
+export const useTotalYogurtStaked = (): any => {
   const farms = useFarms()
-  let total = { cola: new BigNumber(0), value: new BigNumber(0) }
+  let total = { Yogurt: new BigNumber(0), value: new BigNumber(0) }
 
-  const colaFarms = farms.data.filter(farm => farm.token.symbol === 'COLA' && new BigNumber(farm.userData.stakedBalance).gt(0))
+  const YogurtFarms = farms.data.filter(farm => farm.token.symbol === 'Yogurt' && new BigNumber(farm.userData.stakedBalance).gt(0))
 
-  total = colaFarms.reduce((accu, farm) => {
+  total = YogurtFarms.reduce((accu, farm) => {
     let newAccu = accu
 
     const { userData, lpTotalInQuoteToken, lpTokenBalance, quoteToken: { busdPrice: quoteTokenPriceUsd }, token: { busdPrice: tokenPriceString } } = farm
@@ -422,15 +422,15 @@ export const useTotalcolaStaked = (): any => {
     else oneTokenQuoteValue = tokenPrice.times(DEFAULT_TOKEN_DECIMAL)
 
     const totalValueStaked = stakedAmount.times(oneTokenQuoteValue).div(DEFAULT_TOKEN_DECIMAL)
-    const totalcolaValue = !farm.isTokenOnly && !farm.isKingdomToken ? totalValueStaked.div(2) : totalValueStaked
-    const amountcolaTokens = !farm.isTokenOnly && !farm.isKingdomToken ? totalcolaValue.div(tokenPrice) : totalcolaValue.div(oneTokenQuoteValue).times(DEFAULT_TOKEN_DECIMAL)
+    const totalYogurtValue = !farm.isTokenOnly && !farm.isKingdomToken ? totalValueStaked.div(2) : totalValueStaked
+    const amountYogurtTokens = !farm.isTokenOnly && !farm.isKingdomToken ? totalYogurtValue.div(tokenPrice) : totalYogurtValue.div(oneTokenQuoteValue).times(DEFAULT_TOKEN_DECIMAL)
 
     // console.log('oneTokenQuoteValue',oneTokenQuoteValue.div(DEFAULT_TOKEN_DECIMAL).toNumber())
     // console.log('totalValueStaked',totalValueStaked.div(DEFAULT_TOKEN_DECIMAL).toNumber())
-    // console.log('totalcolaValue',totalcolaValue.div(DEFAULT_TOKEN_DECIMAL).toNumber())
-    // console.log('amountcolaTokens',amountcolaTokens.div(DEFAULT_TOKEN_DECIMAL).toNumber())
+    // console.log('totalYogurtValue',totalYogurtValue.div(DEFAULT_TOKEN_DECIMAL).toNumber())
+    // console.log('amountYogurtTokens',amountYogurtTokens.div(DEFAULT_TOKEN_DECIMAL).toNumber())
 
-    newAccu = { cola: newAccu.cola.plus(amountcolaTokens.div(DEFAULT_TOKEN_DECIMAL)), value: newAccu.value.plus(totalcolaValue.div(DEFAULT_TOKEN_DECIMAL)) }
+    newAccu = { Yogurt: newAccu.Yogurt.plus(amountYogurtTokens.div(DEFAULT_TOKEN_DECIMAL)), value: newAccu.value.plus(totalYogurtValue.div(DEFAULT_TOKEN_DECIMAL)) }
     // console.log('newAccu', newAccu)
     return newAccu
   }, total)

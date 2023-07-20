@@ -82,18 +82,18 @@ interface KingdomProps {
   account?: string
   bakePrice?: BigNumber
   beltPrice?: BigNumber
-  colaDen?: any
+  YogurtDen?: any
   realCakePrice?: BigNumber
   bnbDividends?: any
 }
 
-const Kingdom: React.FC<KingdomProps> = ({ farm, removed, cakePrice, account, bakePrice, beltPrice, colaDen, realCakePrice, bnbDividends }) => {
+const Kingdom: React.FC<KingdomProps> = ({ farm, removed, cakePrice, account, bakePrice, beltPrice, YogurtDen, realCakePrice, bnbDividends }) => {
   const [showExpandableSection, setShowExpandableSection] = useState(false)
 
   const { apr, lpTotalInQuoteToken, lpSymbol, lpTokenBalancePCS = 0, lpTotalInQuoteTokenPCS = 0, quoteToken: { busdPrice: quoteTokenPriceUsd }, altPid, farmType, token: { busdPrice: tokenPriceString }, compounding } = farm
   const farmImage = lpSymbol.split(' ')[0].toLocaleLowerCase()
 
-  let aprApy = getKingdomAPRAPY(farm, realCakePrice, bakePrice, beltPrice, colaDen)
+  let aprApy = getKingdomAPRAPY(farm, realCakePrice, bakePrice, beltPrice, YogurtDen)
 
   const { dailyAPR, totalAPY, hostApr } = aprApy
   const { tokenBalance, stakedBalance, earnings } = farm.userData
@@ -123,7 +123,7 @@ const Kingdom: React.FC<KingdomProps> = ({ farm, removed, cakePrice, account, ba
     <>
       <Spacer />
       <K>
-        {farm.token.symbol === 'COLA' && <StyledCardAccent />}
+        {farm.token.symbol === 'Yogurt' && <StyledCardAccent />}
         <KMain role="presentation" className="flex-grid k-grid" onClick={() => setShowExpandableSection(!showExpandableSection)}
       >
           <div className="col"><KImage src={`/images/farms/${farmImage}.png`} alt={lpSymbol} width={64} height={64} /></div>

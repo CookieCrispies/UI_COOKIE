@@ -33,7 +33,7 @@ const Hero = () => {
         <br />
         <Wrapper>
           <Button size="sm">
-            <a href="https://docs.colafactory.com/cola-products/ido">Learn More</a>
+            <a href="https://docs.Yogurtfactory.com/Yogurt-products/ido">Learn More</a>
           </Button>
         </Wrapper>
       </Container>

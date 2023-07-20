@@ -22,7 +22,7 @@ const KingdomCard = () => {
       <CardBody>
         <CardMidContent color="primary">Kingdoms</CardMidContent>
         <Heading color="contrast" size="lg">
-          cola&apos;s First Composable Yield Farming Contract
+          Yogurt&apos;s First Composable Yield Farming Contract
         </Heading>
         <Flex justifyContent="space-between">
           <CardMidContent color="primary">LIVE</CardMidContent>

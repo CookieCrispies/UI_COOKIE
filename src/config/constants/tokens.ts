@@ -146,8 +146,8 @@ const tokens = {
     decimals: 6,
     projectLink: 'https://bitcoin.org/',
   },
-  cola: {
-    symbol: 'COLA',
+  Yogurt: {
+    symbol: 'Yogurt',
     address: {
       56: '0x50d809c74e0b8e49e7b4c65bb3109abe3ff4c1c1',
       97: '',
@@ -155,7 +155,7 @@ const tokens = {
       943: '',
     },
     decimals: 18,
-    projectLink: 'https://coladefi.com/',
+    projectLink: 'https://Yogurtdefi.com/',
   },
   bleo: {
     symbol: 'bLEO',
@@ -166,7 +166,7 @@ const tokens = {
       943: '',
     },
     decimals: 6,
-    projectLink: 'https://coladefi.com/',
+    projectLink: 'https://Yogurtdefi.com/',
   },
   dec: {
     symbol: 'DEC',
@@ -177,7 +177,7 @@ const tokens = {
       943: '',
     },
     decimals: 6,
-    projectLink: 'https://coladefi.com/',
+    projectLink: 'https://Yogurtdefi.com/',
   },
   bake: {
     symbol: 'BAKE',
@@ -354,7 +354,7 @@ const tokens = {
       943: '',
     },
     decimals: 3,
-    projectLink: 'https://coladefi.com/',
+    projectLink: 'https://Yogurtdefi.com/',
   },
   bhive: {
     symbol: 'bHIVE',
@@ -365,7 +365,7 @@ const tokens = {
       943: '',
     },
     decimals: 3,
-    projectLink: 'https://coladefi.com/',
+    projectLink: 'https://Yogurtdefi.com/',
   },
 }
 

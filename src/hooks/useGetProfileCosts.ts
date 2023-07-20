@@ -29,7 +29,7 @@ const useGetProfileCosts = () => {
           numberCakeToUpdate: new BigNumber(numberCakeToUpdate as string),
         })
       } catch (error) {
-        toastError('Error', 'Could not retrieve cola costs for profile')
+        toastError('Error', 'Could not retrieve Yogurt costs for profile')
       }
     }
 

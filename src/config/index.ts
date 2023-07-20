@@ -29,7 +29,7 @@ export const BELT_PER_BLOCK = new BigNumber(1.178)
 export const BELT_PER_YEAR = BELT_PER_BLOCK.times(BLOCKS_PER_YEAR)
 
 // export const PCS_BLOCKS_PER_YEAR = new BigNumber((60 / BSC_BLOCK_TIME) * 60 * 24 * 365) // 10512000
-export const BASE_URL = 'https://colafactory.com/'
+export const BASE_URL = 'https://Yogurtfactory.com/'
 export const BASE_EXCHANGE_URL = 'https://app.pulsex.com'
 export const BASE_ADD_LIQUIDITY_URL = `${BASE_EXCHANGE_URL}/#/add`
 export const BASE_LIQUIDITY_POOL_URL = `${BASE_EXCHANGE_URL}/#/pool`

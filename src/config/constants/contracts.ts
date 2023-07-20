@@ -75,13 +75,13 @@ export default {
     56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
     97: '',
     369: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07', // USDC from ETH
-    943:'0x846ccAD8AD1BaDFC0b2FFa515f66ae8E4AaF8f1d', // USDCola
+    943:'0x846ccAD8AD1BaDFC0b2FFa515f66ae8E4AaF8f1d', // USDYogurt
   },
   usdc: {
     56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
     97: '',
     369: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07', // USDC from ETH
-    943:'0x846ccAD8AD1BaDFC0b2FFa515f66ae8E4AaF8f1d', // USDCola
+    943:'0x846ccAD8AD1BaDFC0b2FFa515f66ae8E4AaF8f1d', // USDYogurt
   },
   cake_real: {
     56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',

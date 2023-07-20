@@ -1,44 +1,44 @@
 import { PageMeta } from './types'
 
 export const DEFAULT_META: PageMeta = {
-  title: 'ColaFactory',
+  title: 'YogurtFactory',
   description:
-    'Turn Cola into cold, hard cash on PulseChain',
-  image: 'https://coladefi.com/images/2logos',
+    'Turn Yogurt into cold, hard cash on PulseChain',
+  image: 'https://Yogurtdefi.com/images/2logos',
 }
 
 export const customMeta: { [key: string]: PageMeta } = {
   '/': {
-    title: 'Home | ColaFactory',
+    title: 'Home | YogurtFactory',
   },
   '/competition': {
-    title: 'Trading Battle | ColaFactory',
+    title: 'Trading Battle | YogurtFactory',
   },
   '/prediction': {
-    title: 'Prediction | ColaFactory',
+    title: 'Prediction | YogurtFactory',
   },
   '/farms': {
-    title: 'Farms | ColaFactory',
+    title: 'Farms | YogurtFactory',
   },
   '/pools': {
-    title: 'Pools | ColaFactory',
+    title: 'Pools | YogurtFactory',
   },
   '/lottery': {
-    title: 'Lottery | ColaFactory',
+    title: 'Lottery | YogurtFactory',
   },
   '/collectibles': {
-    title: 'Collectibles | ColaFactory',
+    title: 'Collectibles | YogurtFactory',
   },
   '/ido': {
-    title: 'Initial DEX Offering | ColaFactory',
+    title: 'Initial DEX Offering | YogurtFactory',
   },
   '/teams': {
-    title: 'Leaderboard | ColaFactory',
+    title: 'Leaderboard | YogurtFactory',
   },
   '/profile/tasks': {
-    title: 'Task Center | ColaFactory',
+    title: 'Task Center | YogurtFactory',
   },
   '/profile': {
-    title: 'Your Profile | ColaFactory',
+    title: 'Your Profile | YogurtFactory',
   },
 }

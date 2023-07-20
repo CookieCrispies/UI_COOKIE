@@ -43,7 +43,7 @@ const StyledLinkExternal = styled(Link)`
   font-weight: 400;
 `
 
-const ColaKingdom = styled.div`
+const YogurtKingdom = styled.div`
   color: ${(props) => props.theme.colors.text};
   margin-top: 0.2rem;
 `
@@ -146,14 +146,7 @@ const KingdomDetail: React.FC<KingdomDetailProps> = ({
             <Text>Type:</Text>
             <Text>Auto-compound</Text>
           </Flex>
-          {altPid === 12 ? (
-            <ColaKingdom>*cola Kingdom multiplier coexists with cola Den multiplier</ColaKingdom>
-          ) : (
-            <Flex justifyContent="space-between">
-              <Text>Farm:</Text>
-              <Text>{farmName}</Text>
-            </Flex>
-          )}
+
         </Detail>
         <Detail>
           <AprApy

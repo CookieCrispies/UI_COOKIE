@@ -76,7 +76,7 @@ const FarmedStakingCard = () => {
     }
   }, [onReward])
 
-  const addWatchColaToken = useCallback(async () => {
+  const addWatchYogurtToken = useCallback(async () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     const provider = window.ethereum
@@ -89,10 +89,10 @@ const FarmedStakingCard = () => {
             type: 'ERC20',
             options: {
               address: '0x02Dff78fDeDaF86D9dfbe9B3132aA3Ea72Ed1680',
-              symbol: 'COLA',
+              symbol: 'Yogurt',
               decimals: '18',
               image:
-                  'https://raw.githubusercontent.com/Cola-Factory/images/master/logo.png',
+                  'https://raw.githubusercontent.com/Yogurt-Factory/images/master/logo.png',
             },
           },
         })
@@ -110,28 +110,18 @@ const FarmedStakingCard = () => {
     <StyledFarmStakingCard>
       <CardBody>
         <Heading size="xl" mb="24px">
-          <Row> {TranslateString(542, 'Farms & Staking')}
-            <Button onClick={addWatchColaToken} scale="sm">
-              +{' '}
-              <img
-                  style={{ marginLeft: 8 }}
-                  width={16}
-                  src="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/wallet/metamask.png"
-                  alt="metamask logo"
-              /></Button> </Row>
-
-
+          <Row> {TranslateString(542, 'Farms & Staking')} </Row>
         </Heading>
         <TokenImageWrapper>
-        <CardImage src="/images/Cola/cola-card-image.png" alt="cola logo" width={64} height={64} />
+        <CardImage src="/images/Yogurt/Yogurt-card-image.png" alt="Yogurt logo" width={64} height={64} />
 
         </TokenImageWrapper>
             <Block>
-              <Label>{TranslateString(544, 'COLA to Harvest')}:</Label>
+              <Label>{TranslateString(544, 'Yogurt to Harvest')}:</Label>
               <CakeHarvestBalance />
             </Block>
             <Block>
-              <Label>{TranslateString(546, 'COLA in Wallet')}:</Label>
+              <Label>{TranslateString(546, 'Yogurt in Wallet')}:</Label>
               <CakeWalletBalance />
             </Block>
             <Actions>
@@ -143,7 +133,7 @@ const FarmedStakingCard = () => {
                   width="100%"
                 >
                   {pendingTx
-                    ? TranslateString(548, 'Collecting COLA')
+                    ? TranslateString(548, 'Collecting Yogurt')
                     : TranslateString(532, `Harvest all (${balancesWithValue.length})`, {
                         count: balancesWithValue.length,
                       })}

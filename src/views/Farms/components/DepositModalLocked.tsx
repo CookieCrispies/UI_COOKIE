@@ -98,7 +98,7 @@ const DepositModalLocked: React.FC<DepositModalProps> = ({ max, onConfirm, onDis
                 actionInline
             >
                 <Text style={{wordWrap: "break-word", overflowWrap: "break-word", wordBreak: "break-word", maxWidth: "450px"}}>
-                    Adding more cola will renew your lock, setting it to remaining duration. Due to shorter lock period, benefits decrease. To keep similar benefits, extend your lock.
+                    Adding more Yogurt will renew your lock, setting it to remaining duration. Due to shorter lock period, benefits decrease. To keep similar benefits, extend your lock.
                 </Text>
             </Message>
             <div style={{display: "flex", alignItems: "center", justifyContent: "space-between"}}>
@@ -108,7 +108,7 @@ const DepositModalLocked: React.FC<DepositModalProps> = ({ max, onConfirm, onDis
         {/* Show APY information for currently selected weeks value */}
         <div style={{marginBottom: "20px"}} />
         <Text><strong>APY:</strong> {lockedApy ? new BigNumber(getLockedApy(secondsDuration)).toFixed(2) : "0.00"}%</Text>
-        <Text><strong>You will earn:</strong> {youWillEarn && !Number.isNaN(Number(youWillEarn)) ? youWillEarn : "0.000"} cola</Text>
+        <Text><strong>You will earn:</strong> {youWillEarn && !Number.isNaN(Number(youWillEarn)) ? youWillEarn : "0.000"} Yogurt</Text>
         <Text><strong>Duration:</strong> {actualWeeks} Week{actualWeeks === 1 ? "" : "s"}</Text>
         <Text><strong>Unlocks at:</strong> {futureDate}</Text>
 

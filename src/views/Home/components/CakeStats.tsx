@@ -26,28 +26,28 @@ const CakeStats = () => {
   const TranslateString = useI18n()
   const totalSupply = useTotalSupply()
   const burnedBalance = useBurnedBalance(getCakeAddress())
-  const colaPrice = usePriceCakeBusd();
+  const YogurtPrice = usePriceCakeBusd();
   const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0);
   const cakeSupply = getBalanceNumber(circSupply);
-  const marketCap = colaPrice.times(circSupply);
+  const marketCap = YogurtPrice.times(circSupply);
   const {data:farms} = useFarms();
-  let ColaPerBlock = 0
-  if (farms && farms[0] && farms[0]?.colaPerBlock) {
-    ColaPerBlock = new BigNumber(farms[0]?.colaPerBlock).toNumber()
+  let YogurtPerBlock = 0
+  if (farms && farms[0] && farms[0]?.YogurtPerBlock) {
+    YogurtPerBlock = new BigNumber(farms[0]?.YogurtPerBlock).toNumber()
   }
 
   return (
     <StyledCakeStats>
       <CardBody>
         <Heading size="xl" mb="24px">
-          {TranslateString(534, 'COLA Stats')}
+          {TranslateString(534, 'Yogurt Stats')}
         </Heading>
         <Row>
           <Text fontSize="14px">📈 Market Cap</Text>
           <CardValue fontSize="14px" value={getBalanceNumber(marketCap)} decimals={0} prefix="$" />
         </Row>
         <Row>
-          <Text fontSize="14px">🟥 Total Minted</Text>
+          <Text fontSize="14px">🔗 Total Minted</Text>
           {totalSupply && <CardValue fontSize="14px" value={getBalanceNumber(totalSupply)} decimals={0} />}
         </Row>
         <Row>
@@ -55,36 +55,13 @@ const CakeStats = () => {
           <CardValue fontSize="14px" value={0} decimals={0} />
         </Row>
         <Row>
-          <Text fontSize="14px">✈️ Circulating Supply</Text>
-          {cakeSupply && <CardValue fontSize="14px" value={cakeSupply} decimals={0} />}
-        </Row>
-        <Row>
-          <Text fontSize="14px">🥤 New COLA/block</Text>
+          <Text fontSize="14px">🥛 New Yogurt/block</Text>
           <Text bold fontSize="14px">
-            {ColaPerBlock}
+            {YogurtPerBlock}
           </Text>
         </Row>
         <br/>
         <br/>
-        <Row>
-          <a href="https://www.coingecko.com/en/coins/cola-token-2">
-            <img src="/images/Cola/CG.png" width="80px" alt="Cola Defi" />
-          </a>
-          <a href="https://coinmarketcap.com/currencies/colafactory/">
-            <img src="/images/Cola/CMC.png" width="80px" alt="Cola Defi" />
-          </a>
-          <a href="https://www.geckoterminal.com/fr/pulsechain/pools/0x7978de6276f5f7397e730c143f194bcb66c03cc7">
-            <img src="/images/Cola/gecko.png" width="80px" alt="Cola Defi" />
-          </a>
-          <a href="https://scan.pulsechain.com/address/0x02Dff78fDeDaF86D9dfbe9B3132aA3Ea72Ed1680/contracts#address-tabs">
-            <img src="/images/Cola/scan.png" width="80px" alt="Cola Defi" />
-          </a>
-          <a href="https://www.dextools.io/app/en/pulse/pair-explorer/0x7978de6276f5f7397e730c143f194bcb66c03cc7">
-            <img src="/images/Cola/dextools.png" width="80px" alt="Cola Defi" />
-          </a>
-        </Row>
-
-
       </CardBody>
     </StyledCakeStats>
   )

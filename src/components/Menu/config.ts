@@ -30,15 +30,7 @@ const config: MenuEntry[] = [
     icon: 'PoolIcon',
     href: '/pools',
   },
-  {
-    label: 'Vaults',
-    icon: 'PawIcon',
-    href: '/vaults',
-    status: {
-      text: 'SOON',
-      color: 'warning',
-    },
-  },
+
   /* {
     label: 'Lottery',
     icon: 'TicketIcon',
@@ -55,81 +47,37 @@ const config: MenuEntry[] = [
     href: "https://wleo.io/hive-bsc/",
   },
   {
-    label: 'Polycola',
+    label: 'PolyYogurt',
     icon: 'PawIcon',
-    href: 'https://polycola.com',
+    href: 'https://polyYogurt.com',
     status: {
       text: 'Polygon',
       color: 'warning',
     },
   }, */
+
   {
-    label: 'IDO',
-    icon: 'IfoIcon',
-    href: '/ido',
-    status: {
-      text: 'LIVE',
-      color: 'failure',
-    },
-  },
-  {
-    label: 'Vote',
-    icon: 'VoteIcon',
-    href: 'https://snapshot.org/#/colafactory.eth',
-  },
-  {
-    label: 'Audit',
-    icon: 'AuditIcon',
-    href: 'https://github.com/TechRate/Smart-Contract-Audits/blob/main/July_2023/ColaToken.pdf',
-    status: {
-      text: 'LIVE',
-      color: 'failure',
-    },
-  },
-  {
-    label: 'Charts',
+    label: 'More',
     icon: 'InfoIcon',
     items: [
       {
-        label: 'PulseX',
-        href: 'https://app.pulsex.com/info/pool/0x7978de6276f5f7397e730c143f194bcb66c03cc7',
+        label: 'Docs',
+        href: 'https://docs.yogurtfinance.com/',
       },
       {
         label: 'DexScreener',
-        href: 'https://dexscreener.com/pulsechain/0x7978de6276f5f7397e730c143f194bcb66c03cc7',
+        href: 'https://dexscreener.com',
       },
-      {
-        label: 'Coingecko',
-        href: 'https://www.coingecko.com/en/coins/cola-token-2',
-      },
-      {
-        label: 'Coinmarketcap',
-        href: 'https://coinmarketcap.com/currencies/colafactory/',
-      },
-    ],
-  },
-  {
-    label: 'More',
-    icon: 'MoreIcon',
-    items: [
       {
         label: 'Github',
-        href: 'https://github.com/Cola-Factory',
-      },
-      {
-        label: 'Docs',
-        href: 'https://docs.colafactory.com/',
-      },
-      {
-        label: 'Blog',
-        href: 'https://medium.com/@ColaFactoryEN',
+        href: 'https://github.com',
       },
     ],
   },
   /* {
     label: 'Roadmap',
     icon: 'MoreIcon',
-    href: 'https://docs.coladefi.com/roadmap',
+    href: 'https://docs.Yogurtdefi.com/roadmap',
   },
   {
     label: "Tokenized Blogging",
@@ -144,7 +92,7 @@ const config: MenuEntry[] = [
   {
     label: 'CertiK Audit',
     icon: 'AuditIcon',
-    href: 'https://www.certik.org/projects/colafinance',
+    href: 'https://www.certik.org/projects/Yogurtfinance',
   }, */
 ]
 
