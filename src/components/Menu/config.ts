@@ -55,7 +55,24 @@ const config: MenuEntry[] = [
       color: 'warning',
     },
   }, */
-
+  {
+    label: 'Info',
+    icon: 'InfoIcon',
+    items: [
+      {
+        label: 'Coingecko',
+        href: 'https://coingecko.com/',
+      },
+      {
+        label: 'Coinmarketcap',
+        href: 'https://coinmarketcap.com',
+      },
+      {
+        label: 'DexScreener',
+        href: 'https://dexscreener.com',
+      },
+    ],
+  },
   {
     label: 'More',
     icon: 'MoreIcon',
@@ -65,13 +82,14 @@ const config: MenuEntry[] = [
         href: 'https://docs.yogurtfinance.com/',
       },
       {
-        label: 'DexScreener',
-        href: 'https://dexscreener.com',
-      },
-      {
         label: 'Github',
         href: 'https://github.com',
       },
+      {
+        label: 'Defillama',
+        href: 'https://defillama.com/chain/Pulse',
+      },
+
     ],
   },
   /* {
