@@ -441,7 +441,7 @@ const farms: FarmConfig[] = [
     token: tokens.dai,
     quoteToken: tokens.wpls,
   },
-  {
+  /* {
     pid: 6,
     isTokenOnly: true,
     lpSymbol: 'eHEX',
@@ -453,7 +453,7 @@ const farms: FarmConfig[] = [
     },
     token: tokens.ehex,
     quoteToken: tokens.dai,
-  },
+  }, */
   /* {
     pid: 28,
     pcsVersion: 2,

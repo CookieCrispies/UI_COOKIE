@@ -45,13 +45,13 @@ const Ifo = () => {
       </IfoCards>
       <LaunchIfoCallout>
         <div>
-          <Title as="h2">{TranslateString(592, 'How to Participate in Decentralized IDOs on YogurtFactory')}</Title>
+          <Title as="h2">{TranslateString(592, 'How to Participate in Decentralized IDOs on YogurtFinance')}</Title>
           <Heading mb="16px">{TranslateString(594, 'Before IDO')}:</Heading>
           <List>
             <li>{TranslateString(598, 'Get WPLS tokens')}</li>
           </List>
           <Flex mb="16px">
-            {/* <LinkExternal href="https://Yogurtfactory.com/" mr="16px">
+            {/* <LinkExternal href="https://YogurtFinance.com/" mr="16px">
               {TranslateString(999, 'Buy Yogurt')}
             </LinkExternal> */}
             <LinkExternal href="https://app.pulsex.com/swap?outputCurrency=0xa1077a294dde1b09bb078844df40758a5d0f9a27">
@@ -72,7 +72,7 @@ const Ifo = () => {
             <Button
               as="a"
               variant="secondary"
-              href="https://docs.Yogurtfactory.com/Yogurt-products/ido"
+              href="https://docs.YogurtFinance.com/Yogurt-products/ido"
             >
               {TranslateString(610, 'Read more')}
             </Button>
@@ -85,7 +85,7 @@ const Ifo = () => {
             <Text mb={3}>
               {TranslateString(
                 514,
-                'Launch your project with YogurtFactory to bring your token directly to the most active and rapidly growing community on PulseChain.',
+                'Launch your project with YogurtFinance to bring your token directly to the most active and rapidly growing community on PulseChain.',
               )}
             </Text>
             <Button

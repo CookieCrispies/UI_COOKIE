@@ -5,16 +5,16 @@ const ifos: Ifo[] = [
         id: 'Yogurt',
         address: '0x89B35f7Af474D7f8259A8086670c7506B6F2e452',
         isActive: true,
-        name: 'YogurtFactory',
+        name: 'YogurtFinance',
         subTitle: 'Turn Yogurt into cold, hard cash on PulseChain',
         description:
-            'YogurtFactory is a yield farming project, Which has become the standard and the most convenient way to make yield.\n' +
+            'YogurtFinance is a yield farming project, Which has become the standard and the most convenient way to make yield.\n' +
             'Our primary aim is to utilize the scalability, security, decentralization, and lower transaction fees offered by the PULSECHAIN Blockchain to deliver the finest product to the PULSECHAIN Ecosystem.',
         launchDate: 'Jui. 15',
         launchTime: '2PM LON',
         saleAmount: '250,000 Yogurt',
         raiseAmount: '$50,000',
-        projectSiteUrl: 'https://Yogurtfactory.com/',
+        projectSiteUrl: 'https://YogurtFinance.com/',
         currency: 'WPLS',
         currencyAddress: '0xA1077a294dDE1B09bB078844df40758a5D0f9a27',
         tokenDecimals: 18,
