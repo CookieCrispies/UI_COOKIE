@@ -69,6 +69,17 @@ const tokens = {
     decimals: 18,
     projectLink: 'https://www.centre.io/usdc',
   },
+  inc: {
+    symbol: 'inc',
+    address: {
+      56: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d',
+      97: '',
+      369: '0x2fa878Ab3F87CC1C9737Fc071108F904c0B0C95d',
+      943: '',
+    },
+    decimals: 18,
+    projectLink: 'https://www.centre.io/usdc',
+  },
   plsx: {
     symbol: 'plsx',
     address: {
