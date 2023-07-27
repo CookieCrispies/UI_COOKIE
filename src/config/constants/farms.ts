@@ -441,6 +441,19 @@ const farms: FarmConfig[] = [
     token: tokens.dai,
     quoteToken: tokens.wpls,
   },
+  {
+    pid: 13,
+    isTokenOnly: true,
+    lpSymbol: 'INC',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // Yogurt-BUSD LP
+      369: '0xE56043671df55dE5CDf8459710433C10324DE0aE', // Yogurt-BUSD LP
+      943: '',
+    },
+    token: tokens.inc,
+    quoteToken: tokens.wpls,
+  },
   /* {
     pid: 6,
     isTokenOnly: true,
