@@ -8,9 +8,7 @@ import FarmStakingCard from 'views/Home/components/FarmStakingCard'
 import CakeStats from 'views/Home/components/CakeStats'
 import TotalValueLockedCard from 'views/Home/components/TotalValueLockedCard'
 import TwitterCard from 'views/Home/components/TwitterCard'
-import EarnAPRCard from 'views/Home/components/EarnAPRCard'
-import BridgeCard from 'views/Home/components/BridgeCard'
-import KingdomCard from 'views/Home/components/KingdomCard'
+import Countdown from "./components/Countdown";
 
 const Hero = styled.div`
   align-items: center;
@@ -83,6 +81,7 @@ const CTACards = styled(BaseLayout)`
   }
 `
 
+
 const Home: React.FC = () => {
   const TranslateString = useI18n()
 
@@ -92,6 +91,7 @@ const Home: React.FC = () => {
         <Heading as="h1" size="xl" mb="24px" color="white">
           {/* {TranslateString(576, 'Yogurt Defi')} */}
           <img src="/images/Yogurt/logohome.png" alt="Yogurt Defi" />
+          <Countdown />
         </Heading>
       </Hero>
       <div>
