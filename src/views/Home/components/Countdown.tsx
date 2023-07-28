@@ -14,9 +14,9 @@ function MyTimer({ expiryTimestamp }) {
     return (
         <div style={{textAlign: 'center', color:'#33bbe5'}}>
             <br/>
-            <p>Farming start in : </p>
+            <p>Farming starts in : </p>
             <div style={{fontSize: '50px'}}>
-                <span>{days} days </span><span>{hours} hours </span><span>{minutes} minutes </span><span>{seconds} seconds</span>
+                <span>{days} Day </span><span>{hours} Hours </span><span>{minutes} Minutes </span><span>{seconds} Seconds</span>
             </div>
             {/* <p>{isRunning ? 'Running' : 'Not running'}</p> */}
         </div>
