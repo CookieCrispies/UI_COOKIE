@@ -152,6 +152,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, account }
         amountInvested: 1000 / parseFloat(farm.token.busdPrice),
     }).toFixed(2);
 
+
   return (
     <FCard>
       {farm.token.symbol === 'Yogurt' && <StyledCardAccent />}

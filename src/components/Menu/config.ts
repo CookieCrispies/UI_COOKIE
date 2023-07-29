@@ -69,7 +69,7 @@ const config: MenuEntry[] = [
       },
       {
         label: 'DexScreener',
-        href: 'https://dexscreener.com',
+        href: 'https://dexscreener.com/pulsechain/0xca8544e46153f6b2ab535bb6549daaaecb71d58a',
       },
     ],
   },
