@@ -8,13 +8,13 @@ export default {
   masterChef: {
     56: '0x227e79c83065edb8b954848c46ca50b96cb33e16',
     97: '',
-    369: '0x5Fe423A22d4bFD1caFd6044042f4269Fc930F8dC',
+    369:'0x5a8afFC7b1B6b26C98ca77Ae24f61d8d88e9EC20',
     943:'0x789fb076e08cE07A39aA81b4c5Cdf85E07EAf551',
   },
   kingdoms: {
     56: '0x2e72f4b196b9e5b89c29579cc135756a00e6cbbd',
     97: '',
-    369: '',
+    369: '0xEE24940632EB8e438859Fd0147716549c77bF16f',
     943: '',
   },
   lockedKingdoms: {

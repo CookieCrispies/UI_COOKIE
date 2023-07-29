@@ -87,8 +87,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, account, addLiquidi
       <Button
         mt="8px"
         width="100%"
-        disabled
-        /* disabled={requestedApproval || location.pathname.includes('archived')} */
+        disabled={requestedApproval || location.pathname.includes('archived')}
         onClick={handleApprove}
       >
         {TranslateString(758, 'Approve Contract')}

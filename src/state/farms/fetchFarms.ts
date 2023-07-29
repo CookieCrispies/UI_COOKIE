@@ -387,6 +387,9 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
             kingdomCorrectAlloc = BIG_ZERO
           }
 
+          console.log("yogurt pet block")
+          console.log(YogurtPerBlock);
+
           return {
             ...farmConfig,
             tokenAmount: tokenAmount.toJSON(),
