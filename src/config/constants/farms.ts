@@ -364,7 +364,7 @@ const farms: FarmConfig[] = [
     quoteToken: tokens.usdc,
   },
   {
-    pid: 3,
+    pid: 10,
     isTokenOnly: true,
     lpSymbol: 'Yogurt',
     lpAddresses: {
