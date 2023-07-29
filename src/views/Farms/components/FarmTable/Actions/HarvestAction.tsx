@@ -8,15 +8,19 @@ import useI18n from 'hooks/useI18n'
 import { usePriceCakeBusd } from 'state/hooks'
 import { useCountUp } from 'react-countup'
 
+import {useWeb3React} from "@web3-react/core";
 import { ActionContainer, ActionTitles, Title, Subtle, ActionContent, Earned, Staked } from './styles'
+import useStake from "../../../../../hooks/useStake";
 
 interface HarvestActionProps extends FarmWithStakedValue {
   userDataReady: boolean
 }
 
 const HarvestAction: React.FunctionComponent<HarvestActionProps> = ({ pid, userData, userDataReady }) => {
+  const { account } = useWeb3React()
   const earningsBigNumber = new BigNumber(userData.earnings)
   const cakePrice = usePriceCakeBusd()
+  const { onStake } = useStake(10)
   let earnings = 0
   let earningsBusd = 0
   let displayBalance = userDataReady ? earnings.toLocaleString() : <Skeleton width={60} />
@@ -31,6 +35,8 @@ const HarvestAction: React.FunctionComponent<HarvestActionProps> = ({ pid, userD
   const [pendingTx, setPendingTx] = useState(false)
   const { onReward } = useHarvest(pid)
   const TranslateString = useI18n()
+
+  const rawEarningsBalance = account ? getBalanceNumber(earningsBigNumber) : 0
 
   const { countUp, update } = useCountUp({
     start: 0,
@@ -67,6 +73,24 @@ const HarvestAction: React.FunctionComponent<HarvestActionProps> = ({ pid, userD
         >
           {TranslateString(562, 'Harvest')}
         </Button>
+        {pid !== 10 ?
+            <Button
+                disabled={rawEarningsBalance === 0 || pendingTx}
+                variant='secondary'
+                onClick={async () => {
+                  setPendingTx(true)
+                  await Promise.all([
+                    onStake(rawEarningsBalance.toString()),
+                    onReward(),
+
+                  ]);
+                  setPendingTx(false)
+                }
+                }
+            >
+              {TranslateString(999, 'Cream it')}
+            </Button>
+            : null}
       </ActionContent>
     </ActionContainer>
   )
