@@ -163,7 +163,7 @@ const tokens = {
     address: {
       56: '0x50d809c74e0b8e49e7b4c65bb3109abe3ff4c1c1',
       97: '',
-      369: '0x02Dff78fDeDaF86D9dfbe9B3132aA3Ea72Ed1680',
+      369: '0xece11C704F38FF38520667AeCDd7f53eA82F60F5',
       943: '',
     },
     decimals: 18,

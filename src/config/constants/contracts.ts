@@ -8,7 +8,7 @@ export default {
   masterChef: {
     56: '0x227e79c83065edb8b954848c46ca50b96cb33e16',
     97: '',
-    369:'0x5a8afFC7b1B6b26C98ca77Ae24f61d8d88e9EC20',
+    369:'0xca3E704Bd09B979170D76d34880c7A72fda51B63',
     943:'0x789fb076e08cE07A39aA81b4c5Cdf85E07EAf551',
   },
   kingdoms: {
