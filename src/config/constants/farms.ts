@@ -325,52 +325,13 @@ const farms: FarmConfig[] = [
     quoteToken: tokens.Yogurt,
   }, */
   {
-    pid: 10,
+    pid: 0,
     pcsVersion: 2,
     lpSymbol: 'Yogurt-USDC LP',
     lpAddresses: {
       97: '',
       56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
-      369: '0x7978de6276f5f7397e730c143f194bcb66c03cc7', // Yogurt-BUSD LP
-      943: '',
-    },
-    token: tokens.Yogurt,
-    quoteToken: tokens.usdc,
-  },
-  {
-    pid: 9,
-    pcsVersion: 2,
-    lpSymbol: 'Yogurt-WPLS LP',
-    lpAddresses: {
-      97: '',
-      56: '0x7BaE0d7D2760E681559fbb502b43fFA26561bA24',
-      369: '0x571a6Daa0AF03149E627c515D219524740b1dFAe', // Yogurt-BUSD LP
-      943: '',
-    },
-    token: tokens.Yogurt,
-    quoteToken: tokens.wpls,
-  },
-  {
-    pid: 7,
-    pcsVersion: 2,
-    lpSymbol: 'WPLS-USDC LP',
-    lpAddresses: {
-      97: '',
-      56: '0x7BaE0d7D2760E681559fbb502b43fFA26561bA24',
-      369: '0x6753560538ECa67617A9Ce605178F788bE7E524E', // Yogurt-BUSD LP
-      943: '',
-    },
-    token: tokens.wpls,
-    quoteToken: tokens.usdc,
-  },
-  {
-    pid: 0,
-    isTokenOnly: true,
-    lpSymbol: 'Yogurt',
-    lpAddresses: {
-      97: '',
-      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // Yogurt-BUSD LP
-      369: '0x7978de6276f5f7397e730c143f194bcb66c03cc7', // Yogurt-BUSD LP
+      369: '0x7978de6276f5f7397e730c143f194bcb66c03cc7', // TODO Changer LP ici
       943: '',
     },
     token: tokens.Yogurt,
@@ -378,77 +339,116 @@ const farms: FarmConfig[] = [
   },
   {
     pid: 1,
-    isTokenOnly: true,
-    lpSymbol: 'WPLS',
+    pcsVersion: 2,
+    lpSymbol: 'Yogurt-WPLS LP',
     lpAddresses: {
       97: '',
-      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // Yogurt-BUSD LP
-      369: '0x6753560538ECa67617A9Ce605178F788bE7E524E', // Yogurt-BUSD LP
+      56: '0x7BaE0d7D2760E681559fbb502b43fFA26561bA24',
+      369: '0x571a6Daa0AF03149E627c515D219524740b1dFAe', // TODO Changer LP ici
+      943: '',
+    },
+    token: tokens.Yogurt,
+    quoteToken: tokens.wpls,
+  },
+  {
+    pid: 2,
+    pcsVersion: 2,
+    lpSymbol: 'WPLS-USDC LP',
+    lpAddresses: {
+      97: '',
+      56: '0x7BaE0d7D2760E681559fbb502b43fFA26561bA24',
+      369: '0x6753560538ECa67617A9Ce605178F788bE7E524E',
       943: '',
     },
     token: tokens.wpls,
     quoteToken: tokens.usdc,
   },
   {
-    pid: 2,
+    pid: 3,
+    isTokenOnly: true,
+    lpSymbol: 'Yogurt',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
+      369: '0x7978de6276f5f7397e730c143f194bcb66c03cc7', // TODO Changer LP ici avec YOGURT-USDC LP
+      943: '',
+    },
+    token: tokens.Yogurt,
+    quoteToken: tokens.usdc,
+  },
+  {
+    pid: 4,
+    isTokenOnly: true,
+    lpSymbol: 'WPLS',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
+      369: '0x6753560538ECa67617A9Ce605178F788bE7E524E',
+      943: '',
+    },
+    token: tokens.wpls,
+    quoteToken: tokens.usdc,
+  },
+  {
+    pid: 5,
     isTokenOnly: true,
     lpSymbol: 'USDC',
     lpAddresses: {
       97: '',
-      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // Yogurt-BUSD LP
-      369: '0x3225E3B0D3C6b97EC9848f7B40bb3030E5497709', // Yogurt-BUSD LP
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
+      369: '0x3225E3B0D3C6b97EC9848f7B40bb3030E5497709',
       943: '',
     },
     token: tokens.usdc,
     quoteToken: tokens.dai,
   },
   {
-    pid: 4,
-    isTokenOnly: true,
-    lpSymbol: 'PLSX',
-    lpAddresses: {
-      97: '',
-      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // Yogurt-BUSD LP
-      369: '0xB2893ceA8080bF43b7b60B589EDaAb5211D98F23', // Yogurt-BUSD LP
-      943: '',
-    },
-    token: tokens.plsx,
-    quoteToken: tokens.dai,
-  },
-  {
-    pid: 5,
-    isTokenOnly: true,
-    lpSymbol: 'HEX',
-    lpAddresses: {
-      97: '',
-      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // Yogurt-BUSD LP
-      369: '0x6F1747370B1CAcb911ad6D4477b718633DB328c8', // Yogurt-BUSD LP
-      943: '',
-    },
-    token: tokens.hex,
-    quoteToken: tokens.dai,
-  },
-  {
-    pid: 3,
+    pid: 6,
     isTokenOnly: true,
     lpSymbol: 'DAI',
     lpAddresses: {
       97: '',
-      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // Yogurt-BUSD LP
-      369: '0xE56043671df55dE5CDf8459710433C10324DE0aE', // Yogurt-BUSD LP
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
+      369: '0xE56043671df55dE5CDf8459710433C10324DE0aE',
       943: '',
     },
     token: tokens.dai,
     quoteToken: tokens.wpls,
   },
   {
-    pid: 13,
+    pid: 7,
+    isTokenOnly: true,
+    lpSymbol: 'HEX',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
+      369: '0x6F1747370B1CAcb911ad6D4477b718633DB328c8',
+      943: '',
+    },
+    token: tokens.hex,
+    quoteToken: tokens.dai,
+  },
+  {
+    pid: 8,
+    isTokenOnly: true,
+    lpSymbol: 'PLSX',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
+      369: '0xB2893ceA8080bF43b7b60B589EDaAb5211D98F23',
+      943: '',
+    },
+    token: tokens.plsx,
+    quoteToken: tokens.dai,
+  },
+  {
+    pid: 9,
     isTokenOnly: true,
     lpSymbol: 'INC',
     lpAddresses: {
       97: '',
-      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // Yogurt-BUSD LP
-      369: '0xE56043671df55dE5CDf8459710433C10324DE0aE', // Yogurt-BUSD LP
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
+      369: '0x4F0e991e170Aa644763Cb68ecc945Bdf957473eE',
       943: '',
     },
     token: tokens.inc,

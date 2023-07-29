@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://app.pulsex.com',
+        href: 'https://app.pulsex.com/swap?outputCurrency=0xece11C704F38FF38520667AeCDd7f53eA82F60F5',
       },
       {
         label: 'Liquidity',
-        href: 'https://app.pulsex.com',
+        href: 'https://app.pulsex.com/add/PLS/0xece11C704F38FF38520667AeCDd7f53eA82F60F5',
       },
     ],
   },
