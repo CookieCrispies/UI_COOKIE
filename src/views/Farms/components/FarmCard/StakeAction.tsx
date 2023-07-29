@@ -62,7 +62,7 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
     <DepositModal max={new BigNumber(tokenBalanceString.toFixed(0))} onConfirm={onStake} tokenName={tokenName} addLiquidityUrl={addLiquidityUrl} isTokenOnly={isTokenOnly} isKingdomToken={isKingdomToken} />,
   )
   const [onPresentWithdraw] = useModal(
-    <WithdrawModal max={stakedBalance} onConfirm={onUnstake} tokenName={tokenName} isTokenOnly={isTokenOnly} isKingdomToken={isKingdomToken} />,
+    <WithdrawModal max={new BigNumber(getBalanceNumber(stakedBalance, decimals))} onConfirm={onUnstake} tokenName={tokenName} isTokenOnly={isTokenOnly} isKingdomToken={isKingdomToken} />,
   )
 
   const renderStakingButtons = () => {
