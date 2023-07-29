@@ -331,7 +331,7 @@ const farms: FarmConfig[] = [
     lpAddresses: {
       97: '',
       56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
-      369: '0x7978de6276f5f7397e730c143f194bcb66c03cc7', // TODO Changer LP ici
+      369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', // TODO Changer LP ici
       943: '',
     },
     token: tokens.Yogurt,
@@ -344,7 +344,7 @@ const farms: FarmConfig[] = [
     lpAddresses: {
       97: '',
       56: '0x7BaE0d7D2760E681559fbb502b43fFA26561bA24',
-      369: '0x571a6Daa0AF03149E627c515D219524740b1dFAe', // TODO Changer LP ici
+      369: '0x4168ff74C6D552cB05e48B4D28018326bB2079Bb', // TODO Changer LP ici
       943: '',
     },
     token: tokens.Yogurt,
@@ -370,7 +370,7 @@ const farms: FarmConfig[] = [
     lpAddresses: {
       97: '',
       56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
-      369: '0x7978de6276f5f7397e730c143f194bcb66c03cc7', // TODO Changer LP ici avec YOGURT-USDC LP
+      369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', // TODO Changer LP ici avec YOGURT-USDC LP
       943: '',
     },
     token: tokens.Yogurt,
