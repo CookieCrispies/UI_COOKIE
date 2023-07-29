@@ -12,9 +12,13 @@ export const approve = async (lpContract, masterChefContract, account) => {
 }
 
 export const stake = async (masterChefContract, pid, amount, account) => {
-  console.log('account', account)
+  let decimals = DEFAULT_TOKEN_DECIMAL;
+  if (pid === 5)
+    decimals = new BigNumber(6);
+  if (pid === 7)
+    decimals = new BigNumber(8);
   return masterChefContract.methods
-    .deposit(pid, new BigNumber(amount).times(DEFAULT_TOKEN_DECIMAL).toString())
+    .deposit(pid, new BigNumber(amount).times(BIG_TEN.pow(decimals)).toString())
     .send({ from: account })
     .on('transactionHash', (tx) => {
       return tx.transactionHash
@@ -49,8 +53,13 @@ export const sousStakeBnb = async (sousChefContract, amount, account) => {
 }
 
 export const unstake = async (masterChefContract, pid, amount, account) => {
+  let decimals = DEFAULT_TOKEN_DECIMAL;
+  if (pid === 5)
+    decimals = new BigNumber(6);
+  if (pid === 7)
+    decimals = new BigNumber(8);
   return masterChefContract.methods
-    .withdraw(pid, new BigNumber(amount).times(DEFAULT_TOKEN_DECIMAL).toString())
+    .withdraw(pid, new BigNumber(amount).times(BIG_TEN.pow(decimals)).toString())
     .send({ from: account })
     .on('transactionHash', (tx) => {
       return tx.transactionHash
