@@ -82,6 +82,10 @@ const config: MenuEntry[] = [
         href: 'https://docs.yogurtfinance.com/',
       },
       {
+        label: 'Blog',
+        href: 'https://medium.com/@yogurtdefi',
+      },
+      {
         label: 'Github',
         href: 'https://github.com',
       },
