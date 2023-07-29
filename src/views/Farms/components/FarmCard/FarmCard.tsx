@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useMemo, useState} from 'react'
 import BigNumber from 'bignumber.js'
 import styled, { keyframes } from 'styled-components'
 import { Flex, Text, Skeleton } from '@pancakeswap-libs/uikit'
@@ -15,6 +15,8 @@ import CardHeading from './CardHeading'
 import CardActionsContainer from './CardActionsContainer'
 import ApyButton from './ApyButton'
 import {getRoi, tokenEarnedPerThousandDollarsCompounding} from "../../../../utils/compoundApyHelpers";
+import tokens from "../../../../config/constants/tokens";
+import {QuoteToken} from "../../../../config/constants/types";
 
 export interface FarmWithStakedValue extends Farm {
   apr?: number
@@ -109,11 +111,12 @@ interface FarmCardProps {
   farm: FarmWithStakedValue
   removed: boolean
   cakePrice?: BigNumber
+  plsPrice?: BigNumber
   provider?: ProviderType
   account?: string
 }
 
-const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, account }) => {
+const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, plsPrice, account }) => {
   const TranslateString = useI18n()
 
   const [showExpandableSection, setShowExpandableSection] = useState(false)
@@ -122,9 +125,30 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, account }
   // NAR-CAKE LP. The images should be cake-bnb.svg, link-bnb.svg, nar-cake.svg
   const farmImage = farm.lpSymbol.split(' ')[0].toLocaleLowerCase()
 
+    const totalValue: BigNumber = useMemo(() => {
+        if (!farm.lpTotalInQuoteToken) {
+            return null
+        }
+        if (farm.quoteToken.symbol === QuoteToken.PLS) {
+            return plsPrice.times(farm.lpTotalInQuoteToken)
+        }
+        if (farm.quoteToken.symbol === QuoteToken.CAKE) {
+            return cakePrice.times(farm.lpTotalInQuoteToken)
+        }
+        return farm.lpTotalInQuoteToken
+    }, [cakePrice, farm.lpTotalInQuoteToken, farm.quoteToken.symbol, plsPrice])
+
   const totalValueFormatted = farm.liquidity && farm.liquidity.toNumber()
     ? `$${farm.liquidity.toNumber().toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
+
+    const lpPrice = useMemo(() => {
+        return Number(totalValue) / Number(farm.lpTokenBalance)
+    }, [farm, totalValue])
+
+    const lpTokenPriceFormated = lpPrice
+        ? `${Number(lpPrice).toLocaleString(undefined, { maximumFractionDigits: 2 })}`
+        : '-'
 
   const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', '')
   const earnLabel = farm.dual ? farm.dual.earnLabel : 'Yogurt'
@@ -203,6 +227,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, account }
       <ExpandingWrapper expanded={showExpandableSection}>
         <DetailsSection
           removed={removed}
+          isTokenOnly={farm.isTokenOnly}
           // bscScanAddress={`https://scan.pulsechain.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`}
           bscScanAddress={
             farm.isTokenOnly ?
@@ -212,6 +237,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, account }
           }
           infoAddress={`https://app.pulsex.com/info/pools/${lpAddress}`}
           totalValueFormatted={totalValueFormatted}
+          lpTokenPriceFormated={lpTokenPriceFormated}
           lpLabel={lpLabel}
           addLiquidityUrl={addLiquidityUrl}
         />

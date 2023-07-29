@@ -39,12 +39,6 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   return (
     <Wrapper>
       <Flex justifyContent="space-between">
-        {!isTokenOnly && (
-            <Flex justifyContent="space-between">
-              <Text>{TranslateString(999, 'LP price')}:</Text>
-              <Text>${lpTokenPriceFormated}</Text>
-            </Flex>
-        )}
         <Text>{TranslateString(354, 'Total Liquidity')}:</Text>
         <Text>{totalValueFormatted}</Text>
       </Flex>
@@ -53,7 +47,12 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
           {TranslateString(999, `Get ${lpLabel}`, { name: lpLabel })}
         </StyledLinkExternal>
       )} */}
-
+      {!isTokenOnly && (
+          <Flex justifyContent="space-between">
+            <Text>{TranslateString(999, 'LP price')}:</Text>
+            <Text>${lpTokenPriceFormated}</Text>
+          </Flex>
+      )}
        <StyledLinkExternal href={bscScanAddress}>{TranslateString(999, 'View Contract')}</StyledLinkExternal>
       <StyledLinkExternal href={infoAddress}>{TranslateString(999, 'See Pair Info')}</StyledLinkExternal>
     </Wrapper>
@@ -61,3 +60,4 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
 }
 
 export default DetailsSection
+

@@ -143,6 +143,16 @@ export enum NftType {
   MIXIE = 'mixie',
 }
 
+export enum QuoteToken {
+  'PLS' = 'PLS',
+  'WPLS' = 'WPLS',
+  'CAKE' = 'CAKE',
+  'SYRUP' = 'SYRUP',
+  'BUSD' = 'BUSD',
+  'TWT' = 'TWT',
+  'UST' = 'UST',
+}
+
 export type Nft = {
   description: string
   name: string
