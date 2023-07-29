@@ -312,9 +312,6 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
       compoundFrequency: 1,
     })
 
-    if (farm.pid === 10)
-      console.log('apr', farm.apr)
-
     const APR = getRoi({
       amountEarned: tokenEarnedPerThousand365D,
       amountInvested: 1000 / parseFloat(token.busdPrice),
