@@ -32,6 +32,8 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
   const valNumber = new BigNumber(val)
   const fullBalanceNumber = new BigNumber(fullBalance)
 
+  console.log('stakedBalanceNumber', fullBalanceNumber.toNumber())
+
   const handleChange = useCallback(
     (e: React.FormEvent<HTMLInputElement>) => {
       if (e.currentTarget.validity.valid) {
