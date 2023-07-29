@@ -70,10 +70,12 @@ const Staked: React.FunctionComponent<StackedActionProps> = ({
     return stakedBalanceNumber.toLocaleString()
   }, [stakedBalance, decimals])
 
+  const stakedBalanceString = new BigNumber(stakedBalance).div(new BigNumber(10).pow(decimals));
+
   const [onPresentDeposit] = useModal(
     <DepositModal max={tokenBalanceString} onConfirm={(amount) => onStake(amount)} tokenName={lpSymbol} addLiquidityUrl={addLiquidityUrl} />,
   )
-  const [onPresentWithdraw] = useModal(<WithdrawModal max={stakedBalance} onConfirm={onUnstake} tokenName={lpSymbol} />)
+  const [onPresentWithdraw] = useModal(<WithdrawModal max={stakedBalanceString} onConfirm={onUnstake} tokenName={lpSymbol} />)
 
   // const lpContract = getBep20Contract(lpAddress, web3)
   const lpContract = useMemo(() => {
