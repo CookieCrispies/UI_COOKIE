@@ -48,7 +48,7 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
 
   const decimals = isTokenOnly ? farm.token.decimals : 18
 
-   const tokenBalanceString = new BigNumber(tokenBalance).div(new BigNumber(10).pow(decimals));
+  const tokenBalanceString = new BigNumber(tokenBalance).div(new BigNumber(10).pow(decimals));
 
   const displayBalance = useCallback(() => {
     const stakedBalanceNumber = new BigNumber(stakedBalance).div(new BigNumber(10).pow(decimals)).toNumber()
@@ -59,7 +59,7 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
   }, [stakedBalance, decimals])
 
   const [onPresentDeposit] = useModal(
-    <DepositModal max={new BigNumber(tokenBalanceString.toFixed(0))} onConfirm={onStake} tokenName={tokenName} addLiquidityUrl={addLiquidityUrl} isTokenOnly={isTokenOnly} isKingdomToken={isKingdomToken} />,
+    <DepositModal max={tokenBalanceString} onConfirm={onStake} tokenName={tokenName} addLiquidityUrl={addLiquidityUrl} isTokenOnly={isTokenOnly} isKingdomToken={isKingdomToken} />,
   )
   const [onPresentWithdraw] = useModal(
     <WithdrawModal max={new BigNumber(getBalanceNumber(stakedBalance, decimals))} onConfirm={onUnstake} tokenName={tokenName} isTokenOnly={isTokenOnly} isKingdomToken={isKingdomToken} />,
