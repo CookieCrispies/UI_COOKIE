@@ -235,7 +235,7 @@ export const usePriceBnbBusd = (): BigNumber => {
 }
 
 export const usePriceCakeBusd = (): BigNumber => {
-  const cakeBnbFarm = useFarmFromPid(0)
+  const cakeBnbFarm = useFarmFromPid(1)
   const bnbBusdPrice = usePriceBnbBusd()
   //
   // const cakeBusdPrice = cakeBnbFarm.tokenPriceVsQuote ? bnbBusdPrice.times(cakeBnbFarm.tokenPriceVsQuote) : BIG_ZERO
