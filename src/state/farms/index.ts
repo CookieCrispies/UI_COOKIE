@@ -13,6 +13,7 @@ import {
 } from './fetchFarmUser'
 import { FarmsState, Farm } from '../types'
 import {fetchLockedKingdomUserData} from "../../views/Kingdoms/LockedKingdom/poolHelpers";
+import { BIG_TEN } from '../../utils/bigNumber'
 
 const nonArchivedFarms = farmsConfig.filter(({ pid }) => !isArchivedPid(pid))
 
@@ -92,7 +93,6 @@ export const fetchFarmUserDataAsync = (account: string) => async (dispatch, getS
   try {
     const fetchArchived = getState().farms.loadArchivedFarmsData
     const farmsToFetch = fetchArchived ? farmsConfig : nonArchivedFarms
-
     // const lockedKingdomUserData = await fetchLockedKingdomUserData(account);
     const lockedKingdomUserData = null;
     const userFarmAllowances = await fetchFarmUserAllowances(account, farmsToFetch)
@@ -105,9 +105,9 @@ export const fetchFarmUserDataAsync = (account: string) => async (dispatch, getS
         return {
           pid: farmsToFetch[index].pid,
           allowance: userFarmAllowances[index],
-          tokenBalance: userFarmTokenBalances[index],
-          stakedBalance: userStakedBalances[index],
-          earnings: userFarmEarnings[index],
+          tokenBalance: new BigNumber(userFarmTokenBalances[index]).div(BIG_TEN.pow(farmsToFetch[index].token.decimals)).toJSON(),
+          stakedBalance: new BigNumber(userStakedBalances[index]).div(BIG_TEN.pow(farmsToFetch[index].token.decimals)).toJSON(),
+          earnings: new BigNumber(userFarmEarnings[index]).div(BIG_TEN.pow(farmsToFetch[index].token.decimals)).toJSON(),
           isKingdom: farmsToFetch[index].isKingdom,
           lpSymbol: farmsToFetch[index].lpSymbol,
           lockedKingdomUserData,
@@ -117,9 +117,9 @@ export const fetchFarmUserDataAsync = (account: string) => async (dispatch, getS
       return {
         pid: farmsToFetch[index].pid,
         allowance: userFarmAllowances[index],
-        tokenBalance: userFarmTokenBalances[index],
-        stakedBalance: userStakedBalances[index],
-        earnings: userFarmEarnings[index],
+        tokenBalance: new BigNumber(userFarmTokenBalances[index]).toJSON(),
+        stakedBalance: new BigNumber(userStakedBalances[index]).toJSON(),
+        earnings: new BigNumber(userFarmEarnings[index]).toJSON(),
         isKingdom: farmsToFetch[index].isKingdom,
         lpSymbol: farmsToFetch[index].lpSymbol,
       }

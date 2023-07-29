@@ -71,7 +71,7 @@ const Staked: React.FunctionComponent<StackedActionProps> = ({
   }, [stakedBalance, decimals])
 
   const [onPresentDeposit] = useModal(
-    <DepositModal max={tokenBalanceString} onConfirm={(amount) => onStake(new BigNumber(amount).times(new BigNumber(10).pow(new BigNumber(decimals))).toString())} tokenName={lpSymbol} addLiquidityUrl={addLiquidityUrl} />,
+    <DepositModal max={tokenBalanceString} onConfirm={(amount) => onStake(amount)} tokenName={lpSymbol} addLiquidityUrl={addLiquidityUrl} />,
   )
   const [onPresentWithdraw] = useModal(<WithdrawModal max={stakedBalance} onConfirm={onUnstake} tokenName={lpSymbol} />)
 

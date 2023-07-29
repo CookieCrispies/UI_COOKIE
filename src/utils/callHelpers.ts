@@ -12,7 +12,9 @@ export const approve = async (lpContract, masterChefContract, account) => {
 }
 
 export const stake = async (masterChefContract, pid, amount, account) => {
-  console.log("amount", amount)
+  console.log("staked request amount", amount);
+  console.log("staked request pid", pid);
+  console.log("staked request masterChefContract", masterChefContract);
   return masterChefContract.methods
     .deposit(pid, new BigNumber(amount).toString())
     .send({ from: account })
