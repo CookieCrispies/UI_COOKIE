@@ -8,10 +8,10 @@ const tokens = {
     address: {
       56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
       97: '0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe',
-      369: '0x02Dff78fDeDaF86D9dfbe9B3132aA3Ea72Ed1680',
+      369: '0xece11C704F38FF38520667AeCDd7f53eA82F60F5',
       943: '',
     },
-    decimals: 6,
+    decimals: 18,
     projectLink: 'https://app.pulsex.com/',
   },
   wbnb: {
@@ -25,7 +25,7 @@ const tokens = {
     decimals: 6,
     projectLink: 'https://app.pulsex.com/',
   },
-  
+
   busd: {
     symbol: 'BUSD',
     address: {

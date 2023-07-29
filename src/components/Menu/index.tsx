@@ -15,7 +15,7 @@ const Menu = (props) => {
   const { isDark, toggleTheme } = useTheme()
   const cakePriceUsd = usePriceCakeBusd()
   const { profile } = useProfile()
-
+  console.log('cakePriceUsd', cakePriceUsd.toNumber())
   return (
     <UikitMenu
       account={account}
