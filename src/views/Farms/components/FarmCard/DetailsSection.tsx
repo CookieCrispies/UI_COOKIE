@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import { Text, Flex, LinkExternal } from '@pancakeswap-libs/uikit'
 
 export interface ExpandableSectionProps {
+  isTokenOnly?: boolean
+  lpTokenPriceFormated?: string
   bscScanAddress?: string
   infoAddress?: string
   removed?: boolean
@@ -22,10 +24,12 @@ const StyledLinkExternal = styled(LinkExternal)`
 `
 
 const DetailsSection: React.FC<ExpandableSectionProps> = ({
+  isTokenOnly,
   bscScanAddress,
   infoAddress,
   removed,
   totalValueFormatted,
+  lpTokenPriceFormated,
   lpLabel,
   addLiquidityUrl,
 }) => {
@@ -35,6 +39,12 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   return (
     <Wrapper>
       <Flex justifyContent="space-between">
+        {!isTokenOnly && (
+            <Flex justifyContent="space-between">
+              <Text>{TranslateString(999, 'LP price')}:</Text>
+              <Text>${lpTokenPriceFormated}</Text>
+            </Flex>
+        )}
         <Text>{TranslateString(354, 'Total Liquidity')}:</Text>
         <Text>{totalValueFormatted}</Text>
       </Flex>
@@ -43,6 +53,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
           {TranslateString(999, `Get ${lpLabel}`, { name: lpLabel })}
         </StyledLinkExternal>
       )} */}
+
        <StyledLinkExternal href={bscScanAddress}>{TranslateString(999, 'View Contract')}</StyledLinkExternal>
       <StyledLinkExternal href={infoAddress}>{TranslateString(999, 'See Pair Info')}</StyledLinkExternal>
     </Wrapper>
