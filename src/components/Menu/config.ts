@@ -68,8 +68,16 @@ const config: MenuEntry[] = [
         href: 'https://coinmarketcap.com',
       },
       {
+        label: 'PulseX',
+        href: 'https://app.pulsex.com/info/pool/0xca8544e46153f6b2ab535bb6549daaaecb71d58a',
+      },
+      {
         label: 'DexScreener',
         href: 'https://dexscreener.com/pulsechain/0xca8544e46153f6b2ab535bb6549daaaecb71d58a',
+      },
+      {
+        label: 'Defillama',
+        href: 'https://defillama.com/chain/Pulse',
       },
     ],
   },
@@ -89,11 +97,6 @@ const config: MenuEntry[] = [
         label: 'Github',
         href: 'https://github.com',
       },
-      {
-        label: 'Defillama',
-        href: 'https://defillama.com/chain/Pulse',
-      },
-
     ],
   },
   /* {
