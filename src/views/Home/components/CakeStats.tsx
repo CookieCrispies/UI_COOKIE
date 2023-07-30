@@ -60,8 +60,7 @@ const CakeStats = () => {
             {YogurtPerBlock}
           </Text>
         </Row>
-        <br/>
-        <br/>
+
       </CardBody>
     </StyledCakeStats>
   )
