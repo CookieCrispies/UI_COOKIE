@@ -15,11 +15,11 @@ interface TotalStakedProps {
   cakePrice: BigNumber
   bakePrice?: BigNumber
   beltPrice?: BigNumber
-  YogurtDen?: any
+  CookieDen?: any
 }
 
-const TotalStaked: React.FC<TotalStakedProps> = ({ farms, cakePrice, bakePrice, beltPrice, YogurtDen }) => {
-  const [totalStakeUSD, totalYogurt, totalYogurtUSD, totalAPY, totalDailyAPR, count] = useTotalStaked(farms, cakePrice, bakePrice, beltPrice, YogurtDen);
+const TotalStaked: React.FC<TotalStakedProps> = ({ farms, cakePrice, bakePrice, beltPrice, CookieDen }) => {
+  const [totalStakeUSD, totalCookie, totalCookieUSD, totalAPY, totalDailyAPR, count] = useTotalStaked(farms, cakePrice, bakePrice, beltPrice, CookieDen);
 
   const avgAPY = totalAPY.toString() !== 'NaN' && totalAPY !== 0 ? totalAPY / count : 0
   const avgDaily = totalDailyAPR ? totalDailyAPR / count : 0
@@ -28,7 +28,7 @@ const TotalStaked: React.FC<TotalStakedProps> = ({ farms, cakePrice, bakePrice, 
     : '0.00'
   const dailyFormatted = avgDaily ?  `${avgDaily.toLocaleString('en-US', { maximumFractionDigits: 2 })}%`
       : '0.00'
-  const YogurtUSDFormatted = totalYogurtUSD ?  `$${totalYogurtUSD.toLocaleString('en-US', { maximumFractionDigits: 2 })}`
+  const CookieUSDFormatted = totalCookieUSD ?  `$${totalCookieUSD.toLocaleString('en-US', { maximumFractionDigits: 2 })}`
         : '0.00'
 
   return (
@@ -51,15 +51,15 @@ const TotalStaked: React.FC<TotalStakedProps> = ({ farms, cakePrice, bakePrice, 
           <Text>Daily {dailyFormatted}</Text>
         </div>
         <div>
-          <Text>Yogurt Rewards</Text>
+          <Text>Cookie Rewards</Text>
           <Balance
             fontSize="18px"
-            value={totalYogurt}
-            decimals={totalYogurt ? 2 : 1}
+            value={totalCookie}
+            decimals={totalCookie ? 2 : 1}
             unit=""
             color="textSubtle"
           />
-          <Text>{YogurtUSDFormatted}</Text>
+          <Text>{CookieUSDFormatted}</Text>
         </div>
       </Flex>
     </Wrapper>

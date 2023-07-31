@@ -1,1 +1,1 @@
-(self.webpackChunkYogurtdefi_frontend=self.webpackChunkYogurtdefi_frontend||[]).push([[563],{36563:function(){}}]);
+(self.webpackChunkCookiedefi_frontend=self.webpackChunkCookiedefi_frontend||[]).push([[563],{36563:function(){}}]);

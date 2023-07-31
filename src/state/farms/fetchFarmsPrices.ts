@@ -20,7 +20,7 @@ export const getFarmBaseTokenPrice = (farm: Farm, quoteTokenFarm: Farm, bnbPrice
     return hasTokenPriceVsQuote ? bnbPriceBusd.times(farm.tokenPriceVsQuote) : BIG_ZERO
   }
 
-  // if (farm.quoteToken.symbol === 'POLYYogurt') {
+  // if (farm.quoteToken.symbol === 'POLYCookie') {
   //   return hasTokenPriceVsQuote ? bnbPriceBusd.times(farm.tokenPriceVsQuote) : BIG_ZERO
   // }
 
@@ -48,7 +48,7 @@ export const getFarmBaseTokenPrice = (farm: Farm, quoteTokenFarm: Farm, bnbPrice
       : BIG_ZERO
   }
 
-  // if (quoteTokenFarm.quoteToken.symbol === 'POLYYogurt') {
+  // if (quoteTokenFarm.quoteToken.symbol === 'POLYCookie') {
   //   const quoteTokenInBusd = bnbPriceBusd.times(quoteTokenFarm.tokenPriceVsQuote)
   //   return hasTokenPriceVsQuote && quoteTokenInBusd
   //     ? new BigNumber(farm.tokenPriceVsQuote).times(quoteTokenInBusd)

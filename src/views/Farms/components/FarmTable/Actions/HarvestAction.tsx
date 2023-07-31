@@ -54,7 +54,7 @@ const HarvestAction: React.FunctionComponent<HarvestActionProps> = ({ pid, userD
   return (
     <ActionContainer>
       <ActionTitles>
-        <Title>Yogurt </Title>
+        <Title>Cookie </Title>
         <Subtle>{TranslateString(1072, 'EARNED')}</Subtle>
       </ActionTitles>
       <ActionContent>
@@ -73,7 +73,7 @@ const HarvestAction: React.FunctionComponent<HarvestActionProps> = ({ pid, userD
         >
           {TranslateString(562, 'Harvest')}
         </Button>
-        {pid !== 10 ?
+        {/* {pid !== 10 ?
             <Button
                 disabled={rawEarningsBalance === 0 || pendingTx}
                 variant='secondary'
@@ -88,9 +88,9 @@ const HarvestAction: React.FunctionComponent<HarvestActionProps> = ({ pid, userD
                 }
                 }
             >
-              {TranslateString(999, 'Cream it')}
+              {TranslateString(999, 'Compound')}
             </Button>
-            : null}
+            : null} */}
       </ActionContent>
     </ActionContainer>
   )

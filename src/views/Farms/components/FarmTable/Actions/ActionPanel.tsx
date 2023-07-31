@@ -147,7 +147,7 @@ const ActionPanel: React.FunctionComponent<ActionPanelProps> = ({
     tokenAddress: token.address,
   })
   const lpAddress = farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]
-  const bsc = `https://scan.pulsechain.com/address/${lpAddress}`
+  const bsc = `https://basescan.org//address/${lpAddress}`
   const info = `https://app.pulsex.com/info/pools/${lpAddress}`
 
   const exchangeUrl = farm.pcsVersion && farm.pcsVersion > 1 ? PCS_ADD_LIQUIDITY_URL : BASE_ADD_LIQUIDITY_URL
@@ -164,8 +164,8 @@ const ActionPanel: React.FunctionComponent<ActionPanelProps> = ({
           </StakeContainer>
         )}
         */}
-        <StyledLinkExternal href={bsc}>{TranslateString(999, 'View Contract')}</StyledLinkExternal>
-        <StyledLinkExternal href={info}>{TranslateString(999, 'See Pair Info')}</StyledLinkExternal>
+        {/* <StyledLinkExternal href={bsc}>{TranslateString(999, 'View Contract')}</StyledLinkExternal>
+        <StyledLinkExternal href={info}>{TranslateString(999, 'See Pair Info')}</StyledLinkExternal> */}
         <TagsContainer>
           {/* farm.isCommunity ? <CommunityTag /> : <CoreTag /> */}
           {farm.depositFeeBP === 0 ? <NoFeeTag /> : null}

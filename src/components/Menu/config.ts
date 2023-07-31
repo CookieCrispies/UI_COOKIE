@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://app.pulsex.com/swap?outputCurrency=0xece11C704F38FF38520667AeCDd7f53eA82F60F5',
+        href: 'https://base.leetswap.finance/#/swap',
       },
       {
         label: 'Liquidity',
-        href: 'https://app.pulsex.com/add/PLS/0xece11C704F38FF38520667AeCDd7f53eA82F60F5',
+        href: 'https://base.leetswap.finance/#/add/v2/ETH',
       },
     ],
   },
@@ -29,6 +29,11 @@ const config: MenuEntry[] = [
     label: 'Pools',
     icon: 'PoolIcon',
     href: '/pools',
+  },
+  {
+    label: 'IDO',
+    icon: 'IfoIcon',
+    href: '/ido',
   },
 
   /* {
@@ -47,9 +52,9 @@ const config: MenuEntry[] = [
     href: "https://wleo.io/hive-bsc/",
   },
   {
-    label: 'PolyYogurt',
+    label: 'PolyCookie',
     icon: 'PawIcon',
-    href: 'https://polyYogurt.com',
+    href: 'https://polyCookie.com',
     status: {
       text: 'Polygon',
       color: 'warning',
@@ -59,7 +64,7 @@ const config: MenuEntry[] = [
     label: 'Info',
     icon: 'InfoIcon',
     items: [
-      {
+     /* {
         label: 'Coingecko',
         href: 'https://coingecko.com/',
       },
@@ -70,15 +75,15 @@ const config: MenuEntry[] = [
       {
         label: 'PulseX',
         href: 'https://app.pulsex.com/info/pool/0xca8544e46153f6b2ab535bb6549daaaecb71d58a',
-      },
+      }, */
       {
-        label: 'DexScreener',
-        href: 'https://dexscreener.com/pulsechain/0xca8544e46153f6b2ab535bb6549daaaecb71d58a',
+        label: 'BaseScan',
+        href: 'https://basescan.org/address/0x614747C53CB1636b4b962E15e1D66D3214621100#code',
       },
-      {
+      /* {
         label: 'Defillama',
         href: 'https://defillama.com/chain/Pulse',
-      },
+      }, */
     ],
   },
   {
@@ -87,22 +92,22 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Docs',
-        href: 'https://docs.yogurtfinance.com/',
+        href: 'https://docs.cookiebase.finance/',
       },
-      {
+      /* {
         label: 'Blog',
-        href: 'https://medium.com/@yogurtdefi',
-      },
+        href: 'https://medium.com/@Cookiedefi',
+      }, */
       {
         label: 'Github',
-        href: 'https://github.com',
+        href: 'https://github.com/CookieBaseFinance',
       },
     ],
   },
   /* {
     label: 'Roadmap',
     icon: 'MoreIcon',
-    href: 'https://docs.Yogurtdefi.com/roadmap',
+    href: 'https://docs.cookiebase.finance/roadmap',
   },
   {
     label: "Tokenized Blogging",
@@ -117,7 +122,7 @@ const config: MenuEntry[] = [
   {
     label: 'CertiK Audit',
     icon: 'AuditIcon',
-    href: 'https://www.certik.org/projects/Yogurtfinance',
+    href: 'https://www.certik.org/projects/CookieBase',
   }, */
 ]
 

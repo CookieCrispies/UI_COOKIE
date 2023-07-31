@@ -23,7 +23,7 @@ import {
   getBTCBNBAmount,
   getBTCBNBBakeryAmount,
   getCAKEamount,
-  getYogurtAmount,
+  getCookieAmount,
   getETHAmount,
   getSPSBNBAmount,
   getUSDAmount,
@@ -155,7 +155,7 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
               kingdomSupply = await getWBNBDOTAmount()
               break
             case 4:
-              kingdomSupply = await getYogurtAmount()
+              kingdomSupply = await getCookieAmount()
               break
             case 5:
               kingdomSupply = await getBTCBNBBakeryAmount()
@@ -274,11 +274,11 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
           },
           {
             address: getMasterChefAddress(),
-            name: 'YogurtPerBlock',
+            name: 'CookiePerBlock',
           }
         ]
 
-        const [info, totalAllocPoint, YogurtPerBlock] = await multicall(masterchefABI, mCalls).catch(error => {
+        const [info, totalAllocPoint, CookiePerBlock] = await multicall(masterchefABI, mCalls).catch(error => {
           console.log("multicall error")
           throw new Error(`multicall nontoken: ${error}`)
         })
@@ -381,8 +381,8 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
             kingdomCorrectAlloc = BIG_ZERO
           }
 
-          console.log("yogurt pet block")
-          console.log(YogurtPerBlock);
+          console.log("Cookie pet block")
+          console.log(CookiePerBlock);
 
           return {
             ...farmConfig,
@@ -395,7 +395,7 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
             // multiplier: farmConfig.pid === 4 ? '30X' : `2X`,
             // multiplier: '1.5X',
             depositFeeBP: kInfo.depositFeeBP,
-            YogurtPerBlock: new BigNumber(YogurtPerBlock).div(BIG_TEN.pow(DEFAULT_TOKEN_DECIMAL)).toNumber(),
+            CookiePerBlock: new BigNumber(CookiePerBlock).div(BIG_TEN.pow(DEFAULT_TOKEN_DECIMAL)).toNumber(),
             lpTokenBalancePCS: new BigNumber(lpTokenBalanceMC).div(DEFAULT_TOKEN_DECIMAL).toNumber(),
             lpTotalInQuoteTokenPCS: lpTotalInQuoteTokenPCS.toNumber(),
             poolWeightPCS: poolWeightPCS.toJSON(),
@@ -423,7 +423,7 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
           lockedKingdomData: await asyncLockedKingdomData,
           multiplier: `${allocPoint.div(100).toString()}X`,
           depositFeeBP: info.depositFeeBP,
-          YogurtPerBlock: new BigNumber(YogurtPerBlock).div(DEFAULT_TOKEN_DECIMAL).toNumber(),
+          CookiePerBlock: new BigNumber(CookiePerBlock).div(DEFAULT_TOKEN_DECIMAL).toNumber(),
           tokenAmountTotal: tokenAmountTotal.toJSON(),
           lpTokenBalance: new BigNumber(lpTokenBalanceMC).div(DEFAULT_TOKEN_DECIMAL).toNumber(),
         }

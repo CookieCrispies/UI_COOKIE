@@ -3,7 +3,7 @@ import BigNumber from 'bignumber.js'
 
 export interface Address {
   97?: string
-  943: string
+  8453: string
   56?: string
   369: string
 }
@@ -99,7 +99,7 @@ export interface FarmConfig {
   tokenPerBlock?: number
   totalSupplyBelt?: BigNumber
   pcsVersion?: number
-  YogurtPerBlock?: BigNumber
+  CookiePerBlock?: BigNumber
 }
 
 export interface PoolConfig {

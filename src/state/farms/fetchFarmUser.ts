@@ -123,13 +123,13 @@ export const fetchFarmUserEarnings = async (account: string, farmsToFetch: FarmC
 
   const callsMC = nonKingdomFarms.map((farm) => ({
     address: masterChefAddress,
-    name: 'pendingYogurt',
+    name: 'pendingCookie',
     params: [farm.pid, account],
   }))
 
   const callsK = kingdomFarms.filter(farm => farm.pid === 100).map((farm) => ({
     address: kingdomAddress,
-    name: 'pendingYogurt',
+    name: 'pendingCookie',
     params: [farm.pid, account],
   }))
 

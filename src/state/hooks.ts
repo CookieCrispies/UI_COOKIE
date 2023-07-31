@@ -401,13 +401,13 @@ export const useTotalValueKingdoms = (): BigNumber => {
 }
 
 
-export const useTotalYogurtStaked = (): any => {
+export const useTotalCookieStaked = (): any => {
   const farms = useFarms()
-  let total = { Yogurt: new BigNumber(0), value: new BigNumber(0) }
+  let total = { Cookie: new BigNumber(0), value: new BigNumber(0) }
 
-  const YogurtFarms = farms.data.filter(farm => farm.token.symbol === 'Yogurt' && new BigNumber(farm.userData.stakedBalance).gt(0))
+  const CookieFarms = farms.data.filter(farm => farm.token.symbol === 'Cookie' && new BigNumber(farm.userData.stakedBalance).gt(0))
 
-  total = YogurtFarms.reduce((accu, farm) => {
+  total = CookieFarms.reduce((accu, farm) => {
     let newAccu = accu
 
     const { userData, lpTotalInQuoteToken, lpTokenBalance, quoteToken: { busdPrice: quoteTokenPriceUsd }, token: { busdPrice: tokenPriceString } } = farm
@@ -422,15 +422,15 @@ export const useTotalYogurtStaked = (): any => {
     else oneTokenQuoteValue = tokenPrice.times(DEFAULT_TOKEN_DECIMAL)
 
     const totalValueStaked = stakedAmount.times(oneTokenQuoteValue).div(DEFAULT_TOKEN_DECIMAL)
-    const totalYogurtValue = !farm.isTokenOnly && !farm.isKingdomToken ? totalValueStaked.div(2) : totalValueStaked
-    const amountYogurtTokens = !farm.isTokenOnly && !farm.isKingdomToken ? totalYogurtValue.div(tokenPrice) : totalYogurtValue.div(oneTokenQuoteValue).times(DEFAULT_TOKEN_DECIMAL)
+    const totalCookieValue = !farm.isTokenOnly && !farm.isKingdomToken ? totalValueStaked.div(2) : totalValueStaked
+    const amountCookieTokens = !farm.isTokenOnly && !farm.isKingdomToken ? totalCookieValue.div(tokenPrice) : totalCookieValue.div(oneTokenQuoteValue).times(DEFAULT_TOKEN_DECIMAL)
 
     // console.log('oneTokenQuoteValue',oneTokenQuoteValue.div(DEFAULT_TOKEN_DECIMAL).toNumber())
     // console.log('totalValueStaked',totalValueStaked.div(DEFAULT_TOKEN_DECIMAL).toNumber())
-    // console.log('totalYogurtValue',totalYogurtValue.div(DEFAULT_TOKEN_DECIMAL).toNumber())
-    // console.log('amountYogurtTokens',amountYogurtTokens.div(DEFAULT_TOKEN_DECIMAL).toNumber())
+    // console.log('totalCookieValue',totalCookieValue.div(DEFAULT_TOKEN_DECIMAL).toNumber())
+    // console.log('amountCookieTokens',amountCookieTokens.div(DEFAULT_TOKEN_DECIMAL).toNumber())
 
-    newAccu = { Yogurt: newAccu.Yogurt.plus(amountYogurtTokens.div(DEFAULT_TOKEN_DECIMAL)), value: newAccu.value.plus(totalYogurtValue.div(DEFAULT_TOKEN_DECIMAL)) }
+    newAccu = { Cookie: newAccu.Cookie.plus(amountCookieTokens.div(DEFAULT_TOKEN_DECIMAL)), value: newAccu.value.plus(totalCookieValue.div(DEFAULT_TOKEN_DECIMAL)) }
     // console.log('newAccu', newAccu)
     return newAccu
   }, total)

@@ -3,13 +3,13 @@ import tokens from 'config/constants/tokens'
 import { Address } from 'config/constants/types'
 
 export const getAddress = (address: Address): string => {
-  const mainNetChainId = 369
-  const chainId = 369
+  const mainNetChainId = 8453
+  const chainId = 8453
   return address[chainId] ? address[chainId] : address[mainNetChainId]
 }
 
 export const getCakeAddress = () => {
-  return getAddress(tokens.Yogurt.address)
+  return getAddress(tokens.Cookie.address)
 }
 export const getMasterChefAddress = () => {
   return getAddress(addresses.masterChef)

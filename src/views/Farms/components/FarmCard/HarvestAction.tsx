@@ -42,7 +42,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid, isKingdo
         {earningsBusd > 0 && <CardBusdValue value={earningsBusd} />}
       </Heading>
       <BalanceAndCompound>
-          {pid !== 10 ?
+          {/* {pid !== 3 ?
               <Button
                   disabled={rawEarningsBalance === 0 || pendingTx}
                   size='sm'
@@ -59,9 +59,9 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid, isKingdo
                   }
                   }
               >
-                  {TranslateString(999, 'Cream it')}
+                  {TranslateString(999, 'Compound')}
               </Button>
-              : null}
+              : null} */}
 
           <Button
           disabled={rawEarningsBalance === 0 || pendingTx}

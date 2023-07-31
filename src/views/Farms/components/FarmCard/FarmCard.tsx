@@ -151,7 +151,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, plsPrice,
         : '-'
 
   const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', '')
-  const earnLabel = farm.dual ? farm.dual.earnLabel : 'Yogurt'
+  const earnLabel = farm.dual ? farm.dual.earnLabel : 'Cookie'
 
   const farmAPR = farm.apr && farm.apr.toLocaleString('en-US', { maximumFractionDigits: 2 })
 
@@ -179,7 +179,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, plsPrice,
 
   return (
     <FCard>
-      {farm.token.symbol === 'Yogurt' && <StyledCardAccent />}
+      {farm.token.symbol === 'Cookie' && <StyledCardAccent />}
       <CardHeading
         lpLabel={lpLabel}
         multiplier={farm.multiplier}
@@ -228,12 +228,12 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, plsPrice,
         <DetailsSection
           removed={removed}
           isTokenOnly={farm.isTokenOnly}
-          // bscScanAddress={`https://scan.pulsechain.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`}
+          // bscScanAddress={`https://basescan.org//address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`}
           bscScanAddress={
             farm.isTokenOnly ?
-              `https://scan.pulsechain.com/token/${farm.token.address[process.env.REACT_APP_CHAIN_ID]}`
+              `https://basescan.org//token/${farm.token.address[process.env.REACT_APP_CHAIN_ID]}`
               :
-              `https://scan.pulsechain.com/token/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
+              `https://basescan.org//token/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
           }
           infoAddress={`https://app.pulsex.com/info/pools/${lpAddress}`}
           totalValueFormatted={totalValueFormatted}

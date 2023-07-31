@@ -31,11 +31,11 @@ const Hero = () => {
         <Title>{TranslateString(500, 'IDO: Initial DEX Offerings')}</Title>
         <Heading as="h2" color="secondary">{TranslateString(502, 'Participate in new platform tokens via decentralized IDOs!')}</Heading>
         <br />
-        <Wrapper>
+        {/* <Wrapper>
           <Button size="sm">
-            <a href="https://docs.YogurtFinance.com/Yogurt-products/ido">Learn More</a>
+            <a href="https://docs.cookiebase.finance/Cookie-products/ido">Learn More</a>
           </Button>
-        </Wrapper>
+        </Wrapper> */}
       </Container>
     </StyledHero>
   )

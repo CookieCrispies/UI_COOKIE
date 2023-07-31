@@ -43,7 +43,7 @@ const StyledLinkExternal = styled(Link)`
   font-weight: 400;
 `
 
-const YogurtKingdom = styled.div`
+const CookieKingdom = styled.div`
   color: ${(props) => props.theme.colors.text};
   margin-top: 0.2rem;
 `
@@ -94,9 +94,9 @@ const KingdomDetail: React.FC<KingdomDetailProps> = ({
 
   const isToken = isTokenOnly || isKingdomToken
   const farmContract= isToken ?
-    `https://scan.pulsechain.com/token/${tokenAddress}`
-    : `https://scan.pulsechain.com/token/${lpAddress}`
-  const vaultContract = `https://scan.pulsechain.com/address/${kingdomContract}`
+    `https://basescan.org//token/${tokenAddress}`
+    : `https://basescan.org//token/${lpAddress}`
+  const vaultContract = `https://basescan.org//address/${kingdomContract}`
   let infoAddress = `https://pancakeswap.info/pair/${isTokenOnly ? tokenAddress : lpAddress}`
 
   let exchangeUrl = PCS_ADD_LIQUIDITY_URL

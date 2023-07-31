@@ -208,7 +208,7 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
         const quoteTokenPriceUsd = farm.quoteToken.busdPrice
         const totalLiquidity = new BigNumber(farm.lpTotalInQuoteToken).times(quoteTokenPriceUsd)
         
-        const apr = isActive ? getFarmApr(farm.YogurtPerBlock, farm.poolWeight, cakePrice, totalLiquidity) : 0
+        const apr = isActive ? getFarmApr(farm.CookiePerBlock, farm.poolWeight, cakePrice, totalLiquidity) : 0
         return { ...farm, apr: apr ?? 0, liquidity: totalLiquidity }
       })
 
@@ -407,15 +407,15 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
   }
 
   let header = TranslateString(674, 'Farms')
-  let heading = TranslateString(320, 'Stake LP tokens to earn Yogurt')
-  const subHeading = TranslateString(10000, 'Deposit Fee will be used to buyback Yogurt')
+  let heading = TranslateString(320, 'Stake LP tokens to earn Cookie')
+  const subHeading = TranslateString(10000, 'Deposit Fee will be used to buyback Cookie')
   // let extra = null
   // const data = useGetStats()
   // const tvl = data ? data.total_value_locked_all.toLocaleString('en-US', { maximumFractionDigits: 0 }) : null
 
   if (tokenMode) {
     header = TranslateString(674, 'Pools')
-    heading = TranslateString(10002, 'Stake tokens to earn Yogurt')
+    heading = TranslateString(10002, 'Stake tokens to earn Cookie')
   }
 
   const tlvSpacing = '20px'
@@ -442,10 +442,10 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
 
                 <hr />
 
-                <p style={{marginBottom: "10px"}}>MTB Assets (HIVE and HBD) Can Be Wrapped and Utilized to Provide Liquidity and Earn High Yields. MTB Assets Generate Revenue Which Buys and Burns Yogurt Each Day</p>
+                <p style={{marginBottom: "10px"}}>MTB Assets (HIVE and HBD) Can Be Wrapped and Utilized to Provide Liquidity and Earn High Yields. MTB Assets Generate Revenue Which Buys and Burns Cookie Each Day</p>
 
                 <Button className="button-cad">
-                  <a href="https://docs.Yogurtdefi.com/mechanics/multi-token-bridge">How it Works</a>
+                  <a href="https://docs.cookiebase.finance/mechanics/multi-token-bridge">How it Works</a>
                 </Button>
             </Card>
           </div> */}
@@ -502,7 +502,7 @@ const Farms: React.FC<FarmsProps> = ({ tokenMode, kingdomMode }) => {
         </ControlContainer>
         {renderContent()}
         <div ref={loadMoreRef} />
-        {/* <Image src="/images/Yogurt/LogoYogurt2.png" alt="illustration" width={700} height={350} responsive /> */}
+        {/* <Image src="/images/Cookie/LogoCookie2.png" alt="illustration" width={700} height={350} responsive /> */}
       </Page>
     </>
   )

@@ -90,8 +90,8 @@ const Home: React.FC = () => {
     <Page>
       <Hero>
         <Heading as="h1" size="xl" mb="24px" color="white">
-          {/* {TranslateString(576, 'Yogurt Defi')} */}
-          <img src="/images/Yogurt/logohome.png" alt="Yogurt Defi" />
+          {/* {TranslateString(576, 'Cookie Defi')} */}
+          <img src="/images/Cookie/logohome.png" alt="Cookie Defi" />
           {/* <Countdown /> */}
         </Heading>
       </Hero>
