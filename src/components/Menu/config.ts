@@ -35,6 +35,11 @@ const config: MenuEntry[] = [
     icon: 'IfoIcon',
     href: '/ido',
   },
+   {
+    label: 'Bridge',
+    icon: 'SunIcon',
+    href: '/bridge',
+  },
 
   /* {
     label: 'Lottery',
