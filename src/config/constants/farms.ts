@@ -376,6 +376,45 @@ const farms: FarmConfig[] = [
     token: tokens.Cookie,
     quoteToken: tokens.usdc,
   },
+  {
+    pid: 11,
+    isTokenOnly: true,
+    lpSymbol: 'ETH',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
+      369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', // TODO
+      8453: '',
+    },
+    token: tokens.eth,
+    quoteToken: tokens.usdc,
+  },
+  {
+    pid: 12,
+    isTokenOnly: true,
+    lpSymbol: 'USDC',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
+      369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', // TODO
+      8453: '',
+    },
+    token: tokens.usdc,
+    quoteToken: tokens.dai,
+  },
+  {
+    pid: 13,
+    isTokenOnly: true,
+    lpSymbol: 'DAI',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
+      369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', // TODO
+      8453: '',
+    },
+    token: tokens.dai,
+    quoteToken: tokens.usdc,
+  },
   /* {
     pid: 4,
     isTokenOnly: true,

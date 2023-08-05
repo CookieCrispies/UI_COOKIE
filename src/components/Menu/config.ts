@@ -18,27 +18,34 @@ const config: MenuEntry[] = [
         label: 'Liquidity',
         href: 'https://base.leetswap.finance/#/add/v2/ETH',
       },
+      {
+        label: 'Bridge (Official)',
+        href: 'https://bridge.base.org/',
+      },
+      {
+        label: 'Bridge (Axelar)',
+        href: '/bridge',
+      },
     ],
   },
   {
-    label: 'Farms',
-    icon: 'FarmIcon',
-    href: '/farms',
-  },
-  {
-    label: 'Pools',
+    label: 'Yield',
     icon: 'PoolIcon',
-    href: '/pools',
+    items: [
+      {
+        label: 'Farms',
+        href: '/farms',
+      },
+      {
+        label: 'Pools',
+        href: '/pools',
+      },
+    ]
   },
   {
     label: 'IDO',
     icon: 'IfoIcon',
     href: '/ido',
-  },
-   {
-    label: 'Bridge',
-    icon: 'SunIcon',
-    href: '/bridge',
   },
 
   /* {
@@ -66,6 +73,11 @@ const config: MenuEntry[] = [
     },
   }, */
   {
+    label: 'Docs',
+    icon: 'MoreIcon',
+    href: 'https://docs.cookiebase.xyz/',
+  },
+  {
     label: 'Info',
     icon: 'InfoIcon',
     items: [
@@ -86,27 +98,13 @@ const config: MenuEntry[] = [
         href: 'https://basescan.org/address/0x614747C53CB1636b4b962E15e1D66D3214621100#code',
       },
       /* {
-        label: 'Defillama',
-        href: 'https://defillama.com/chain/Pulse',
-      }, */
-    ],
-  },
-  {
-    label: 'More',
-    icon: 'MoreIcon',
-    items: [
-      {
-        label: 'Docs',
-        href: 'https://docs.cookiebase.finance/',
-      },
-      /* {
         label: 'Blog',
         href: 'https://medium.com/@Cookiedefi',
       }, */
-      {
-        label: 'Github',
-        href: 'https://github.com/CookieBaseFinance',
-      },
+      /* {
+        label: 'Defillama',
+        href: 'https://defillama.com/chain/Pulse',
+      }, */
     ],
   },
   /* {
