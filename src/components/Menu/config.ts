@@ -11,16 +11,16 @@ const config: MenuEntry[] = [
     icon: 'TradeIcon',
     items: [
       {
-        label: 'Exchange',
-        href: 'https://base.leetswap.finance/#/swap',
+        label: 'Exchange (Uniswap)',
+        href: 'https://app.uniswap.org/#/swap',
       },
       {
-        label: 'Liquidity',
-        href: 'https://base.leetswap.finance/#/add/v2/ETH',
+        label: 'Liquidity (Uniswap)',
+        href: 'https://app.uniswap.org/#/add/ETH',
       },
       {
         label: 'Bridge (Official)',
-        href: 'https://bridge.base.org/',
+        href: 'https://bridge.base.org/deposit',
       },
       {
         label: 'Bridge (Axelar)',
