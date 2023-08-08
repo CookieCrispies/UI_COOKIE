@@ -1,16 +1,19 @@
 // import tokens from './tokens'
 // import { PoolConfig, PoolCategory } from './types'
 import { BigNumber } from "@ethersproject/bignumber";
-import { PoolConfig } from './types'
+import {PoolCategory, PoolConfig} from './types'
+import tokens from "./tokens";
 
 const pools: PoolConfig[] = [
-  /* {
+   {
     sousId: 0,
     stakingToken: tokens.cake,
     earningToken: tokens.cake,
     contractAddress: {
-      97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
+      8453: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
       56: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
+        97: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
+        369: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
     },
     poolCategory: PoolCategory.CORE,
     harvest: true,
@@ -18,6 +21,39 @@ const pools: PoolConfig[] = [
     sortOrder: 1,
     isFinished: false,
   },
+    {
+        sousId: 1,
+        stakingToken: tokens.cake,
+        earningToken: tokens.eth,
+        contractAddress: {
+            8453: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
+            56: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
+            97: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
+            369: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
+        },
+        poolCategory: PoolCategory.CORE,
+        harvest: true,
+        tokenPerBlock: '10',
+        sortOrder: 1,
+        isFinished: false,
+    },
+    {
+        sousId: 2,
+        stakingToken: tokens.cake,
+        earningToken: tokens.usdc,
+        contractAddress: {
+            8453: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
+            56: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
+            97: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
+            369: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
+        },
+        poolCategory: PoolCategory.CORE,
+        harvest: true,
+        tokenPerBlock: '10',
+        sortOrder: 1,
+        isFinished: false,
+    },
+    /*
   {
     sousId: 116,
     stakingToken: tokens.cake,
