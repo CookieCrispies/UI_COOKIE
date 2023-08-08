@@ -61,6 +61,29 @@ const Cards = styled(BaseLayout)`
   }
 `
 
+const Cards2 = styled(BaseLayout)`
+  align-items: stretch;
+  justify-content: stretch;
+  margin-bottom: 32px;
+
+  & > div {
+    grid-column: span 6;
+    width: 100%;
+  }
+
+  ${({ theme }) => theme.mediaQueries.sm} {
+    & > div {
+      grid-column: span 8;
+    }
+  }
+
+  ${({ theme }) => theme.mediaQueries.lg} {
+    & > div {
+      grid-column: span 6;
+    }
+  }
+`
+
 const CTACards = styled(BaseLayout)`
   align-items: start;
   margin-bottom: 32px;
@@ -98,9 +121,7 @@ const Home: React.FC = () => {
       <div>
         <Cards>
           <FarmStakingCard />
-          <TwitterCard/>
           <CakeStats />
-          <TotalValueLockedCard />
         </Cards>
       </div>
     </Page>
