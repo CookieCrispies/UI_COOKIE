@@ -14,6 +14,17 @@ const tokens = {
     decimals: 18,
     projectLink: 'https://app.pulsex.com/',
   },
+  cookie: {
+    symbol: 'COOKIE',
+    address: {
+      56: '0x614747C53CB1636b4b962E15e1D66D3214621100',
+      97: '0x614747C53CB1636b4b962E15e1D66D3214621100',
+      369: '0x614747C53CB1636b4b962E15e1D66D3214621100',
+      8453: '0x614747C53CB1636b4b962E15e1D66D3214621100',
+    },
+    decimals: 18,
+    projectLink: 'https://cookiebase.xyz/',
+  },
   wbnb: {
     symbol: 'BNB',
     address: {

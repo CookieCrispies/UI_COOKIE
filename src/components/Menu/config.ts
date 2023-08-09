@@ -40,10 +40,10 @@ const config: MenuEntry[] = [
         label: 'Pools',
         href: '/pools',
       },
-      {
+      /* {
         label: 'Cooking',
         href: '/cooking',
-      },
+      }, */
     ]
   },
   {
