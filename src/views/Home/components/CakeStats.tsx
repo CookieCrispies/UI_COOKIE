@@ -73,7 +73,7 @@ const CakeStats = () => {
         </Row>
         <br/>
         <Row>
-          <img src="/images/Cookie/logo.png"  alt="Cookie Defi" />
+          <img src="/images/Cookie/logo.png" alt="Cookie Defi" />
           <img src="/images/Cookie/logo.png" alt="Cookie Defi" />
 
         </Row>
