@@ -85,18 +85,18 @@ const config: MenuEntry[] = [
     label: 'Info',
     icon: 'InfoIcon',
     items: [
-     /* {
+      {
         label: 'Coingecko',
-        href: 'https://coingecko.com/',
+        href: 'https://www.coingecko.com/en/coins/cookiebase',
       },
       {
         label: 'Coinmarketcap',
-        href: 'https://coinmarketcap.com',
+        href: 'https://coinmarketcap.com/currencies/cookiebase/',
       },
       {
-        label: 'PulseX',
-        href: 'https://app.pulsex.com/info/pool/0xca8544e46153f6b2ab535bb6549daaaecb71d58a',
-      }, */
+        label: 'Defillama',
+        href: 'https://defillama.com/protocol/cookiebase',
+      },
       {
         label: 'BaseScan',
         href: 'https://basescan.org/address/0x614747C53CB1636b4b962E15e1D66D3214621100#code',
@@ -105,10 +105,7 @@ const config: MenuEntry[] = [
         label: 'Blog',
         href: 'https://medium.com/@Cookiedefi',
       }, */
-      /* {
-        label: 'Defillama',
-        href: 'https://defillama.com/chain/Pulse',
-      }, */
+
     ],
   },
   /* {
