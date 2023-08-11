@@ -1,26 +1,25 @@
 import { Ifo } from './types'
 
 const ifos: Ifo[] = [
-    /* {
+     {
         id: 'cookie',
         address: '',
-        isActive: false,
-        name: 'CookieBase - Phase 2',
+        isActive: true,
+        name: 'CookieBase',
         subTitle: 'Embrace creamy yields and crumbly rewards on Base Blockchain',
         description:
             'CookieBase is a yield farming project, Which has become the standard and the most convenient way to make yield.\n' +
             'Our primary aim is to utilize the scalability, security, decentralization, and lower transaction fees offered by the Base Blockchain to deliver the finest product to the Base Ecosystem.',
-        launchDate: 'SOON',
-        launchTime: '',
-        saleAmount: '6,666,666 Cookie',
-        raiseAmount: '$1,000,000',
+        launchDate: 'Aug. 14',
+        launchTime: '3PM UTC',
+        saleAmount: '1,500,000 Cookie',
+        raiseAmount: '$1,500,000',
         projectSiteUrl: 'https://cookiebase.finance/',
         currency: 'WETH',
-        currencyAddress: '',
+        currencyAddress: '0x4200000000000000000000000000000000000006',
         tokenDecimals: 18,
-        releaseBlockNumber: 1996639,
-        /!* releaseBlockNumber: 17791843, *!/
-    }, */
+        releaseBlockNumber: 2466758,
+    }, 
     /* {
       id: 'blink',
       address: '0x44a9Cc8463EC00937242b660BF65B10365d99baD',

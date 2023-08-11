@@ -63,20 +63,7 @@ const CakeStats = () => {
             {CookiePerBlock}
           </Text>
         </Row>
-        <br/>
-        <br/>
-        <Row>
-          <Text fontSize="14px">Total Value Locked (TVL) : </Text>
-          <Text bold fontSize="14px">
-            <CardValue value={totalValue.toNumber()} prefix="$" decimals={2}/>
-          </Text>
-        </Row>
-        <br/>
-        <Row>
-          <img src="/images/Cookie/logo.png" alt="Cookie Defi" />
-          <img src="/images/Cookie/logo.png" alt="Cookie Defi" />
-
-        </Row>
+       
       </CardBody>
     </StyledCakeStats>
   )

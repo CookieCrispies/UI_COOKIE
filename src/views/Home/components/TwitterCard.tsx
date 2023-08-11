@@ -23,10 +23,20 @@ const TwitterCard = () => {
   return (
     <StyledTwitterCard>
       <CardBody>
-          <Heading size="md" mb="24px">
-              {TranslateString(10003, 'Announcements the 9th August ! ')}
-          </Heading>
-          <img src="/images/four.png" width="500px" height="500px" alt="Cookie Defi" />
+        <Heading size="xl" mb="24px">
+          {TranslateString(10003, 'Announcements')}
+        </Heading>
+        <Timeline
+          dataSource={{
+            sourceType: 'profile',
+            screenName: 'base_cookie'
+          }}
+          options={{
+            height: '300',
+            chrome: "noheader, nofooter",
+            width: "400"
+          }}
+        />
       </CardBody>
     </StyledTwitterCard>
   )
