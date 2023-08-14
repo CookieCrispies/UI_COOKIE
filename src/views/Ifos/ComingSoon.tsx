@@ -63,7 +63,7 @@ const ComingSoon = () => {
               )}
             </Text>
             <Text mb={3}>
-              <LiquidityLink href="https://app.pulsex.com/liquidity">
+              <LiquidityLink href="https://baseswap.fi/liquidity">
                 {TranslateString(506, 'Get Cookie-BNB LP >')}
               </LiquidityLink>
             </Text>

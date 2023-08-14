@@ -235,7 +235,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, plsPrice,
               :
               `https://basescan.org//token/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
           }
-          infoAddress={`https://app.pulsex.com/info/pools/${lpAddress}`}
+          infoAddress={`https://baseswap.fi/info/pools/${lpAddress}`}
           totalValueFormatted={totalValueFormatted}
           lpTokenPriceFormated={lpTokenPriceFormated}
           lpLabel={lpLabel}

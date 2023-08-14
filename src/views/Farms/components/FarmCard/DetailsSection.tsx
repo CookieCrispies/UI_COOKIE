@@ -42,19 +42,14 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
         <Text>{TranslateString(354, 'Total Liquidity')}:</Text>
         <Text>{totalValueFormatted}</Text>
       </Flex>
-      {/* {!removed && (
+       {!removed && (
         <StyledLinkExternal href={addLiquidityUrl}>
           {TranslateString(999, `Get ${lpLabel}`, { name: lpLabel })}
         </StyledLinkExternal>
-      )} */}
-      {/* {!isTokenOnly && (
-          <Flex justifyContent="space-between">
-            <Text>{TranslateString(999, 'LP price')}:</Text>
-            <Text>${lpTokenPriceFormated}</Text>
-          </Flex>
-      )} */}
-       {/* <StyledLinkExternal href={bscScanAddress}>{TranslateString(999, 'View Contract')}</StyledLinkExternal>
-      <StyledLinkExternal href={infoAddress}>{TranslateString(999, 'See Pair Info')}</StyledLinkExternal> */}
+      )} 
+      
+       <StyledLinkExternal href={bscScanAddress}>{TranslateString(999, 'View Contract')}</StyledLinkExternal>
+      <StyledLinkExternal href={infoAddress}>{TranslateString(999, 'See Pair Info')}</StyledLinkExternal>
     </Wrapper>
   )
 }

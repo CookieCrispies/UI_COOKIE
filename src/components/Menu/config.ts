@@ -11,12 +11,12 @@ const config: MenuEntry[] = [
     icon: 'TradeIcon',
     items: [
       {
-        label: 'Exchange (Uniswap)',
-        href: 'https://app.uniswap.org/#/swap',
+        label: 'Exchange',
+        href: 'https://baseswap.fi/swap',
       },
       {
-        label: 'Liquidity (Uniswap)',
-        href: 'https://app.uniswap.org/#/add/ETH',
+        label: 'Liquidity',
+        href: 'https://baseswap.fi/add/ETH/0x614747C53CB1636b4b962E15e1D66D3214621100',
       },
       {
         label: 'Bridge (Official)',

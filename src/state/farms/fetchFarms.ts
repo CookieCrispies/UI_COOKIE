@@ -381,7 +381,7 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
             kingdomCorrectAlloc = BIG_ZERO
           }
 
-          console.log("Cookie pet block")
+          console.log("Cookie per block")
           console.log(CookiePerBlock);
 
           return {
