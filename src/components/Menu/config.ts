@@ -50,6 +50,10 @@ const config: MenuEntry[] = [
     label: 'IDO',
     icon: 'IfoIcon',
     href: '/ido',
+    status: {
+      text: 'LIVE',
+      color: 'warning',
+    },
   },
 
   /* {
