@@ -5,7 +5,7 @@ import {PoolCategory, PoolConfig} from './types'
 import tokens from "./tokens";
 
 const pools: PoolConfig[] = [
-    /* {
+     {
      sousId: 0,
      stakingToken: tokens.cookie,
      earningToken: tokens.cookie,
@@ -22,7 +22,7 @@ const pools: PoolConfig[] = [
      isFinished: false,
    },
 
-
+/*
    {
      sousId: 116,
      stakingToken: tokens.cake,

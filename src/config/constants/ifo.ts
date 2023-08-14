@@ -3,7 +3,7 @@ import { Ifo } from './types'
 const ifos: Ifo[] = [
      {
         id: 'cookie',
-        address: '',
+        address: '0x5A1dF64163AC8e5699697DbF5609C7d228cdb63c',
         isActive: true,
         name: 'CookieBase',
         subTitle: 'Embrace creamy yields and crumbly rewards on Base Blockchain',
@@ -18,7 +18,7 @@ const ifos: Ifo[] = [
         currency: 'WETH',
         currencyAddress: '0x4200000000000000000000000000000000000006',
         tokenDecimals: 18,
-        releaseBlockNumber: 2466758,
+        releaseBlockNumber: 2747557,
     }, 
     /* {
       id: 'blink',
