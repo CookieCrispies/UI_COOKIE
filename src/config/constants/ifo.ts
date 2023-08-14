@@ -1,7 +1,7 @@
 import { Ifo } from './types'
 
 const ifos: Ifo[] = [
-     {
+     /* {
         id: 'cookie',
         address: '0x5A1dF64163AC8e5699697DbF5609C7d228cdb63c',
         isActive: true,
@@ -20,7 +20,7 @@ const ifos: Ifo[] = [
         tokenDecimals: 18,
         releaseBlockNumber: 2747557,
     }, 
-    /* {
+     {
       id: 'blink',
       address: '0x44a9Cc8463EC00937242b660BF65B10365d99baD',
       isActive: false,
