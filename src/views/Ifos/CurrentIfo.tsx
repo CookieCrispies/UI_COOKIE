@@ -40,10 +40,10 @@ const Ifo = () => {
 
   return (
     <div>
-      <IfoCards isSingle>
+     {/*  <IfoCards isSingle>
          {activeIfo? <IfoCard ifo={activeIfo} /> : <Text>No Active IDOs</Text>} 
       </IfoCards>
-      {/* <LaunchIfoCallout>
+       <LaunchIfoCallout>
         <div>
           <Title as="h2">{TranslateString(592, 'How to Participate in Decentralized IDOs on CookieBase')}</Title>
           <Heading mb="16px">{TranslateString(594, 'Before IDO')}:</Heading>
