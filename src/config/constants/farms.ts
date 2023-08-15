@@ -368,7 +368,7 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
       369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', 
-      8453: '0x1cd6Ca847016A3bd0cC1fe2dF5027E78ea428170', // TODO
+      8453: '0x2EB5b9C15cc097dFbBe91E72787821f3e2525c1D', // TODO
     },
     token: tokens.Cookie,
     quoteToken: tokens.usdc,
