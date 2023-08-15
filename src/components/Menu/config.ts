@@ -112,7 +112,15 @@ const config: MenuEntry[] = [
         href: 'https://defillama.com/protocol/cookiebase',
       },
       {
-        label: 'BaseScan',
+        label: 'DexScreener',
+        href: 'https://dexscreener.com/base/0x614747C53CB1636b4b962E15e1D66D3214621100',
+      },
+      {
+        label: 'DexTools',
+        href: 'https://www.dextools.io/app/en/base/pair-explorer/0x9072fed6661a64766a17ac4415dbef0afff627df',
+      },
+      {
+        label: 'Token',
         href: 'https://basescan.org/address/0x614747C53CB1636b4b962E15e1D66D3214621100#code',
       },
       /* {
