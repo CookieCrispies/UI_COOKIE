@@ -38,6 +38,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
 
   return (
     <Wrapper>
+       
       <Flex justifyContent="space-between">
         <Text>{TranslateString(354, 'Total Liquidity')}:</Text>
         <Text>{totalValueFormatted}</Text>

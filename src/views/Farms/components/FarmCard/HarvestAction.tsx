@@ -29,7 +29,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid, isKingdo
   const [pendingTx, setPendingTx] = useState(false)
   const { onReward } = useHarvest(pid, isKingdom)
   const cakePrice = usePriceCakeBusd()
-  const { onStake } = useStake(10)
+  const { onStake } = useStake(3)
 
   const rawEarningsBalance = account ? getBalanceNumber(earnings) : 0
   const displayBalance = rawEarningsBalance.toLocaleString()
@@ -42,7 +42,6 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid, isKingdo
         {earningsBusd > 0 && <CardBusdValue value={earningsBusd} />}
       </Heading>
       <BalanceAndCompound>
-          {/* {pid !== 3 ?
               <Button
                   disabled={rawEarningsBalance === 0 || pendingTx}
                   size='sm'
@@ -61,7 +60,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid, isKingdo
               >
                   {TranslateString(999, 'Compound')}
               </Button>
-              : null} */}
+              
 
           <Button
           disabled={rawEarningsBalance === 0 || pendingTx}
