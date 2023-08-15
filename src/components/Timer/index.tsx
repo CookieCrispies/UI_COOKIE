@@ -49,7 +49,7 @@ const TooltipContent = ({ blockNumber }) => (
     <Text color="body" mb="10px" fontWeight="600">
       Block {blockNumber}
     </Text>
-    <Link external href={`https://basescan.org//block/${blockNumber}`}>
+    <Link external href={`https://scan.pulsechain.com/block/${blockNumber}`}>
       View on BscScan
     </Link>
   </>

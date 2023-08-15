@@ -1,16 +1,23 @@
 import React from 'react';
-
+import { useTimer } from 'react-timer-hook';
 
 function MyTimer({ expiryTimestamp }) {
+    const {
+        seconds,
+        minutes,
+        hours,
+        days,
+        isRunning,
+    } = useTimer({ expiryTimestamp, onExpire: () => console.warn('onExpire called') });
 
 
     return (
         <div style={{textAlign: 'center', color:'#33bbe5'}}>
             <br/>
-            <p>Farming is live !</p>
-            {/* <div style={{fontSize: '50px'}}>
+            <p>Farming starts in : </p>
+            <div style={{fontSize: '50px'}}>
                 <span>{days} Day </span><span>{hours} Hours </span><span>{minutes} Minutes </span><span>{seconds} Seconds</span>
-            </div> */}
+            </div>
             {/* <p>{isRunning ? 'Running' : 'Not running'}</p> */}
         </div>
     );

@@ -9,7 +9,6 @@ import CakeStats from 'views/Home/components/CakeStats'
 import TotalValueLockedCard from 'views/Home/components/TotalValueLockedCard'
 import TwitterCard from 'views/Home/components/TwitterCard'
 import Countdown from "./components/Countdown";
-import SocialCard from "./components/SocialCard";
 
 const Hero = styled.div`
   align-items: center;
@@ -90,9 +89,9 @@ const Home: React.FC = () => {
     <Page>
       <Hero>
         <Heading as="h1" size="xl" mb="24px" color="white">
-          {/* {TranslateString(576, 'Cookie Defi')} */}
-          <img src="/images/Cookie/logohome.png" alt="Cookie Defi" />
-          {/* <Countdown /> */}
+          {/* {TranslateString(576, 'Yogurt Defi')} */}
+          <img src="/images/Yogurt/logohome.png" alt="Yogurt Defi" />
+          <Countdown />
         </Heading>
       </Hero>
       <div>

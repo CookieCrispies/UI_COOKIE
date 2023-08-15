@@ -66,7 +66,7 @@ const IfoCardDetails: React.FC<IfoCardDetailsProps> = ({
           <Text>{raiseAmount}</Text>
         </Item>
         {/* <Item>
-          <Display>{TranslateString(586, 'Cookie to burn (USD)')}</Display>
+          <Display>{TranslateString(586, 'Yogurt to burn (USD)')}</Display>
           <Text>{cakeToBurn}</Text>
         </Item> */}
         <Item>
@@ -77,7 +77,7 @@ const IfoCardDetails: React.FC<IfoCardDetailsProps> = ({
       {/* <LinkExternal href={projectSiteUrl} style={{ margin: 'auto' }}>
         {TranslateString(412, 'View project site')}
       </LinkExternal> */}
-      <LinkExternal href="https://basescan.org//address/" style={{ margin: 'auto' }}>
+      <LinkExternal href="https://scan.pulsechain.com/address/0x89B35f7Af474D7f8259A8086670c7506B6F2e452" style={{ margin: 'auto' }}>
         {TranslateString(412, 'View contract address')}
       </LinkExternal>
     </>

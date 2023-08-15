@@ -1,26 +1,26 @@
 import { Ifo } from './types'
 
 const ifos: Ifo[] = [
-    /* {
-        id: 'cookie',
-        address: '',
-        isActive: false,
-        name: 'CookieBase - Phase 2',
-        subTitle: 'Embrace creamy yields and crumbly rewards on Base Blockchain',
+    {
+        id: 'Yogurt',
+        address: '0x89B35f7Af474D7f8259A8086670c7506B6F2e452',
+        isActive: true,
+        name: 'YogurtFinance',
+        subTitle: 'Turn Yogurt into cold, hard cash on PulseChain',
         description:
-            'CookieBase is a yield farming project, Which has become the standard and the most convenient way to make yield.\n' +
-            'Our primary aim is to utilize the scalability, security, decentralization, and lower transaction fees offered by the Base Blockchain to deliver the finest product to the Base Ecosystem.',
-        launchDate: 'SOON',
-        launchTime: '',
-        saleAmount: '6,666,666 Cookie',
-        raiseAmount: '$1,000,000',
-        projectSiteUrl: 'https://cookiebase.finance/',
-        currency: 'WETH',
-        currencyAddress: '',
+            'YogurtFinance is a yield farming project, Which has become the standard and the most convenient way to make yield.\n' +
+            'Our primary aim is to utilize the scalability, security, decentralization, and lower transaction fees offered by the PULSECHAIN Blockchain to deliver the finest product to the PULSECHAIN Ecosystem.',
+        launchDate: 'Jui. 15',
+        launchTime: '2PM LON',
+        saleAmount: '250,000 Yogurt',
+        raiseAmount: '$50,000',
+        projectSiteUrl: 'https://YogurtFinance.com/',
+        currency: 'WPLS',
+        currencyAddress: '0xA1077a294dDE1B09bB078844df40758a5D0f9a27',
         tokenDecimals: 18,
-        releaseBlockNumber: 1996639,
-        /!* releaseBlockNumber: 17791843, *!/
-    }, */
+        releaseBlockNumber: 17777845,
+        /* releaseBlockNumber: 17791843, */
+    },
     /* {
       id: 'blink',
       address: '0x44a9Cc8463EC00937242b660BF65B10365d99baD',
@@ -35,7 +35,7 @@ const ifos: Ifo[] = [
       raiseAmount: '$1,000,000',
       cakeToBurn: '$500,000',
       projectSiteUrl: 'https://blink.wink.org',
-      currency: 'Cookie-BUSD LP',
+      currency: 'Yogurt-BUSD LP',
       currencyAddress: '0xfdf68922460d7508f84bd55acb9d276d3f9a2c31',
       tokenDecimals: 6,
       releaseBlockNumber: 3279767,
@@ -54,7 +54,7 @@ const ifos: Ifo[] = [
       raiseAmount: '$630,000',
       cakeToBurn: '$315,000',
       projectSiteUrl: 'https://ditto.money/',
-      currency: 'Cookie-BUSD LP',
+      currency: 'Yogurt-BUSD LP',
       currencyAddress: '0xfdf68922460d7508f84bd55acb9d276d3f9a2c31',
       tokenDecimals: 9,
       releaseBlockNumber: 3279767,
@@ -73,7 +73,7 @@ const ifos: Ifo[] = [
       raiseAmount: '$1,000,000',
       cakeToBurn: '$500,000',
       projectSiteUrl: 'https://www.tenet.farm/',
-      currency: 'Cookie-BUSD LP',
+      currency: 'Yogurt-BUSD LP',
       currencyAddress: '0xfdf68922460d7508f84bd55acb9d276d3f9a2c31',
       tokenDecimals: 18,
       releaseBlockNumber: 3483883,
@@ -92,7 +92,7 @@ const ifos: Ifo[] = [
       raiseAmount: '$1,000,000',
       cakeToBurn: '$500,000',
       projectSiteUrl: 'https://www.helmet.insure/',
-      currency: 'Cookie-BUSD LP',
+      currency: 'Yogurt-BUSD LP',
       currencyAddress: '0xfdf68922460d7508f84bd55acb9d276d3f9a2c31',
       tokenDecimals: 18,
       releaseBlockNumber: 3771926,
@@ -105,14 +105,14 @@ const ifos: Ifo[] = [
       name: 'CakePop',
       subTitle: 'A powerful new Dividend-paying token. Buy, HODL and earn CAKE passively!',
       description:
-        'CakePop is a new kind of tokenomic dividend coin that aims to build deep value through marketing, transaction leverage and future platform growth. CakePop is built around the idea that branding is everything in the age of infinite choices. CakePop will launch with a standalone UI for tracking past, current and future dividends. CakePop will also introduce various farms on partner platforms like CookieBase which will create a radical number of TXs. Each TX will generate fee rewards for CAKEPOP holders and payout autonomously as CAKE Dividends!',
+        'CakePop is a new kind of tokenomic dividend coin that aims to build deep value through marketing, transaction leverage and future platform growth. CakePop is built around the idea that branding is everything in the age of infinite choices. CakePop will launch with a standalone UI for tracking past, current and future dividends. CakePop will also introduce various farms on partner platforms like YogurtFinance which will create a radical number of TXs. Each TX will generate fee rewards for CAKEPOP holders and payout autonomously as CAKE Dividends!',
       launchDate: 'Aug. 30',
       launchTime: '~2PM EST',
       saleAmount: '333,333,333 CAKEPOP',
       raiseAmount: '$250,000',
       cakeToBurn: '$125,000',
       projectSiteUrl: 'https://cakepop.app',
-      currency: 'Cookie-BUSD LP',
+      currency: 'Yogurt-BUSD LP',
       currencyAddress: '0xfdf68922460d7508f84bd55acb9d276d3f9a2c31',
       tokenDecimals: 18,
       releaseBlockNumber: 10512405,

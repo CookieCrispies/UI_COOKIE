@@ -26,21 +26,21 @@ const CakeStats = () => {
   const TranslateString = useI18n()
   const totalSupply = useTotalSupply()
   const burnedBalance = useBurnedBalance(getCakeAddress())
-  const CookiePrice = usePriceCakeBusd();
+  const YogurtPrice = usePriceCakeBusd();
   const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0);
   const cakeSupply = getBalanceNumber(circSupply);
-  const marketCap = CookiePrice.times(circSupply);
+  const marketCap = YogurtPrice.times(circSupply);
   const {data:farms} = useFarms();
-  let CookiePerBlock = 0
-  if (farms && farms[0] && farms[0]?.CookiePerBlock) {
-    CookiePerBlock = new BigNumber(farms[0]?.CookiePerBlock).toNumber()
+  let YogurtPerBlock = 0
+  if (farms && farms[0] && farms[0]?.YogurtPerBlock) {
+    YogurtPerBlock = new BigNumber(farms[0]?.YogurtPerBlock).toNumber()
   }
 
   return (
     <StyledCakeStats>
       <CardBody>
         <Heading size="xl" mb="24px">
-          {TranslateString(534, 'Cookie Stats')}
+          {TranslateString(534, 'Yogurt Stats')}
         </Heading>
         <Row>
           <Text fontSize="14px">📈 Market Cap</Text>
@@ -55,12 +55,13 @@ const CakeStats = () => {
           <CardValue fontSize="14px" value={0} decimals={0} />
         </Row>
         <Row>
-          <Text fontSize="14px">🍪 New Cookie/block</Text>
+          <Text fontSize="14px">🥛 New Yogurt/block</Text>
           <Text bold fontSize="14px">
-            {CookiePerBlock}
+            {YogurtPerBlock}
           </Text>
         </Row>
-
+        <br/>
+        <br/>
       </CardBody>
     </StyledCakeStats>
   )

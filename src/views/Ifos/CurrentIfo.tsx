@@ -41,19 +41,19 @@ const Ifo = () => {
   return (
     <div>
       <IfoCards isSingle>
-        {/* {activeIfo? <IfoCard ifo={activeIfo} /> : <Text>No Active IDOs</Text>} */}
+        {activeIfo? <IfoCard ifo={activeIfo} /> : <Text>No Active IDOs</Text>}
       </IfoCards>
-      {/* <LaunchIfoCallout>
+      <LaunchIfoCallout>
         <div>
-          <Title as="h2">{TranslateString(592, 'How to Participate in Decentralized IDOs on CookieBase')}</Title>
+          <Title as="h2">{TranslateString(592, 'How to Participate in Decentralized IDOs on YogurtFinance')}</Title>
           <Heading mb="16px">{TranslateString(594, 'Before IDO')}:</Heading>
           <List>
             <li>{TranslateString(598, 'Get WPLS tokens')}</li>
           </List>
           <Flex mb="16px">
-             <LinkExternal href="https://cookiebase.finance/" mr="16px">
-              {TranslateString(999, 'Buy Cookie')}
-            </LinkExternal>
+            {/* <LinkExternal href="https://YogurtFinance.com/" mr="16px">
+              {TranslateString(999, 'Buy Yogurt')}
+            </LinkExternal> */}
             <LinkExternal href="https://app.pulsex.com/swap?outputCurrency=0xa1077a294dde1b09bb078844df40758a5d0f9a27">
               {TranslateString(999, 'Get WPLS tokens')}
             </LinkExternal>
@@ -67,37 +67,37 @@ const Ifo = () => {
             <li>{TranslateString(606, 'Click "Claim" to claim the IDO tokens you purchased.')}</li>
             <li>{TranslateString(608, 'Done!')}</li>
           </List>
-          <img src="images/Cookie/LogoTextNewDark.png" width={300} alt="Cookie" />
+          <img src="images/Yogurt/LogoTextNewDark.png" width={300} alt="Yogurt" />
           <Text as="div" pt="16px">
             <Button
               as="a"
               variant="secondary"
-              href="https://docs.cookiebase.finance/Cookie-products/ido"
+              href="https://docs.YogurtFinance.com/Yogurt-products/ido"
             >
               {TranslateString(610, 'Read more')}
             </Button>
           </Text>
         </div>
         <div>
-          <Image src="/images/Cookie/logoCookie2.png" alt="ifo" width={500} height={406} responsive />
+          <Image src="/images/Yogurt/logoYogurt2.png" alt="ifo" width={500} height={406} responsive />
           <div>
             <Title as="h2">{TranslateString(512, 'Want to launch your own IDO?')}</Title>
             <Text mb={3}>
               {TranslateString(
                 514,
-                'Launch your project with CookieBase to bring your token directly to the most active and rapidly growing community on PulseChain.',
+                'Launch your project with YogurtFinance to bring your token directly to the most active and rapidly growing community on PulseChain.',
               )}
             </Text>
             <Button
               as="a"
-              href="https://t.me/Cookiesterol"
+              href="https://t.me/Yogurtsterol"
               external
             >
               {TranslateString(516, 'Apply to launch')}
             </Button>
           </div>
         </div>
-      </LaunchIfoCallout> */}
+      </LaunchIfoCallout>
     </div>
   )
 }

@@ -1,44 +1,44 @@
 import { PageMeta } from './types'
 
 export const DEFAULT_META: PageMeta = {
-  title: 'CookieBase',
+  title: 'YogurtFinance',
   description:
-    'Sweeten your DeFi journey with CookieBase! 🌟 Embrace creamy yields and crumbly rewards on Base Blockchain.',
-  image: 'https://cookiebase.finance/images/2logos',
+    'Turn Yogurt into cold, hard cash on PulseChain',
+  image: 'https://Yogurtdefi.com/images/2logos',
 }
 
 export const customMeta: { [key: string]: PageMeta } = {
   '/': {
-    title: 'Home | CookieBase',
+    title: 'Home | YogurtFinance',
   },
   '/competition': {
-    title: 'Trading Battle | CookieBase',
+    title: 'Trading Battle | YogurtFinance',
   },
   '/prediction': {
-    title: 'Prediction | CookieBase',
+    title: 'Prediction | YogurtFinance',
   },
   '/farms': {
-    title: 'Farms | CookieBase',
+    title: 'Farms | YogurtFinance',
   },
   '/pools': {
-    title: 'Pools | CookieBase',
+    title: 'Pools | YogurtFinance',
   },
   '/lottery': {
-    title: 'Lottery | CookieBase',
+    title: 'Lottery | YogurtFinance',
   },
   '/collectibles': {
-    title: 'Collectibles | CookieBase',
+    title: 'Collectibles | YogurtFinance',
   },
   '/ido': {
-    title: 'Initial DEX Offering | CookieBase',
+    title: 'Initial DEX Offering | YogurtFinance',
   },
   '/teams': {
-    title: 'Leaderboard | CookieBase',
+    title: 'Leaderboard | YogurtFinance',
   },
   '/profile/tasks': {
-    title: 'Task Center | CookieBase',
+    title: 'Task Center | YogurtFinance',
   },
   '/profile': {
-    title: 'Your Profile | CookieBase',
+    title: 'Your Profile | YogurtFinance',
   },
 }

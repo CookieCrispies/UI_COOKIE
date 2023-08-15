@@ -29,7 +29,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid, isKingdo
   const [pendingTx, setPendingTx] = useState(false)
   const { onReward } = useHarvest(pid, isKingdom)
   const cakePrice = usePriceCakeBusd()
-  const { onStake } = useStake(10)
+  const { onStake } = useStake(pid, isKingdom)
 
   const rawEarningsBalance = account ? getBalanceNumber(earnings) : 0
   const displayBalance = rawEarningsBalance.toLocaleString()
@@ -42,28 +42,22 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid, isKingdo
         {earningsBusd > 0 && <CardBusdValue value={earningsBusd} />}
       </Heading>
       <BalanceAndCompound>
-          {/* {pid !== 3 ?
-              <Button
-                  disabled={rawEarningsBalance === 0 || pendingTx}
-                  size='sm'
-                  variant='secondary'
-                  marginBottom='15px'
-                  onClick={async () => {
-                      setPendingTx(true)
-                      await Promise.all([
-                          onStake(rawEarningsBalance.toString()),
-                          onReward(),
-
-                      ]);
-                      setPendingTx(false)
-                  }
-                  }
-              >
-                  {TranslateString(999, 'Compound')}
-              </Button>
-              : null} */}
-
+        {pid === 3 ?
           <Button
+            disabled={rawEarningsBalance === 0 || pendingTx}
+            size='sm'
+            variant='secondary'
+            marginBottom='15px'
+            onClick={async () => {
+              setPendingTx(true)
+              await onStake(rawEarningsBalance.toString())
+              setPendingTx(false)
+            }}
+          >
+            {TranslateString(999, 'Compound')}
+          </Button>
+          : null}
+        <Button
           disabled={rawEarningsBalance === 0 || pendingTx}
           onClick={async () => {
             setPendingTx(true)

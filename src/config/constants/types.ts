@@ -3,7 +3,7 @@ import BigNumber from 'bignumber.js'
 
 export interface Address {
   97?: string
-  8453: string
+  943: string
   56?: string
   369: string
 }
@@ -99,7 +99,7 @@ export interface FarmConfig {
   tokenPerBlock?: number
   totalSupplyBelt?: BigNumber
   pcsVersion?: number
-  CookiePerBlock?: BigNumber
+  YogurtPerBlock?: BigNumber
 }
 
 export interface PoolConfig {
@@ -141,16 +141,6 @@ export type NftSource = {
 export enum NftType {
   PANCAKE = 'pancake',
   MIXIE = 'mixie',
-}
-
-export enum QuoteToken {
-  'PLS' = 'PLS',
-  'WPLS' = 'WPLS',
-  'CAKE' = 'CAKE',
-  'SYRUP' = 'SYRUP',
-  'BUSD' = 'BUSD',
-  'TWT' = 'TWT',
-  'UST' = 'UST',
 }
 
 export type Nft = {

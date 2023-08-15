@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 // eslint-disable-next-line import/no-unresolved
 import { PancakeTheme } from '@pancakeswap-libs/uikit/dist/theme'
-import background from './background.jpg'
 
 declare module 'styled-components' {
   /* eslint-disable @typescript-eslint/no-empty-interface */
@@ -13,8 +12,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Bantayog Regular', sans-serif;
   }
   body {
-    background-color: #3BC3F2;
+    background-color: #E3D6BF;
+
     
+
     img {
       height: auto;
       max-width: 100%;

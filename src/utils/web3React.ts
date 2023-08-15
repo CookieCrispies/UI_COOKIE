@@ -7,7 +7,7 @@ import getNodeUrl from './getRpcUrl'
 
 const POLLING_INTERVAL = 12000
 const rpcUrl = getNodeUrl()
-const chainId = 8453
+const chainId = 369
 
 const injected = new InjectedConnector({ supportedChainIds: [chainId] })
 

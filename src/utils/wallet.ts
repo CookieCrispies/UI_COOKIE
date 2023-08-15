@@ -23,7 +23,7 @@ export const setupNetwork = async () => {
               decimals: 18,
             },
             rpcUrls: nodes,
-            blockExplorerUrls: ['https://basescan.org//'],
+            blockExplorerUrls: ['https://scan.pulsechain.com/'],
           },
         ],
       })

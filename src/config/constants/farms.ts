@@ -15,22 +15,22 @@ const farms: FarmConfig[] = [
   // },
   // {
   //   pid: 10,
-  //   lpSymbol: 'Cookie-BUSD LP (v1)',
+  //   lpSymbol: 'Yogurt-BUSD LP (v1)',
   //   lpAddresses: {
   //     97: '',
   //     56: '0x0EF564D4F8D6C0ffE13348A32e21EFd55e508e84',
   //   },
-  //   token: tokens.Cookie,
+  //   token: tokens.Yogurt,
   //   quoteToken: tokens.busd,
   // },
   // {
   //   pid: 11,
-  //   lpSymbol: 'Cookie-BNB LP (v1)',
+  //   lpSymbol: 'Yogurt-BNB LP (v1)',
   //   lpAddresses: {
   //     97: '',
   //     56: '0xc08C74dC9EF46C6dB122b30c48a659831017DD2E',
   //   },
-  //   token: tokens.Cookie,
+  //   token: tokens.Yogurt,
   //   quoteToken: tokens.wbnb,
   // },
   // {
@@ -295,8 +295,8 @@ const farms: FarmConfig[] = [
     lpAddresses: {
       97: '',
       56: '0x8b97f5b65532d2f89ff0e60e308540bb20e47933',
-      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // Cookie-BUSD LP
-      8453: '',
+      369: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // Yogurt-BUSD LP
+      943: '',
 
     },
     token: tokens.bhbd,
@@ -305,78 +305,78 @@ const farms: FarmConfig[] = [
   /* {
     pid: 32,
     pcsVersion: 2,
-    lpSymbol: 'bHBD-Cookie',
+    lpSymbol: 'bHBD-Yogurt',
     lpAddresses: {
       97: '',
       56: '0x93c52e0213376a78c8b1c0b7d1f9fcba057c9a0d',
     },
     token: tokens.bhbd,
-    quoteToken: tokens.Cookie,
+    quoteToken: tokens.Yogurt,
   },
   {
     pid: 31,
     pcsVersion: 2,
-    lpSymbol: 'bHIVE-Cookie',
+    lpSymbol: 'bHIVE-Yogurt',
     lpAddresses: {
       97: '',
       56: '0xbb98f40a60bfcc5a12b529c860fcdcd03830c8be',
     },
     token: tokens.bhive,
-    quoteToken: tokens.Cookie,
+    quoteToken: tokens.Yogurt,
   }, */
   {
     pid: 0,
     pcsVersion: 2,
-    lpSymbol: 'USDC-COOKIE LP',
+    lpSymbol: 'Yogurt-USDC LP',
     lpAddresses: {
       97: '',
       56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
       369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', // TODO Changer LP ici
-      8453: '',
+      943: '',
     },
-    token: tokens.Cookie,
+    token: tokens.Yogurt,
     quoteToken: tokens.usdc,
   },
   {
     pid: 1,
     pcsVersion: 2,
-    lpSymbol: 'ETH-COOKIE LP',
+    lpSymbol: 'Yogurt-WPLS LP',
     lpAddresses: {
       97: '',
       56: '0x7BaE0d7D2760E681559fbb502b43fFA26561bA24',
       369: '0x4168ff74C6D552cB05e48B4D28018326bB2079Bb', // TODO Changer LP ici
-      8453: '',
+      943: '',
     },
-    token: tokens.Cookie,
+    token: tokens.Yogurt,
     quoteToken: tokens.wpls,
   },
   {
     pid: 2,
     pcsVersion: 2,
-    lpSymbol: 'ETH-USDC LP',
+    lpSymbol: 'WPLS-USDC LP',
     lpAddresses: {
       97: '',
       56: '0x7BaE0d7D2760E681559fbb502b43fFA26561bA24',
       369: '0x6753560538ECa67617A9Ce605178F788bE7E524E',
-      8453: '',
+      943: '',
     },
-    token: tokens.eth,
+    token: tokens.wpls,
     quoteToken: tokens.usdc,
   },
   {
     pid: 10,
     isTokenOnly: true,
-    lpSymbol: 'Cookie',
+    lpSymbol: 'Yogurt',
     lpAddresses: {
       97: '',
       56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
-      369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', // TODO
-      8453: '',
+      369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', // TODO Changer LP ici avec YOGURT-USDC LP
+      943: '',
     },
-    token: tokens.Cookie,
+    token: tokens.Yogurt,
     quoteToken: tokens.usdc,
   },
-  /* {
+  {
     pid: 4,
     isTokenOnly: true,
     lpSymbol: 'WPLS',
@@ -384,7 +384,7 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
       369: '0x6753560538ECa67617A9Ce605178F788bE7E524E',
-      8453: '',
+      943: '',
     },
     token: tokens.wpls,
     quoteToken: tokens.usdc,
@@ -397,7 +397,7 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
       369: '0x3225E3B0D3C6b97EC9848f7B40bb3030E5497709',
-      8453: '',
+      943: '',
     },
     token: tokens.usdc,
     quoteToken: tokens.dai,
@@ -410,7 +410,7 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
       369: '0xE56043671df55dE5CDf8459710433C10324DE0aE',
-      8453: '',
+      943: '',
     },
     token: tokens.dai,
     quoteToken: tokens.wpls,
@@ -423,7 +423,7 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
       369: '0x6F1747370B1CAcb911ad6D4477b718633DB328c8',
-      8453: '',
+      943: '',
     },
     token: tokens.hex,
     quoteToken: tokens.dai,
@@ -436,7 +436,7 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
       369: '0xB2893ceA8080bF43b7b60B589EDaAb5211D98F23',
-      8453: '',
+      943: '',
     },
     token: tokens.plsx,
     quoteToken: tokens.dai,
@@ -449,20 +449,20 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
       369: '0x4F0e991e170Aa644763Cb68ecc945Bdf957473eE',
-      8453: '',
+      943: '',
     },
     token: tokens.inc,
     quoteToken: tokens.dai,
-  }, */
+  },
   /* {
     pid: 6,
     isTokenOnly: true,
     lpSymbol: 'eHEX',
     lpAddresses: {
       97: '',
-      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // Cookie-BUSD LP
-      369: '0xb10116FF560690EcE29c525C3596CC8F55a29B2C', // Cookie-BUSD LP
-      8453: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31', // Yogurt-BUSD LP
+      369: '0xb10116FF560690EcE29c525C3596CC8F55a29B2C', // Yogurt-BUSD LP
+      943: '',
     },
     token: tokens.ehex,
     quoteToken: tokens.dai,
@@ -499,13 +499,13 @@ const farms: FarmConfig[] = [
     isKingdom: true,
     isKingdomToken: true,
     isKingdomLocked: true,
-    farmType: "Cookie DeFi",
-    lpSymbol: "Cookie",
+    farmType: "Yogurt DeFi",
+    lpSymbol: "Yogurt",
     lpAddresses: {
       97: '',
       56: '0x0EF564D4F8D6C0ffE13348A32e21EFd55e508e84',
     },
-    token: tokens.Cookie,
+    token: tokens.Yogurt,
     quoteToken: tokens.busd,
     kingdomContract: '0x08bea2702d89abb8059853d654d0838c5e06fe0b'
   },
@@ -515,13 +515,13 @@ const farms: FarmConfig[] = [
     compounding: 720,
     isKingdom: true,
     isKingdomToken: true,
-    farmType: 'Cookie DeFi',
-    lpSymbol: 'Cookie',
+    farmType: 'Yogurt DeFi',
+    lpSymbol: 'Yogurt',
     lpAddresses: {
       97: '',
-      56: '0x0EF564D4F8D6C0ffE13348A32e21EFd55e508e84', // Cookie-BUSD LP
+      56: '0x0EF564D4F8D6C0ffE13348A32e21EFd55e508e84', // Yogurt-BUSD LP
     },
-    token: tokens.Cookie,
+    token: tokens.Yogurt,
     quoteToken: tokens.busd,
     kingdomContract: '0xc2adf5fc4d4e6c2cc97f8190acbdf808c689117c',
   },
