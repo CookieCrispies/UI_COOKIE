@@ -49,7 +49,8 @@ const Staked: React.FunctionComponent<StackedActionProps> = ({
   const location = useLocation()
   const tokenAddress = getAddress(token.address)
 
-  const isApproved = account && allowance && allowance.isGreaterThan(0)
+  const isApproved = account && allowance && (allowance.isGreaterThan(0) || stakedBalance.isGreaterThan(0))
+
 
   const lpAddress = lpAddresses[process.env.REACT_APP_CHAIN_ID]
   const liquidityUrlPathParts = getLiquidityUrlPathParts({
@@ -67,7 +68,7 @@ const Staked: React.FunctionComponent<StackedActionProps> = ({
     if (stakedBalanceNumber > 0 && stakedBalanceNumber < 0.0001) {
       return getFullDisplayBalance(new BigNumber(stakedBalanceNumber)).toLocaleString()
     }
-    return stakedBalanceNumber.toLocaleString()
+    return Number(stakedBalanceNumber).toLocaleString(undefined, { maximumFractionDigits: 4 })
   }, [stakedBalance, decimals])
 
   const stakedBalanceString = new BigNumber(stakedBalance).div(new BigNumber(10).pow(decimals));

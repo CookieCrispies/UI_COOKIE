@@ -55,7 +55,7 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
     if (stakedBalanceNumber > 0 && stakedBalanceNumber < 0.0001) {
       return getFullDisplayBalance(new BigNumber(stakedBalanceNumber)).toLocaleString()
     }
-    return stakedBalanceNumber.toLocaleString()
+    return Number(stakedBalanceNumber).toLocaleString(undefined, { maximumFractionDigits: 4 })
   }, [stakedBalance, decimals])
 
   const [onPresentDeposit] = useModal(
