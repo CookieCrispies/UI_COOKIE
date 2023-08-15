@@ -160,9 +160,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
           `Calculated based on current rates. Compounding once daily. Rates are estimates provided for your convenience only, and by no means represent guaranteed returns.`,
         )}
       </Description>
-      <Flex justifyContent="center">
-        <LinkExternal href={linkHref}>{linkLabel}</LinkExternal>
-      </Flex>
+     
     </Modal>
   )
 }
