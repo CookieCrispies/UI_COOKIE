@@ -20,7 +20,7 @@ const HarvestAction: React.FunctionComponent<HarvestActionProps> = ({ pid, userD
   const { account } = useWeb3React()
   const earningsBigNumber = new BigNumber(userData.earnings)
   const cakePrice = usePriceCakeBusd()
-  const { onStake } = useStake(10)
+  const { onStake } = useStake(3)
   let earnings = 0
   let earningsBusd = 0
   let displayBalance = userDataReady ? earnings.toLocaleString() : <Skeleton width={60} />
@@ -73,7 +73,7 @@ const HarvestAction: React.FunctionComponent<HarvestActionProps> = ({ pid, userD
         >
           {TranslateString(562, 'Harvest')}
         </Button>
-        {/* {pid !== 10 ?
+        
             <Button
                 disabled={rawEarningsBalance === 0 || pendingTx}
                 variant='secondary'
@@ -90,7 +90,7 @@ const HarvestAction: React.FunctionComponent<HarvestActionProps> = ({ pid, userD
             >
               {TranslateString(999, 'Compound')}
             </Button>
-            : null} */}
+            
       </ActionContent>
     </ActionContainer>
   )
