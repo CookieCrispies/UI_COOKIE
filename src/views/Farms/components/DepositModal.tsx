@@ -95,9 +95,6 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
           {pendingTx ? TranslateString(488, 'Pending Confirmation') : TranslateString(464, 'Confirm')}
         </Button>
       </ModalActions>
-      <LinkExternal href={addLiquidityUrl} style={{ alignSelf: 'center' }}>
-        {TranslateString(999, 'Get')} {tokenName}
-      </LinkExternal>
     </Modal>
   )
 }
