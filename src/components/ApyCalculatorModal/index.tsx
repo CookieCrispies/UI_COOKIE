@@ -139,7 +139,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
         </GridItem>
         {/* 365 day / APY row */}
         <GridItem>
-          <Text>365d(APY)</Text>
+          <Text>365d(APR)</Text>
         </GridItem>
         <GridItem>
           <Text>

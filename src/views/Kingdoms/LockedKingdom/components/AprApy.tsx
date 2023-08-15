@@ -35,7 +35,7 @@ const AprApy: React.FC<AprApyProps> = ({ aprApy,  lpLabel, addLiquidityUrl }) =>
         <Text>~{compounding}</Text>
       </Flex>
       <Flex justifyContent="space-between">
-        <Text>Farm APY:</Text>
+        <Text>Farm APR:</Text>
         <Balance
           fontSize="16px"
           value={farmAPY}

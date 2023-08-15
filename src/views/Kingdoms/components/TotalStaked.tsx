@@ -40,7 +40,7 @@ const TotalStaked: React.FC<TotalStakedProps> = ({ farms, cakePrice, bakePrice, 
           <Text>{count} assets</Text>
         </div>
         <div>
-          <Text>Average APY</Text>
+          <Text>Average APR</Text>
           <Balance
             fontSize="18px"
             value={avgAPY}
