@@ -31,6 +31,10 @@ const config: MenuEntry[] = [
   {
     label: 'Yield',
     icon: 'PoolIcon',
+    status: {
+      text: 'Live',
+      color: 'warning',
+    },
     items: [
       {
         label: 'Farms',
@@ -81,6 +85,16 @@ const config: MenuEntry[] = [
     icon: 'MoreIcon',
     href: 'https://docs.cookiebase.xyz/',
   },
+  {
+    label: 'Vote',
+    icon: 'FarmIcon',
+    href: 'https://snapshot.org/#/cookiebase.eth',
+    status: {
+      text: 'Live',
+      color: 'warning',
+    },
+  },
+  
   {
     label: 'Info',
     icon: 'InfoIcon',
