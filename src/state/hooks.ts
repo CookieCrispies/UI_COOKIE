@@ -240,7 +240,6 @@ export const usePriceCakeBusd = (): BigNumber => {
   //
   // const cakeBusdPrice = cakeBnbFarm.tokenPriceVsQuote ? bnbBusdPrice.times(cakeBnbFarm.tokenPriceVsQuote) : BIG_ZERO
   const cakeBusdPrice = cakeBnbFarm.tokenPriceVsQuote ? new BigNumber(cakeBnbFarm.tokenPriceVsQuote).div(new BigNumber(bnbBusdPrice)) : BIG_ZERO
-  console.log('cakeBusdPrice', bnbBusdPrice.toNumber())
   return cakeBusdPrice
 }
 
