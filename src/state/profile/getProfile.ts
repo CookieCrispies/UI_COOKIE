@@ -54,7 +54,7 @@ const getProfile = async (address: string): Promise<GetProfileResponse> => {
         `profile_${address}`,
         {
           username,
-          avatar: `https://app.pulsex.com/images/nfts/${nft?.images.sm}`,
+          avatar: `https://baseswap.fi/images/nfts/${nft?.images.sm}`,
         },
         { domain: 'app.pulsex.com', secure: true, expires: 30 },
       )

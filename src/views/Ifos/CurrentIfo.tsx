@@ -40,10 +40,10 @@ const Ifo = () => {
 
   return (
     <div>
-      <IfoCards isSingle>
-        {/* {activeIfo? <IfoCard ifo={activeIfo} /> : <Text>No Active IDOs</Text>} */}
+     {/*  <IfoCards isSingle>
+         {activeIfo? <IfoCard ifo={activeIfo} /> : <Text>No Active IDOs</Text>} 
       </IfoCards>
-      {/* <LaunchIfoCallout>
+       <LaunchIfoCallout>
         <div>
           <Title as="h2">{TranslateString(592, 'How to Participate in Decentralized IDOs on CookieBase')}</Title>
           <Heading mb="16px">{TranslateString(594, 'Before IDO')}:</Heading>
@@ -54,7 +54,7 @@ const Ifo = () => {
              <LinkExternal href="https://cookiebase.finance/" mr="16px">
               {TranslateString(999, 'Buy Cookie')}
             </LinkExternal>
-            <LinkExternal href="https://app.pulsex.com/swap?outputCurrency=0xa1077a294dde1b09bb078844df40758a5d0f9a27">
+            <LinkExternal href="https://baseswap.fi/swap?outputCurrency=0xa1077a294dde1b09bb078844df40758a5d0f9a27">
               {TranslateString(999, 'Get WPLS tokens')}
             </LinkExternal>
           </Flex>

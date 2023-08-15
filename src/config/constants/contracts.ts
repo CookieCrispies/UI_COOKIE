@@ -9,7 +9,7 @@ export default {
     56: '0x227e79c83065edb8b954848c46ca50b96cb33e16',
     97: '',
     369:'0xca3E704Bd09B979170D76d34880c7A72fda51B63',
-    8453:'0x789fb076e08cE07A39aA81b4c5Cdf85E07EAf551',
+    8453:'0x0544b381F24eaC255ED1e2Ab2a67f10D2502921a',
   },
   kingdoms: {
     56: '0x2e72f4b196b9e5b89c29579cc135756a00e6cbbd',
@@ -33,7 +33,7 @@ export default {
     56: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
     97: '',
     369: '',
-    8453: '',
+    8453: '0x41E8DA95dDE2500B5D01758bc153346A04E4a92c',
   },
   bakery: {
     56: '0x20ec291bb8459b6145317e7126532ce7ece5056f',
@@ -68,8 +68,8 @@ export default {
   mulltiCall: {
     56: '0x1ee38d535d541c55c9dae27b12edf090c608e6fb',
     97: '0x67ADCB4dF3931b0C5Da724058ADC2174a9844412',
-    369: '0xD2BC81CF3a79fB9D7ab245cEa9A353635780f8F7', // Multicall
-    8453:'0xb50F69cA8071c0FCD0273D6C2b87336c9e84fadF',
+    369: '0xD2BC81CF3a79fB9D7ab245cEa9A353635780f8F7',
+    8453:'0xc6963fa0C9c4243EF69FD7D78e748eC97eA81633',
   },
   busd: {
     56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',

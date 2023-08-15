@@ -145,7 +145,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
 
   return (
     <StyledIfoCard ifoId={id} ribbon={Ribbon} isActive={isActive}>
-      <BackgroundImg ifoId={id} src={`/images/ifos/${id}.jpg`} />
+      <BackgroundImg ifoId={id} src={`/images/ifos/${id}.png`} />
       <CardBody>
         <IfoCardHeader ifoId={id} name={name} subTitle={subTitle} />
         <IfoCardProgress progress={state.progress} />

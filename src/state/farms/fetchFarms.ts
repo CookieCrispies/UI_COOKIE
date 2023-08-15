@@ -212,7 +212,6 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
           } else {
             tokenPriceVsQuote = new BigNumber(quoteTokenBalanceLP).div(new BigNumber(tokenBalanceLP)).div(BIG_TEN.pow(farmConfig.quoteToken.decimals)).times(BIG_TEN.pow(farmConfig.token.decimals))
           }
-
           lpTotalInQuoteToken = tokenAmount.times(tokenPriceVsQuote)
           // lpTotalInQuoteTokenPCS = tokenAmountPCS.times(tokenPriceVsQuote)
         } else {
@@ -381,7 +380,7 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
             kingdomCorrectAlloc = BIG_ZERO
           }
 
-          console.log("Cookie pet block")
+          console.log("Cookie per block")
           console.log(CookiePerBlock);
 
           return {
@@ -407,7 +406,7 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
             beltRate,
           }
         }
-
+        
         const allocPoint = new BigNumber(info.allocPoint._hex)
         const poolWeight = allocPoint.div(new BigNumber(totalAllocPoint))
 // console.log('tokenPriceVsQuote',tokenPriceVsQuote.toFormat(10))

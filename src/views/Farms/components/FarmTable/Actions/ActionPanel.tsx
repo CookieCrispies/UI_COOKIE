@@ -148,7 +148,7 @@ const ActionPanel: React.FunctionComponent<ActionPanelProps> = ({
   })
   const lpAddress = farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]
   const bsc = `https://basescan.org//address/${lpAddress}`
-  const info = `https://app.pulsex.com/info/pools/${lpAddress}`
+  const info = `https://baseswap.fi/info/pools/${lpAddress}`
 
   const exchangeUrl = farm.pcsVersion && farm.pcsVersion > 1 ? PCS_ADD_LIQUIDITY_URL : BASE_ADD_LIQUIDITY_URL
   const addLiquidityUrl = `${exchangeUrl}/${liquidityUrlPathParts}`

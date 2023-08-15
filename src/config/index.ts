@@ -7,7 +7,7 @@ BigNumber.config({
   DECIMAL_PLACES: 80,
 })
 
-export const BSC_BLOCK_TIME = 10
+export const BSC_BLOCK_TIME = 2
 
 // CAKE_PER_BLOCK details
 // 40 CAKE is minted per block
@@ -18,7 +18,7 @@ export const BSC_BLOCK_TIME = 10
 // CAKE/Block in components/CakeStats.tsx = 22 (40 - Amount sent to burn pool)
 
 export const CAKE_PER_BLOCK = new BigNumber(1)
-export const BLOCKS_PER_YEAR = new BigNumber(10512000)
+export const BLOCKS_PER_YEAR = new BigNumber(15768000)
 export const ETHERSBIGNUMBER_BLOCKS_PER_YEAR = EthersBigNumber.from(BLOCKS_PER_YEAR.toNumber())
 export const PCSCAKE_PER_BLOCK = new BigNumber(40)
 export const PCSBLOCKS_PER_YEAR = new BigNumber((60 / BSC_BLOCK_TIME) * 60 * 24 * 365) // 10512000

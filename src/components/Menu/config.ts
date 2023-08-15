@@ -12,33 +12,44 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://base.leetswap.finance/#/swap',
+        href: 'https://baseswap.fi/swap',
       },
       {
         label: 'Liquidity',
-        href: 'https://base.leetswap.finance/#/add/v2/ETH',
+        href: 'https://baseswap.fi/add/ETH/0x614747C53CB1636b4b962E15e1D66D3214621100',
+      },
+      {
+        label: 'Bridge (Official)',
+        href: 'https://bridge.base.org/deposit',
+      },
+      {
+        label: 'Bridge (Axelar)',
+        href: '/bridge',
       },
     ],
   },
   {
-    label: 'Farms',
-    icon: 'FarmIcon',
-    href: '/farms',
-  },
-  {
-    label: 'Pools',
+    label: 'Yield',
     icon: 'PoolIcon',
-    href: '/pools',
+    items: [
+      {
+        label: 'Farms',
+        href: '/farms',
+      },
+      {
+        label: 'Pools',
+        href: '/pools',
+      },
+      /* {
+        label: 'Cooking',
+        href: '/cooking',
+      }, */
+    ]
   },
   {
     label: 'IDO',
     icon: 'IfoIcon',
     href: '/ido',
-  },
-   {
-    label: 'Bridge',
-    icon: 'SunIcon',
-    href: '/bridge',
   },
 
   /* {
@@ -66,47 +77,43 @@ const config: MenuEntry[] = [
     },
   }, */
   {
+    label: 'Docs',
+    icon: 'MoreIcon',
+    href: 'https://docs.cookiebase.xyz/',
+  },
+  {
     label: 'Info',
     icon: 'InfoIcon',
     items: [
-     /* {
+      {
         label: 'Coingecko',
-        href: 'https://coingecko.com/',
+        href: 'https://www.coingecko.com/en/coins/cookiebase',
       },
       {
         label: 'Coinmarketcap',
-        href: 'https://coinmarketcap.com',
+        href: 'https://coinmarketcap.com/currencies/cookiebase/',
       },
       {
-        label: 'PulseX',
-        href: 'https://app.pulsex.com/info/pool/0xca8544e46153f6b2ab535bb6549daaaecb71d58a',
-      }, */
-      {
-        label: 'BaseScan',
-        href: 'https://basescan.org/address/0x614747C53CB1636b4b962E15e1D66D3214621100#code',
-      },
-      /* {
         label: 'Defillama',
-        href: 'https://defillama.com/chain/Pulse',
-      }, */
-    ],
-  },
-  {
-    label: 'More',
-    icon: 'MoreIcon',
-    items: [
+        href: 'https://defillama.com/protocol/cookiebase',
+      },
       {
-        label: 'Docs',
-        href: 'https://docs.cookiebase.finance/',
+        label: 'DexScreener',
+        href: 'https://dexscreener.com/base/0x614747C53CB1636b4b962E15e1D66D3214621100',
+      },
+      {
+        label: 'DexTools',
+        href: 'https://www.dextools.io/app/en/base/pair-explorer/0x9072fed6661a64766a17ac4415dbef0afff627df',
+      },
+      {
+        label: 'Token',
+        href: 'https://basescan.org/address/0x614747C53CB1636b4b962E15e1D66D3214621100#code',
       },
       /* {
         label: 'Blog',
         href: 'https://medium.com/@Cookiedefi',
       }, */
-      {
-        label: 'Github',
-        href: 'https://github.com/CookieBaseFinance',
-      },
+
     ],
   },
   /* {

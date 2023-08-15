@@ -16,7 +16,7 @@ export const getFarmBaseTokenPrice = (farm: Farm, quoteTokenFarm: Farm, bnbPrice
     return hasTokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : BIG_ZERO
   }
 
-  if (farm.quoteToken.symbol === 'wpls') {
+  if (farm.quoteToken.symbol === 'eth') {
     return hasTokenPriceVsQuote ? bnbPriceBusd.times(farm.tokenPriceVsQuote) : BIG_ZERO
   }
 
@@ -34,7 +34,7 @@ export const getFarmBaseTokenPrice = (farm: Farm, quoteTokenFarm: Farm, bnbPrice
   // If the farm's quote token isn't BUSD or wBNB, we then use the quote token, of the original farm's quote token
   // i.e. for farm PNT - pBTC we use the pBTC farm's quote token - BNB, (pBTC - BNB)
   // from the BNB - pBTC price, we can calculate the PNT - BUSD price
-  if (quoteTokenFarm.quoteToken.symbol === 'wpls') {
+  if (quoteTokenFarm.quoteToken.symbol === 'eth') {
     const quoteTokenInBusd = bnbPriceBusd.times(quoteTokenFarm.tokenPriceVsQuote)
     return hasTokenPriceVsQuote && quoteTokenInBusd
       ? new BigNumber(farm.tokenPriceVsQuote).times(quoteTokenInBusd)
@@ -64,7 +64,7 @@ export const getFarmQuoteTokenPrice = (farm: Farm, quoteTokenFarm: Farm, bnbPric
     return new BigNumber(1)
   }
 
-  if (farm.quoteToken.symbol === 'wpls') {
+  if (farm.quoteToken.symbol === 'eth') {
     return bnbPriceBusd
   }
 
@@ -72,7 +72,7 @@ export const getFarmQuoteTokenPrice = (farm: Farm, quoteTokenFarm: Farm, bnbPric
     return BIG_ZERO
   }
 
-  if (quoteTokenFarm.quoteToken.symbol === 'wpls') {
+  if (quoteTokenFarm.quoteToken.symbol === 'eth') {
     return quoteTokenFarm.tokenPriceVsQuote ? bnbPriceBusd.times(quoteTokenFarm.tokenPriceVsQuote) : BIG_ZERO
   }
 

@@ -325,55 +325,91 @@ const farms: FarmConfig[] = [
     quoteToken: tokens.Cookie,
   }, */
   {
-    pid: 0,
-    pcsVersion: 2,
+    pid: 1,
     lpSymbol: 'USDC-COOKIE LP',
     lpAddresses: {
       97: '',
       56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
-      369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', // TODO Changer LP ici
-      8453: '',
+      369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', 
+      8453: '0x2EB5b9C15cc097dFbBe91E72787821f3e2525c1D', // TODO
     },
     token: tokens.Cookie,
     quoteToken: tokens.usdc,
   },
   {
-    pid: 1,
-    pcsVersion: 2,
+    pid: 0,
     lpSymbol: 'ETH-COOKIE LP',
     lpAddresses: {
       97: '',
       56: '0x7BaE0d7D2760E681559fbb502b43fFA26561bA24',
-      369: '0x4168ff74C6D552cB05e48B4D28018326bB2079Bb', // TODO Changer LP ici
-      8453: '',
+      369: '0x4168ff74C6D552cB05e48B4D28018326bB2079Bb', 
+      8453: '0x9072FEd6661a64766A17ac4415DbeF0aFff627df', // TODO
     },
     token: tokens.Cookie,
-    quoteToken: tokens.wpls,
+    quoteToken: tokens.eth,
   },
   {
     pid: 2,
-    pcsVersion: 2,
     lpSymbol: 'ETH-USDC LP',
     lpAddresses: {
       97: '',
       56: '0x7BaE0d7D2760E681559fbb502b43fFA26561bA24',
       369: '0x6753560538ECa67617A9Ce605178F788bE7E524E',
-      8453: '',
+      8453: '0x41d160033C222E6f3722EC97379867324567d883',
     },
     token: tokens.eth,
     quoteToken: tokens.usdc,
   },
   {
-    pid: 10,
+    pid: 3,
     isTokenOnly: true,
     lpSymbol: 'Cookie',
     lpAddresses: {
       97: '',
       56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
-      369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', // TODO
-      8453: '',
+      369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', 
+      8453: '0x2EB5b9C15cc097dFbBe91E72787821f3e2525c1D', // TODO
     },
     token: tokens.Cookie,
+    quoteToken: tokens.usdc,
+  },
+  {
+    pid: 4,
+    isTokenOnly: true,
+    lpSymbol: 'ETH',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
+      369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', // TODO
+      8453: '0x41d160033C222E6f3722EC97379867324567d883',
+    },
+    token: tokens.eth,
+    quoteToken: tokens.usdc,
+  },
+  {
+    pid: 5,
+    isTokenOnly: true,
+    lpSymbol: 'USDC',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
+      369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', // TODO
+      8453: '0x6D3c5a4a7aC4B1428368310E4EC3bB1350d01455',
+    },
+    token: tokens.usdc,
+    quoteToken: tokens.dai,
+  },
+  {
+    pid: 6,
+    isTokenOnly: true,
+    lpSymbol: 'DAI',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
+      369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', // TODO
+      8453: '0x6D3c5a4a7aC4B1428368310E4EC3bB1350d01455',
+    },
+    token: tokens.dai,
     quoteToken: tokens.usdc,
   },
   /* {
