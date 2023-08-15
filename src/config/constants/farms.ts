@@ -325,31 +325,31 @@ const farms: FarmConfig[] = [
     quoteToken: tokens.Cookie,
   }, */
   {
-    pid: 2,
+    pid: 1,
     lpSymbol: 'USDC-COOKIE LP',
     lpAddresses: {
       97: '',
       56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
       369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', 
-      8453: '0x1cd6Ca847016A3bd0cC1fe2dF5027E78ea428170', // TODO
+      8453: '0x2EB5b9C15cc097dFbBe91E72787821f3e2525c1D', // TODO
     },
     token: tokens.Cookie,
     quoteToken: tokens.usdc,
   },
   {
-    pid: 3,
+    pid: 0,
     lpSymbol: 'ETH-COOKIE LP',
     lpAddresses: {
       97: '',
       56: '0x7BaE0d7D2760E681559fbb502b43fFA26561bA24',
       369: '0x4168ff74C6D552cB05e48B4D28018326bB2079Bb', 
-      8453: '0xE80B4F755417FB4baF4dbd23C029db3F62786523', // TODO
+      8453: '0x9072FEd6661a64766A17ac4415DbeF0aFff627df', // TODO
     },
     token: tokens.Cookie,
     quoteToken: tokens.eth,
   },
   {
-    pid: 4,
+    pid: 2,
     lpSymbol: 'ETH-USDC LP',
     lpAddresses: {
       97: '',
@@ -361,7 +361,7 @@ const farms: FarmConfig[] = [
     quoteToken: tokens.usdc,
   },
   {
-    pid: 0,
+    pid: 3,
     isTokenOnly: true,
     lpSymbol: 'Cookie',
     lpAddresses: {
@@ -374,7 +374,7 @@ const farms: FarmConfig[] = [
     quoteToken: tokens.usdc,
   },
   {
-    pid: 1,
+    pid: 4,
     isTokenOnly: true,
     lpSymbol: 'ETH',
     lpAddresses: {
@@ -387,7 +387,7 @@ const farms: FarmConfig[] = [
     quoteToken: tokens.usdc,
   },
   {
-    pid: 6,
+    pid: 5,
     isTokenOnly: true,
     lpSymbol: 'USDC',
     lpAddresses: {
@@ -400,7 +400,7 @@ const farms: FarmConfig[] = [
     quoteToken: tokens.dai,
   },
   {
-    pid: 5,
+    pid: 6,
     isTokenOnly: true,
     lpSymbol: 'DAI',
     lpAddresses: {
