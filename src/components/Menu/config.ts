@@ -109,7 +109,7 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Defillama',
-        href: 'https://defillama.com/protocol/cookiebase',
+        href: 'https://defillama.com/protocol/cookiebase-farm',
       },
       {
         label: 'DexScreener',
