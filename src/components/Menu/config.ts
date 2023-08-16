@@ -108,16 +108,6 @@ const config: MenuEntry[] = [
 
     ],
   },
-  {
-    label: 'Defillama',
-    icon: 'DefillamaIcon',
-    href: '/'
-  },
-  {
-    label: 'Vfta Tools',
-    icon: 'VftaToolsIcon',
-    href: '/'
-  },
   /* {
     label: 'Roadmap',
     icon: 'MoreIcon',
