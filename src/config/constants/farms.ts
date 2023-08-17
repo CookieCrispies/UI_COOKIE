@@ -423,7 +423,7 @@ const farms: FarmConfig[] = [
       8453: '0x5f0a153a64fd734c111b770da11de2c385ca8042',
     },
     token: tokens.toshi,
-    quoteToken: tokens.usdc,
+    quoteToken: tokens.eth,
   }, 
   {
     pid: 8,
@@ -446,8 +446,8 @@ const farms: FarmConfig[] = [
       369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', // TODO
       8453: '0x07CFA5Df24fB17486AF0CBf6C910F24253a674D3',
     },
-    token: tokens.eth,
-    quoteToken: tokens.cbeth,
+    token: tokens.cbeth,
+    quoteToken: tokens.eth,
   },
   /* {
     pid: 4,
