@@ -59,6 +59,17 @@ const tokens = {
     decimals: 18,
     projectLink: 'https://ethereum.org/en/',
   },
+  cbeth: {
+    symbol: 'CBETH',
+    address: {
+      56: '0x2170ed0880ac9a755fd29b2688956bd959f933f8',
+      97: '',
+      369: '0x02DcdD04e3F455D838cd1249292C58f3B79e3C3C',
+      8453: '0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22',
+    },
+    decimals: 18,
+    projectLink: 'https://ethereum.org/en/',
+  },
   usdc: {
     symbol: 'USDC',
     address: {
@@ -68,6 +79,17 @@ const tokens = {
       8453: '0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA',
     },
     decimals: 6,
+    projectLink: 'https://www.centre.io/usdc',
+  },
+  toshi: {
+    symbol: 'TOSHI',
+    address: {
+      56: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d',
+      97: '',
+      369: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
+      8453: '0x8544FE9D190fD7EC52860abBf45088E81Ee24a8c',
+    },
+    decimals: 18,
     projectLink: 'https://www.centre.io/usdc',
   },
   wpls: {

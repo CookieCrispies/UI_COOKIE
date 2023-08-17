@@ -31,10 +31,6 @@ const config: MenuEntry[] = [
   {
     label: 'Yield',
     icon: 'PoolIcon',
-    status: {
-      text: 'Live',
-      color: 'warning',
-    },
     items: [
       {
         label: 'Farms',
@@ -89,10 +85,6 @@ const config: MenuEntry[] = [
     label: 'Vote',
     icon: 'FarmIcon',
     href: 'https://snapshot.org/#/cookiebase.eth',
-    status: {
-      text: 'Live',
-      color: 'warning',
-    },
   },
   
   {
@@ -109,7 +101,7 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Defillama',
-        href: 'https://defillama.com/protocol/cookiebase',
+        href: 'https://defillama.com/protocol/cookiebase-farm',
       },
       {
         label: 'DexScreener',
@@ -118,6 +110,10 @@ const config: MenuEntry[] = [
       {
         label: 'DexTools',
         href: 'https://www.dextools.io/app/en/base/pair-explorer/0x9072fed6661a64766a17ac4415dbef0afff627df',
+      },
+      {
+        label: 'Revoke contract',
+        href: 'https://basescan.org/tokenapprovalchecker',
       },
       {
         label: 'Token',

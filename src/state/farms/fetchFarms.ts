@@ -1,5 +1,6 @@
 import BigNumber from 'bignumber.js'
 import erc20 from 'config/abi/erc20.json'
+import erc20UniV3 from 'config/abi/erc20-univ3.json'
 import masterchefABI from 'config/abi/masterchef.json'
 import multicall from 'utils/multicall'
 import {BIG_TEN, BIG_ZERO} from 'utils/bigNumber'
@@ -47,6 +48,11 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
           asyncLockedKingdomData = fetchPoolVaultData();
         }
 
+        if (farmConfig.pid === 7)
+          {
+            console.log('tosh')
+          }
+
         let calls = [
           // Balance of token in the LP contract
           {
@@ -65,11 +71,6 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
             address: farmConfig.isTokenOnly ? tokenAddress : lpAddress,
             name: 'balanceOf',
             params: [getMasterChefAddress()],
-          },
-          // Total supply of LP tokens
-          {
-            address: lpAddress,
-            name: 'totalSupply',
           },
           // Token decimals
           {
@@ -107,10 +108,6 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
               name: 'balanceOf',
               params: [hostMasterchef],
             },
-            {
-              address: lpAddress,
-              name: 'totalSupply',
-            },
             // Token decimals
             {
               address: tokenAddress,
@@ -131,10 +128,23 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
           tokenBalanceLP,
           quoteTokenBalanceLP,
           lpTokenBalanceMC,
-          lpTotalSupply,
           tokenDecimals,
           quoteTokenDecimals,
         ] = multiResult
+
+        const calls2 = [
+          // Total supply of LP tokens
+          {
+            address: lpAddress,
+            name: farmConfig.pid === 7 ? 'liquidity' : 'totalSupply',
+          }
+        ]
+
+        const multiResult1 = await multicall(farmConfig.pid === 7 ? erc20UniV3 : erc20, calls2)
+
+        const [
+          lpTotalSupply
+        ] = multiResult1;
 
         let kingdomSupply: string
         let beltAPR: string
