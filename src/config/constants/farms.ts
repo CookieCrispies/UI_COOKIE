@@ -412,6 +412,43 @@ const farms: FarmConfig[] = [
     token: tokens.dai,
     quoteToken: tokens.usdc,
   },
+   {
+    pid: 7,
+    isTokenOnly: true,
+    lpSymbol: 'TOSHI',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
+      369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', // TODO
+      8453: '0x5f0a153a64fd734c111b770da11de2c385ca8042',
+    },
+    token: tokens.toshi,
+    quoteToken: tokens.eth,
+  }, 
+  {
+    pid: 8,
+    lpSymbol: 'DAI-USDC LP',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
+      369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', // TODO
+      8453: '0x6D3c5a4a7aC4B1428368310E4EC3bB1350d01455',
+    },
+    token: tokens.dai,
+    quoteToken: tokens.usdc,
+  },
+  {
+    pid: 9,
+    lpSymbol: 'ETH-CBETH LP',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
+      369: '0xcA8544E46153F6B2Ab535BB6549DAAAEcb71d58A', // TODO
+      8453: '0x07CFA5Df24fB17486AF0CBf6C910F24253a674D3',
+    },
+    token: tokens.cbeth,
+    quoteToken: tokens.eth,
+  },
   /* {
     pid: 4,
     isTokenOnly: true,

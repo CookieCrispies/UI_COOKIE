@@ -15,8 +15,6 @@ export const stake = async (masterChefContract, pid, amount, account) => {
   let decimals = DEFAULT_TOKEN_DECIMAL;
   if (pid === 5)
     decimals = BIG_TEN.pow(6);
-  if (pid === 7)
-    decimals = BIG_TEN.pow(8);
   return masterChefContract.methods
     .deposit(pid, new BigNumber(amount).times(decimals).toString())
     .send({ from: account })
@@ -56,8 +54,6 @@ export const unstake = async (masterChefContract, pid, amount, account) => {
   let decimals = DEFAULT_TOKEN_DECIMAL;
   if (pid === 5)
     decimals = BIG_TEN.pow(6);
-  if (pid === 7)
-    decimals = BIG_TEN.pow(8);
   return masterChefContract.methods
     .withdraw(pid, new BigNumber(amount).times(decimals).toString())
     .send({ from: account })
